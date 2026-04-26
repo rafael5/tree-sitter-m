@@ -161,9 +161,22 @@ module.exports = grammar({
     // `F I=1:1:10` is a single FOR argument `I=1` followed by `:1:10`
     // (increment, limit). The grammar accepts a chain of `:expr` parts
     // and lets downstream consumers re-interpret by command context.
-    argument: $ => prec.right(seq(
+    // SET / KILL / NEW list targets: `S (A,B,C)=val`, `K (A,B)`,
+    // `N (X,Y,Z)` (NEW with exclusion list). The parenthesised list of
+    // names with 2+ elements only ever appears as a command argument
+    // — single-element `(A)=B` is a normal parenthesised binary_expr.
+    // Require `repeat1` (≥1 comma) to disambiguate.
+    set_target_list: $ => prec(3, seq(
+      '(',
       $._expression,
-      optional($.argument_postconditional),
+      repeat1(seq(',', $._expression)),
+      ')',
+      optional(seq('=', $._expression)),
+    )),
+
+    argument: $ => prec.right(choice(
+      seq($._expression, optional($.argument_postconditional)),
+      $.set_target_list,
     )),
 
     argument_postconditional: $ => prec.right(seq(

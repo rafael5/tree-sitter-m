@@ -48,6 +48,10 @@
           "named": true
         },
         {
+          "type": "set_target_list",
+          "named": true
+        },
+        {
           "type": "special_variable",
           "named": true
         },
@@ -850,6 +854,69 @@
     "fields": {},
     "children": {
       "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "format_control",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "indirection",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "pattern_match",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_target_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
       "required": true,
       "types": [
         {

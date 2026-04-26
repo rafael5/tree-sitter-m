@@ -174,6 +174,7 @@ disambiguation:
 | + two-space rule (external scanner) | 381 (38.1%) | +16.8pp | argless commands now disambiguated |
 | + dot-block compact + spaced forms | 457 (45.7%) | +7.6pp | `.I X=1` and `. . N X` accepted |
 | + negated comparison operators (`'=` etc.) | 532 (53.2%) | +7.5pp | `'=` `'<` `'>` `'[` `']` `']]` as binops |
+| + multi-target SET/KILL/NEW lists | 569 (56.9%) | +3.7pp | `S (A,B,C)=v`, `K (A,B)`, `N (X,Y)` |
 
 ---
 
@@ -280,3 +281,34 @@ These are next-turn work; none required the scanner.
   unary form.
 - 1 new corpus test in `expressions.txt` exercises `'=`, `'<`, `']]`.
 - Smoke gate **45.7% → 53.2% clean (+7.5pp)**.
+
+---
+
+## 2026-04-26 (later still) — B5 sub: SET/KILL/NEW list targets
+
+**Done:**
+
+- New `set_target_list` rule: `( expr (, expr)+ ) optional( = expr )`.
+  Requires ≥2 elements (one comma minimum) so it doesn't shadow
+  `parenthesized` for single-element `(A)=B` (which is a normal
+  binary expression). `=` is optional because KILL and NEW use the
+  list without an RHS: `K (A,B)`, `N (X,Y)`.
+- `argument` rule now choices between the existing
+  `expr [+ argument_postconditional]` and `set_target_list`. With
+  static prec(3) on the list rule and LALR conflict resolution by
+  required commas, no explicit conflict declaration was needed.
+- 2 new corpus tests in `expressions.txt`: SET with 3-element list,
+  KILL with 3-element list (no RHS).
+- Smoke gate **53.2% → 56.9% clean (+3.7pp)**. Set-kill-list bucket
+  dropped from 452 ERROR nodes to 29 (residual is nested in
+  larger expressions).
+
+**Re-tried colon-chain in function args, regressed again.**
+Same -12pp regression even with negated-ops + set-kill in place,
+confirming the regression isn't entanglement with those. The dirty
+files I sampled were already broken pre-colon-chain (e.g. `?(expr)`
+tab-to-column in WRITE, naked global refs `^(0)`). My theory: the
+colon-chain change shifts LALR error recovery so files that
+previously had a *contained* error now produce an error chain that
+poisons the rest of the line. Worth investigating with
+`tree-sitter parse --debug` later. Deferred.

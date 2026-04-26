@@ -202,3 +202,44 @@ Negated comparison operators (not-equal, not-less, not-greater)
               (variable (local_variable (identifier)))
               (operator)
               (number))))))))
+
+================================================================================
+SET with multi-target list (parenthesised LHS)
+================================================================================
+
+ S (X,Y,Z)=0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (set_target_list
+              (variable (local_variable (identifier)))
+              (variable (local_variable (identifier)))
+              (variable (local_variable (identifier)))
+              (number))))))))
+
+================================================================================
+KILL with multi-target list (no =RHS)
+================================================================================
+
+ K (A,B,C)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (set_target_list
+              (variable (local_variable (identifier)))
+              (variable (local_variable (identifier)))
+              (variable (local_variable (identifier))))))))))
