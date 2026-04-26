@@ -146,91 +146,18 @@ parser for M.
 
 ## 3. Architectural decisions
 
-Six decisions drive the rest of the spec. Listed once here so
-downstream sections can reference them by number.
+Six decisions drive the rest of the spec. Each is documented in its
+own ADR file under [`docs/adr/`](adr/) — context, decision,
+consequences, status. Downstream sections reference them by number.
 
-### AD-01: Source the keyword tables from `m-standard`'s grammar-surface, not from any single standard
-
-The parser must read **any real-world M code** from VistA, YottaDB
-applications, IRIS applications, OSEHRA repos. A parser that rejects
-valid YDB-only or IRIS-only tokens can't read the codebases it's
-meant to help.
-
-Therefore the keyword tables (commands, functions, ISVs, operators,
-pattern codes) come from `m-standard/integrated/grammar-surface.json` —
-the **union** of all sources, with abbreviation prefix-form expansion
-already done. ~225 tokens in v0.2.
-
-The pragmatic standard (81), SAC (171 flagged), and operational
-standard (58) are all *subsets* of this union. They live as
-**linter profiles**, not parser variants. See AD-03 for how the
-parser exposes the data needed to enforce them.
-
-### AD-02: Hand-code the language structure; data-drive the keyword tables
-
-M's structural rules — line shape, comments, strings, postconditionals,
-indirection, dot-blocks, argumentless commands — are **invariant**
-across all sources. They're part of the M language definition that
-AnnoStd, YDB docs, and IRIS docs all describe in compatible terms.
-These are hand-written in `grammar.js`.
-
-The variant data — which tokens count as commands vs functions vs
-ISVs, what their abbreviations are, what their tier is — comes from
-`m-standard` and is injected into `grammar.js` via code generation
-at build time. See §9.
-
-This split keeps the structural grammar small and reviewable while
-letting the keyword tables grow with `m-standard` updates.
-
-### AD-03: Stamp `standard_status` as an AST node attribute
-
-Every recognised command / function / ISV / operator / pattern code
-node in the parse tree carries a `standard_status` attribute drawn
-from `grammar-surface.json`. Values: `ansi`, `ydb-extension`,
-`iris-extension`, `multi-vendor-ext`.
-
-Cost: one extra string per keyword node. Value: every downstream
-tool can immediately classify a token's portability tier without
-reaching back to the integrated layer or rebuilding the parser per
-profile.
-
-### AD-04: Pin to a specific `m-standard` schema version
-
-`tree-sitter-m`'s build pipeline pins to a specific `m-standard`
-`schema_version` (currently `"1"`). When `m-standard` ships a
-breaking schema change (per ADR-005 of m-standard), `tree-sitter-m`
-chooses whether and when to upgrade. Pinning is recorded in
-`package.json`'s `m-standard.schema_version` field; CI fails the
-build if the pinned schema doesn't match the consumed file.
-
-This means `tree-sitter-m` releases are *decoupled* from `m-standard`
-releases — additive m-standard updates flow through automatically;
-breaking ones require deliberate adoption.
-
-### AD-05: Test against a corpus of real M code from multiple sources
-
-The test corpus must include actual routines from at least:
-- VistA Kernel (IRIS-style M)
-- A YottaDB sample application (YDB-style M)
-- `m-standard`'s own `sources/sac/routines/` (XINDEX itself — known
-  to be SAC-compliant by construction)
-- Synthetic fixtures targeting specific grammar rules
-
-Tests assert both tree-sitter's standard "parse this string and
-match this S-expression" and the AD-03 attribute presence: every
-keyword node has the expected `standard_status`.
-
-### AD-06: Provide language bindings via tree-sitter's standard scaffold
-
-Ship Node, Rust, Python, and Go bindings using
-`tree-sitter`'s standard binding generators. No bespoke binding
-code; the parser is consumed exactly as any other tree-sitter
-language is.
-
-This means downstream consumers can use any tree-sitter-aware
-tooling (Neovim's nvim-treesitter, VS Code's tree-sitter extensions,
-GitHub's code-search infrastructure, Helix editor, etc.) without
-tree-sitter-m-specific glue.
+| | Decision |
+|---|---|
+| [AD-01](adr/AD-01-source-grammar-surface.md) | Source the keyword tables from `m-standard`'s grammar-surface, not from any single standard. |
+| [AD-02](adr/AD-02-hand-code-language-structure.md) | Hand-code the language structure; data-drive the keyword tables. |
+| [AD-03](adr/AD-03-standard-status-on-nodes.md) | Stamp `standard_status` as an AST node attribute. |
+| [AD-04](adr/AD-04-pin-mstandard-schema.md) | Pin to a specific `m-standard` schema version. |
+| [AD-05](adr/AD-05-real-source-corpus.md) | Test against a corpus of real M code from multiple sources. |
+| [AD-06](adr/AD-06-tree-sitter-bindings.md) | Provide language bindings via tree-sitter's standard scaffold. |
 
 ---
 

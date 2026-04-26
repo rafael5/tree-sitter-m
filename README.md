@@ -3,15 +3,17 @@
 A [tree-sitter](https://tree-sitter.github.io/) grammar for the
 M (MUMPS) programming language.
 
-> **Status:** v0.1 grammar work substantially complete (end of B5).
-> Milestones B0–B5 done (B5 partial — coverage tuning landed at
-> **99.06% clean on the full 39,330-routine VistA corpus**;
-> editor-quality error-recovery tuning waits on B6 bindings).
-> 110 passing corpus tests. v1.0 release blocked on B6 (bindings),
-> CI workflow, per-tier coverage gate, and at least one editor
-> integration. See [`STATUS.md`](STATUS.md) for the v1.0 punch
-> list and [`docs/build-log.md`](docs/build-log.md) for the
-> per-feature progression history.
+> **Status:** v0.1 ready for first publish. Grammar at **99.06%
+> clean on the full 39,330-routine VistA corpus**; 110 passing
+> corpus tests; per-tier coverage gate green at 347/347; 10k-line
+> synthetic routine parses in 78.6ms (under the 100ms spec budget);
+> all four bindings (Node, Rust, Python, Go) scaffolded and passing
+> on the Linux/macOS/Windows CI matrix. v1.0 blocked on first
+> publish (#7) and at least one editor integration (#8 — VS Code
+> targeted). See [`STATUS.md`](STATUS.md) for the v1.0 punch list,
+> [`RELEASE.md`](RELEASE.md) for publish steps, and
+> [`docs/build-log.md`](docs/build-log.md) for the per-feature
+> progression history.
 
 ## Why this exists
 
@@ -102,15 +104,41 @@ node tools/smoke-corpus.js ~/vista-meta/vista/vista-m-host/Packages
 node tools/error-buckets.js ~/vista-meta/vista/vista-m-host/Packages --sample 1000
 ```
 
-Bindings (Node, Rust, Python, Go) are not yet scaffolded — see
-[`STATUS.md`](STATUS.md) for the B6 plan.
+## Bindings
+
+Once published (see [`RELEASE.md`](RELEASE.md)), `tree-sitter-m`
+will be installable from the four standard tree-sitter ecosystems:
+
+```bash
+npm install tree-sitter-m tree-sitter            # Node
+cargo add tree-sitter-m tree-sitter              # Rust
+pip install tree-sitter-m tree-sitter            # Python
+go get github.com/rafael5/tree-sitter-m          # Go
+```
+
+**Node version requirement.** The Node binding requires
+**Node 22 LTS**. Upstream `tree-sitter@0.25.0` (the JS runtime)
+fails to compile against Node 24's V8 headers — install on Node 24
+errors during `npm install` with a `node_object_wrap.h` /
+`v8-weak-callback-info.h` complaint about an incomplete type. Use
+`nvm install 22 && nvm use 22` until upstream tree-sitter ships a
+Node 24-compatible release. Other bindings (Rust, Python, Go) have
+no equivalent host-version constraint.
+
+**Prebuilt binaries.** First-time consumers on a platform without a
+prebuild fall back to `node-gyp` build at install time (works,
+requires a C toolchain). Prebuilt binary distribution via
+`prebuildify` is wired into `package.json` but not yet running in
+CI; see [`RELEASE.md`](RELEASE.md) §3 for the rollout plan.
 
 ## Documentation
 
 | File | What's in it |
 |------|---|
 | [`STATUS.md`](STATUS.md) | Progression vs spec, v1.0 punch list, prioritised TODOs |
-| [`docs/spec.md`](docs/spec.md) | Full design, ADRs (AD-01..06), milestones, success criteria |
+| [`RELEASE.md`](RELEASE.md) | Step-by-step publish checklist (npm / crates.io / PyPI / Go / GitHub) |
+| [`docs/spec.md`](docs/spec.md) | Full design, milestones, success criteria |
+| [`docs/adr/`](docs/adr/) | Architectural decisions (AD-01..06) — one file per decision |
 | [`docs/build-log.md`](docs/build-log.md) | Chronological per-feature progression (every commit) |
 | [`docs/tree-sitter-notes.md`](docs/tree-sitter-notes.md) | Tree-sitter implementation notes — token precedence rules, regex limitations, recurring patterns. **Read before adding grammar rules.** |
 | [`CLAUDE.md`](CLAUDE.md) | Hard rules and project conventions |

@@ -3,7 +3,7 @@
   "concept": "grammar-metadata",
   "generator": "tools/build-grammar.js",
   "source": "../m-standard/integrated/grammar-surface.json",
-  "generated_at": "2026-04-26T02:31:34Z",
+  "generated_at": "2026-04-26T19:46:36Z",
   "metadata": {
     "commands:AB": [
       {

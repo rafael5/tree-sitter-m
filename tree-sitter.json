@@ -17,15 +17,15 @@
       { "name": "Rafael Richards" }
     ],
     "links": {
-      "repository": "https://github.com/rafael5/m-parser"
+      "repository": "https://github.com/rafael5/tree-sitter-m"
     }
   },
   "bindings": {
     "c": true,
-    "go": false,
-    "node": false,
-    "python": false,
-    "rust": false,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
     "swift": false,
     "zig": false
   }

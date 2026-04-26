@@ -1,30 +1,53 @@
-# Node
-node_modules/
-npm-debug.log
-package-lock.json
-yarn.lock
-
-# Tree-sitter generated (when present, often committed but ignore intermediate)
-build/
-*.dylib
-*.so
-*.dll
-
-# Rust
+# Rust artifacts
 target/
 Cargo.lock
 
-# Python
-__pycache__/
-*.pyc
-.venv/
-*.egg-info/
-dist/
+# Node artifacts
 build/
+prebuilds/
+node_modules/
+# package-lock.json is committed — CI uses `npm ci` for reproducible installs.
 
-# Go
-*.test
-coverage.out
+# Swift artifacts
+.build/
+Package.resolved
+
+# Go artifacts
+_obj/
+
+# Python artifacts
+.venv/
+dist/
+*.egg-info
+*.whl
+
+# C artifacts
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.pc
+*.exp
+*.lib
+
+# Zig artifacts
+.zig-cache/
+zig-cache/
+zig-out/
+
+# Example dirs
+/examples/*/
+
+# Grammar volatiles
+*.wasm
+*.obj
+*.o
+
+# Archives
+*.tar.gz
+*.tgz
+*.zip
 
 # Editors
 .vscode/

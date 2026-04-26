@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=62.4.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tree-sitter-m"
+description = "Tree-sitter grammar for the M (MUMPS) programming language. Generated from m-standard's grammar-surface.json (union of AnnoStd, YottaDB, IRIS)."
+version = "0.1.0"
+keywords = ["incremental", "parsing", "tree-sitter", "m"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+authors = [{ name = "Rafael Richards" }]
+requires-python = ">=3.10"
+license.text = "AGPL-3.0"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/rafael5/tree-sitter-m"
+
+[project.optional-dependencies]
+core = ["tree-sitter~=0.24"]
+
+[tool.cibuildwheel]
+build = "cp310-*"
+build-frontend = "build"

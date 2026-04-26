@@ -1,4 +1,7 @@
-// External scanner for m-parser.
+// SPDX-License-Identifier: AGPL-3.0-only
+// Copyright (c) 2026 Rafael Richards. See LICENSE in the repo root.
+//
+// External scanner for tree-sitter-m.
 //
 // Solves the deferred items from B4 by emitting context-aware space
 // tokens that the auto-generated regex lexer can't produce:

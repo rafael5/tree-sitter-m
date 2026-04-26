@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// Copyright (c) 2026 Rafael Richards. See LICENSE in the repo root.
+//
 // Tree-sitter grammar for the M (MUMPS) programming language.
 //
 // Hand-coded structural rules + data-driven keyword tables.
