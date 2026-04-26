@@ -93,3 +93,127 @@ Logical OR operator (binary !) still works
               (variable
                 (local_variable
                   (identifier))))))))))
+
+================================================================================
+WRITE tab-to-column with numeric column
+================================================================================
+
+ W ?5
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control
+              (format_tab
+                (number)))))))))
+
+================================================================================
+WRITE newline then tab-to-column then string
+================================================================================
+
+ W !?5,"hello"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control
+              (format_tab
+                (number))))
+          (argument
+            (string)))))))
+
+================================================================================
+WRITE tab-to-column with parenthesised expression
+================================================================================
+
+ W ?(IOM-10),"Page"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control
+              (format_tab
+                (parenthesized
+                  (binary_expression
+                    (variable
+                      (local_variable
+                        (identifier)))
+                    (operator)
+                    (number))))))
+          (argument
+            (string)))))))
+
+================================================================================
+WRITE tab-to-column with bare arithmetic expression
+================================================================================
+
+ W !?DL+5,X
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control
+              (format_tab
+                (binary_expression
+                  (variable
+                    (local_variable
+                      (identifier)))
+                  (operator)
+                  (number)))))
+          (argument
+            (variable
+              (local_variable
+                (identifier)))))))))
+
+================================================================================
+Pattern match (?) still works after expression
+================================================================================
+
+ I X?1A.E
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))))))))))

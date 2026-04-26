@@ -22,6 +22,7 @@ enum TokenType {
   SP1,
   SP2PLUS,
   SP_TRAILING,
+  FORMAT_TAB,
 };
 
 // Required tree-sitter scanner ABI ---------------------------------------
@@ -55,8 +56,21 @@ bool tree_sitter_m_external_scanner_scan(void *payload,
                                           const bool *valid_symbols) {
   (void)payload;
 
+  // FORMAT_TAB: the `?` in WRITE format-control's tab-to-column atom
+  // (e.g. `W ?5`, `W !?DL+1`). Only emit when the parser declares
+  // FORMAT_TAB valid — which the grammar arranges to be true exactly
+  // at format_control's atom-start positions. In binary pattern-match
+  // position (`expr ? pattern`), FORMAT_TAB is NOT in valid_symbols,
+  // so this scanner falls through and the auto-lexer matches `?` as
+  // the literal pattern operator.
+  if (lexer->lookahead == '?' && valid_symbols[FORMAT_TAB]) {
+    lexer->advance(lexer, false);
+    lexer->result_symbol = FORMAT_TAB;
+    return true;
+  }
+
   // Fast path: if the next char isn't a space, this scanner has nothing
-  // to contribute; let the auto-lexer try.
+  // more to contribute; let the auto-lexer try.
   if (lexer->lookahead != ' ') return false;
 
   // Neither token is needed in the current parser state — bail so the

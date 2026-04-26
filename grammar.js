@@ -40,6 +40,7 @@ module.exports = grammar({
     $._sp1,
     $._sp2plus,
     $._sp_trailing,
+    $._format_tab,
   ],
 
   conflicts: $ => [
@@ -47,6 +48,13 @@ module.exports = grammar({
     // command in the sequence or precede the trailing comment. GLR
     // lookahead at the next non-space token resolves it.
     [$.command_sequence],
+    // After `?expr` inside format_control, a following `?` could be
+    // either (a) the start of another format_tab atom or (b) a binary
+    // pattern_match operator extending the inner expression. GLR forks
+    // both; the external scanner emits FORMAT_TAB (token type), which
+    // only the format-atom branch can consume — pattern_match needs
+    // `?` literal — so the format-atom branch wins at runtime.
+    [$.format_tab, $.pattern_match],
   ],
 
   rules: {
@@ -235,17 +243,26 @@ module.exports = grammar({
       $.format_control,
     ),
 
-    // WRITE format control: `!` (newline) and `#` (form feed). M's
-    // WRITE chains these without comma separators — `W !!`, `W !,X`.
-    // Both chars double as binary operators (logical OR / modulo);
-    // GLR resolves via the prec(3) token bias. `?N` (tab-to-column)
-    // and `*N` (ASCII char) tried multiple shapes; all regress even
-    // under the corrected counter. Needs a fundamentally different
-    // discriminator (perhaps an external scanner state for "inside
-    // WRITE arglist").
-    format_control: $ => prec(3, repeat1($._format_char)),
+    // WRITE format control: `!` (newline), `#` (form feed), and
+    // `?expr` (tab-to-column). M's WRITE chains atoms without comma
+    // separators — `W !!`, `W !?5,X`, `W ?(IOM-10),"Page"`.
+    //
+    // Three earlier attempts at `?expr` as a pure-grammar token
+    // regressed via GLR over-exploration: `?` literal also opens
+    // pattern_match, so adding a second interpretation widens the
+    // state space and mis-recovers neighbouring tokens. The fix is
+    // to gate `?` via the external scanner: FORMAT_TAB is emitted
+    // only when valid_symbols declares it (start-of-format-atom),
+    // and pattern_match's binary `?` reaches the auto-lexer untouched
+    // because FORMAT_TAB isn't valid in that parser state.
+    format_control: $ => prec(3, repeat1(choice(
+      $._format_char,
+      $.format_tab,
+    ))),
 
     _format_char: $ => token(prec(3, /[!#]/)),
+
+    format_tab: $ => seq($._format_tab, $._expression),
 
     // Entry reference: `LABEL^ROUTINE`. Used as DO/GOTO/JOB arguments
     // and as the target of $$extrinsic calls. Plain `^ROUTINE` is
@@ -285,9 +302,16 @@ module.exports = grammar({
     // Per spec §5.8:
     //   pattern_atom    ::= repeat_count (pattern_code | pattern_string | alternation)
     //   repeat_count    ::= integer | integer "." integer? | "." integer
+    // M's pattern-match operator is `?`; the negated form `'?` ("does
+    // not match") is a morphological compound, mirroring `'=`/`'<`/etc.
+    // for comparisons. Real M uses both heavily — VistA's input
+    // validators are full of `STR'?pattern`. The 2-char form is a single
+    // anonymous token so longest-match resolves `X'?p` to `X` `'?` `p`
+    // rather than `X` `'` `?` `p` (which would require unary `'` after
+    // an expression — not valid).
     pattern_match: $ => prec.left(0, seq(
       $._expression,
-      '?',
+      choice('?', "'?"),
       $.pattern,
     )),
 
@@ -308,14 +332,20 @@ module.exports = grammar({
       /\./,         // .
     )),
 
+    // Pattern code: optional `'` (NOT) followed by one or more letters.
+    // M's standard is one letter per atom (A/C/E/L/N/P/U), but YDB and
+    // IRIS de-facto allow concatenated letters as a character class —
+    // `?.ANP` means "any number of A, N, or P chars". VistA uses this
+    // pervasively. Each letter stays its own pattern_letter node so
+    // downstream AD-03 stamping can resolve standard_status per letter.
     pattern_code: $ => seq(
-      optional("'"),  // apostrophe = NOT
-      $.pattern_letter,
+      optional("'"),
+      repeat1($.pattern_letter),
     ),
 
-    // The standard 7 codes plus any other ASCII letter (vendor patcode).
-    // Per AD-01 the union: accept any letter; downstream linter flags
-    // non-standard codes.
+    // Single letter — the union of standard 7 (A/C/E/L/N/P/U) plus any
+    // other ASCII letter (vendor patcode). Per AD-01: accept any letter;
+    // downstream linter flags non-standard codes.
     pattern_letter: $ => /[A-Za-z]/,
 
     pattern_string: $ => $.string,

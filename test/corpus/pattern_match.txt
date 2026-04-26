@@ -162,3 +162,59 @@ Pattern: literal string match
                   (pattern_repeat_count)
                   (pattern_string
                     (string)))))))))))
+
+================================================================================
+Pattern: multi-letter code (character class concatenation)
+================================================================================
+
+ I X?.ANP
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)
+                    (pattern_letter)
+                    (pattern_letter)))))))))))
+
+================================================================================
+Pattern: negated match operator ('?)
+================================================================================
+
+ I HRD'?1"T"2N
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_string
+                    (string)))
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))))))))))

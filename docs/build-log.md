@@ -445,3 +445,51 @@ scanner state ("inside WRITE arg") to gate emission.
 | + naked global ref `^(...)` | 694 (69.4%) | +14.3pp |
 | + empty-arg slots (subscripts + arglist) | 756 (75.6%) | +6.2pp |
 | + numeric labels (`5 S X=1`) | 790 (79.0%) | +3.4pp |
+
+---
+
+## 2026-04-26 (later × 8) — format-tab + negated pattern match + multi-letter pattern code
+
+**Done (single commit, three related fixes):**
+
+- **`?expr` tab-to-column in WRITE** via external-scanner-gated
+  FORMAT_TAB token. Three earlier pure-grammar attempts regressed
+  by -2.4pp to -4.5pp because `?` literal also opens pattern_match,
+  so a second grammar-level interpretation widened the GLR state
+  space and mis-recovered neighbouring tokens. The fix: scanner
+  emits FORMAT_TAB only when valid_symbols declares it (i.e. at the
+  start of a `format_atom` inside `format_control`); pattern_match's
+  binary `?` reaches the auto-lexer untouched because FORMAT_TAB is
+  not valid in expression-after position. New `format_tab` rule:
+  `seq($._format_tab, $._expression)`. Conflict declared
+  `[$.format_tab, $.pattern_match]` — at runtime only the
+  format-atom branch can consume FORMAT_TAB so the pattern_match
+  fork dies cleanly. **+9.5pp (79.0% → 88.5%).**
+- **Negated pattern match `'?`** as a 2-char compound operator,
+  mirroring `'=`/`'<`/etc. for comparisons. VistA's input
+  validators are full of `STR'?pattern`. Added as a `choice('?',
+  "'?")` in `pattern_match`. Longest-match resolves `X'?p` to `X`
+  `'?` `p` rather than `X` `'` `?` `p` (which would require unary
+  `'` after an expression — invalid). **+4.8pp (88.5% → 93.3%).**
+- **Multi-letter pattern codes** `?.ANP` for "any of A, N, or P
+  chars". M's standard is one letter per atom, but YDB and IRIS
+  de-facto allow concatenated letters as a character class, and
+  VistA uses this pervasively. `pattern_code` now uses
+  `repeat1($.pattern_letter)` — each letter stays its own
+  pattern_letter node so AD-03 stamping can resolve standard_status
+  per letter. **+2.7pp (93.3% → 96.0%).**
+- Combined session delta: **79.0% → 96.0% (+17.0pp).** The
+  remaining ~4% is dominated by IRIS object-method syntax
+  (`OBJ.Method()`, `OBJ.Property=val`) — out of scope until
+  m-standard ships v2.0 with IRIS data.
+- 7 new corpus tests across `format_control.txt` (5) and
+  `pattern_match.txt` (2). 92 corpus tests total, 100% pass.
+
+**Smoke-gate progression (this session):**
+
+| Milestone | Clean | Δ |
+|-----------|------:|--:|
+| (start of session) | 790 (79.0%) | — |
+| + `?expr` tab-to-column via FORMAT_TAB external | 885 (88.5%) | +9.5pp |
+| + negated pattern match `'?` | 933 (93.3%) | +4.8pp |
+| + multi-letter pattern code `?.ANP` | 960 (96.0%) | +2.7pp |
