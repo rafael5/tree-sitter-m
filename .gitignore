@@ -1,0 +1,33 @@
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Tree-sitter generated (when present, often committed but ignore intermediate)
+build/
+*.dylib
+*.so
+*.dll
+
+# Rust
+target/
+Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Go
+*.test
+coverage.out
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
