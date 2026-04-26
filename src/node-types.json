@@ -16,6 +16,10 @@
           "named": true
         },
         {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
           "type": "extrinsic_function",
           "named": true
         },
@@ -86,6 +90,10 @@
           "named": true
         },
         {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
           "type": "extrinsic_function",
           "named": true
         },
@@ -138,6 +146,10 @@
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
           "named": true
         },
         {
@@ -236,6 +248,25 @@
     "fields": {}
   },
   {
+    "type": "entry_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "subscripts",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "extrinsic_function",
     "named": true,
     "fields": {},
@@ -245,6 +276,10 @@
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
           "named": true
         },
         {
@@ -319,6 +354,10 @@
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
           "named": true
         },
         {
@@ -448,6 +487,10 @@
           "named": true
         },
         {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
           "type": "extrinsic_function",
           "named": true
         },
@@ -561,6 +604,10 @@
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
           "named": true
         },
         {
@@ -691,6 +738,10 @@
           "named": true
         },
         {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
           "type": "extrinsic_function",
           "named": true
         },
@@ -762,6 +813,10 @@
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
           "named": true
         },
         {
@@ -861,6 +916,10 @@
           "named": true
         },
         {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
           "type": "extrinsic_function",
           "named": true
         },
@@ -913,6 +972,10 @@
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
           "named": true
         },
         {

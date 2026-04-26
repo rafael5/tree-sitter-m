@@ -1,0 +1,53 @@
+================================================================================
+DO with entry reference (LABEL^ROUTINE)
+================================================================================
+
+ D EN^A1BFMSG1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (entry_reference
+              (identifier)
+              (identifier))))))))
+
+================================================================================
+GOTO with entry reference and subscripts
+================================================================================
+
+ G LABEL^ROUTINE(1)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (entry_reference
+              (identifier)
+              (identifier)
+              (subscripts
+                (number)))))))))
+
+================================================================================
+Trailing whitespace before EOL is ignored
+================================================================================
+
+ Q
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)))))

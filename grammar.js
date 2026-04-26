@@ -32,6 +32,9 @@ module.exports = grammar({
     // command in the sequence or precede the trailing comment. GLR
     // lookahead at the next non-space token resolves it.
     [$.command_sequence],
+    // After command_sequence, trailing ` ` could be a comment lead-in
+    // or just trailing whitespace before EOL.
+    [$._line_body],
   ],
 
   rules: {
@@ -55,6 +58,7 @@ module.exports = grammar({
         seq($._sp, $._line_body),
         $.comment,
       ),
+      optional($._sp),  // allow trailing whitespace before EOL
       $._eol,
     ),
 
@@ -133,6 +137,7 @@ module.exports = grammar({
       $.special_variable,
       $.function_call,
       $.extrinsic_function,
+      $.entry_reference,
       $.variable,
       $.parenthesized,
       $.binary_expression,
@@ -140,6 +145,21 @@ module.exports = grammar({
       $.indirection,
       $.pattern_match,
     ),
+
+    // Entry reference: `LABEL^ROUTINE`. Used as DO/GOTO/JOB arguments
+    // and as the target of $$extrinsic calls. Plain `^ROUTINE` is
+    // already covered by global_variable (same syntax — the parser
+    // treats both the same; downstream interprets by command context).
+    //
+    // The `LABEL+offset^ROUTINE` form (offset by N lines) is deferred:
+    // adding `+expr` would conflict with binary `+` inside parens, and
+    // it's used in only a small fraction of routines.
+    entry_reference: $ => prec(1, seq(
+      $.identifier,
+      '^',
+      $.identifier,
+      optional($.subscripts),
+    )),
 
     // M pattern matching: `expr ? pattern` where pattern is a sequence
     // of (repeat_count, atom) pairs. The right side of `?` is its own
@@ -289,12 +309,12 @@ module.exports = grammar({
 
     special_variable_keyword: $ => choice(...K.intrinsic_special_variables),
 
-    extrinsic_function: $ => seq(
+    extrinsic_function: $ => prec.right(seq(
       '$$',
       $.identifier,
       optional(seq('^', $.identifier)),
       optional(seq('(', optional($._inner_arglist), ')')),
-    ),
+    )),
 
     _inner_arglist: $ => seq(
       $._expression,
