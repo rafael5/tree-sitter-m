@@ -96,6 +96,17 @@ module.exports = grammar({
     _sp: $ => / +/,
     _eol: $ => /\r?\n/,
 
+    // M's two-space rule (single space = arg-separator, two spaces =
+    // argless-command boundary) requires lexical context the LR(1)
+    // grammar can't supply on its own — `F I=1:1:10 W I` is one space
+    // between F's args and the body command, but `D  Q` is two spaces
+    // marking D as argless. Implementing the distinction faithfully
+    // needs an external scanner (src/scanner.c). Until then the grammar
+    // uses a single `_sp` token and biases right (commands consume
+    // arguments greedily). Reported errors on real VistA where the
+    // distinction matters: trace to argless commands chained on one
+    // line, e.g. ` Q  D ^FOO`.
+
     // -------- Comments --------
 
     comment: $ => seq(';', /[^\r\n]*/),
@@ -107,10 +118,6 @@ module.exports = grammar({
       repeat(seq($._sp, $.command)),
     ),
 
-    // v0.1 simplification: without the two-space rule (deferred to B4),
-    // `D X` is genuinely ambiguous — could be `DO X` or `DO` (argless)
-    // followed by `X` as the next command. Bias right so the longest
-    // match (consume args if anything follows on the line) wins.
     command: $ => prec.right(seq(
       $.command_keyword,
       optional($.postconditional),
@@ -167,11 +174,13 @@ module.exports = grammar({
     // feed). M's WRITE allows these to chain without comma separators —
     // `W !!` writes two newlines, `W !,X` writes newline then X.
     // Both characters double as binary operators (logical OR / modulo);
-    // GLR explores both. Format_control matches the longest run of
-    // `!`/`#` greedily as a single atom.
+    // GLR explores both via an explicit token with prec 3.
     //
-    // `?expr` (tab-to-column) is not currently handled — it collides
-    // with the pattern-match operator. Deferred for v0.2.
+    // `?expr` (tab-to-column) is not handled — it collides with the
+    // pattern-match operator. SET-list / KILL-list `(A,B,C)=val` is
+    // also deferred — adding it as `tuple` regressed the smoke gate
+    // 2pp because of confusion with subscripts and parenthesized
+    // expressions. Both wait for B5 disambiguation work.
     format_control: $ => prec(3, repeat1($._format_char)),
 
     _format_char: $ => token(prec(3, /[!#]/)),
