@@ -106,7 +106,16 @@ module.exports = grammar({
       repeat(seq(',', $.argument)),
     ),
 
-    argument: $ => $._expression,
+    // Per-argument postconditional: `D LABEL:cond,LABEL2:cond2`. M allows
+    // these on DO / GOTO / XECUTE arguments. Per AD-01 the parser accepts
+    // them on any argument (the union of all sources); a downstream linter
+    // can flag misuse on commands like SET.
+    argument: $ => prec.right(seq(
+      $._expression,
+      optional($.argument_postconditional),
+    )),
+
+    argument_postconditional: $ => seq(':', $._expression),
 
     // -------- Expressions --------
 

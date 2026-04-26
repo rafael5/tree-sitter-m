@@ -1,0 +1,114 @@
+================================================================================
+DO with single per-argument postconditional
+================================================================================
+
+ D LABEL:1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (local_variable
+                (identifier)))
+            (argument_postconditional
+              (number))))))))
+
+================================================================================
+DO with multiple per-argument postconditionals
+================================================================================
+
+ D LABEL1:X=1,LABEL2:X=2,LABEL3
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (local_variable
+                (identifier)))
+            (argument_postconditional
+              (binary_expression
+                (variable
+                  (local_variable
+                    (identifier)))
+                (operator)
+                (number))))
+          (argument
+            (variable
+              (local_variable
+                (identifier)))
+            (argument_postconditional
+              (binary_expression
+                (variable
+                  (local_variable
+                    (identifier)))
+                (operator)
+                (number))))
+          (argument
+            (variable
+              (local_variable
+                (identifier)))))))))
+
+================================================================================
+GOTO with per-argument postconditional referencing global
+================================================================================
+
+ G ^FOO:Y>0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (global_variable
+                (identifier)))
+            (argument_postconditional
+              (binary_expression
+                (variable
+                  (local_variable
+                    (identifier)))
+                (operator)
+                (number)))))))))
+
+================================================================================
+Argument postcond with parenthesized condition
+================================================================================
+
+ D LABEL:(X=1)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (local_variable
+                (identifier)))
+            (argument_postconditional
+              (parenthesized
+                (binary_expression
+                  (variable
+                    (local_variable
+                      (identifier)))
+                  (operator)
+                  (number))))))))))
