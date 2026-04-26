@@ -136,3 +136,69 @@ Parenthesized subexpression
                   (variable
                     (local_variable
                       (identifier))))))))))))
+
+================================================================================
+Negated comparison operators (not-equal, not-less, not-greater)
+================================================================================
+
+ I A'=B S X=1
+ I A'<B S Y=2
+ I A']]B S Z=3
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable (local_variable (identifier)))
+              (operator)
+              (variable (local_variable (identifier)))))))
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable (local_variable (identifier)))
+              (operator)
+              (number)))))))
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable (local_variable (identifier)))
+              (operator)
+              (variable (local_variable (identifier)))))))
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable (local_variable (identifier)))
+              (operator)
+              (number)))))))
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable (local_variable (identifier)))
+              (operator)
+              (variable (local_variable (identifier)))))))
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable (local_variable (identifier)))
+              (operator)
+              (number))))))))

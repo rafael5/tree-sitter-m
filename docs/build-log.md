@@ -173,6 +173,7 @@ disambiguation:
 | + dot-block prefix + unary restrict | 213 (21.3%) | -0.3pp | net stable |
 | + two-space rule (external scanner) | 381 (38.1%) | +16.8pp | argless commands now disambiguated |
 | + dot-block compact + spaced forms | 457 (45.7%) | +7.6pp | `.I X=1` and `. . N X` accepted |
+| + negated comparison operators (`'=` etc.) | 532 (53.2%) | +7.5pp | `'=` `'<` `'>` `'[` `']` `']]` as binops |
 
 ---
 
@@ -249,13 +250,33 @@ These are next-turn work; none required the scanner.
 
 **Tried and reverted:**
 
-- Colon-chain in function-call args (`$S(cond:val,cond:val)` —
-  SELECT-style). Modified `_inner_arglist` to allow `expr (':' expr)*`
-  per arg. Corpus tests passed but smoke gate **regressed
-  -11.9pp**. Root cause: `'=` (not-equal) and other `'op` negated
-  binary operators aren't in `K.operators` (only `'` alone is); the
-  parser was already mis-recovering on those, and the colon-chain
-  changed LALR conflict resolution in a way that widened the
-  mis-recovery to neighbouring tokens. Reverted; both fixes
-  (`'op` operators and `$S` colon chain) are entangled and need to
-  land together. Deferred.
+- Colon-chain in function-call args (`$S(cond:val,cond:val)`) —
+  modified `_inner_arglist` to allow `expr (':' expr)*` per arg.
+  Reverted twice (once before negated-ops, once after). Both
+  attempts regressed the smoke gate -11.9pp and -12.7pp respectively;
+  the regression survives the `'op` fix, so it is NOT entangled with
+  negated operators (earlier hypothesis was wrong). Real cause is
+  unidentified — corpus tests pass, real-world files break. Likely a
+  GLR conflict-resolution shift that interacts badly with another
+  unhandled construct (naked global refs `^(0)`, by-reference params
+  `.VAR`, multi-target SET `S (A,B)=v`). Deferred until after those
+  land — at which point colon-chain may "just work" or the regression
+  may localise to a smaller set worth investigating.
+
+---
+
+## 2026-04-26 (later still) — B5 sub: negated comparison operators
+
+**Done:**
+
+- Added `'=` `'<` `'>` `'[` `']` `']]` to the `operator` rule. M
+  allows prefix-`'` to negate comparison operators; m-standard's
+  grammar-surface lists only the 17 base operators because the
+  negation is morphological, but real M lexers produce these as
+  compound tokens.
+- Tree-sitter's longest-match resolves `A'=B` to `A` `'=` `B` (2-char
+  op) rather than `A` `'` `=` `B`. Unary `'X` still works because
+  the `'` followed by a non-operator char gets matched as the 1-char
+  unary form.
+- 1 new corpus test in `expressions.txt` exercises `'=`, `'<`, `']]`.
+- Smoke gate **45.7% → 53.2% clean (+7.5pp)**.

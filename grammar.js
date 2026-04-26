@@ -325,7 +325,17 @@ module.exports = grammar({
       $._expression,
     )),
 
-    operator: $ => choice(...K.operators),
+    // M's negated comparison operators: `'` prefix on `=`, `<`, `>`,
+    // `[`, `]`, `]]`. Lexically distinct from unary `'` because of the
+    // following character; tree-sitter's longest-match resolves
+    // `A'=B` to `A` `'=` `B` (2-char op) rather than `A` `'` `=` `B`.
+    // m-standard's grammar-surface lists only the base 17 operators
+    // because the negation is morphological, but real M lexers treat
+    // these as compound tokens.
+    operator: $ => choice(
+      ...K.operators,
+      "'=", "'<", "'>", "'[", "']", "']]",
+    ),
 
     string: $ => seq(
       '"',
