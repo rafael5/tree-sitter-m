@@ -35,6 +35,11 @@ module.exports = grammar({
     // After command_sequence, trailing ` ` could be a comment lead-in
     // or just trailing whitespace before EOL.
     [$._line_body],
+    // `!` and `#` are both format-control atoms (in WRITE args) AND
+    // binary/unary operators (logical OR, modulo). Tree-sitter
+    // explores both via GLR; precedence on format_control biases
+    // the standalone case.
+    [$.format_control, $.operator],
   ],
 
   rules: {
@@ -144,7 +149,19 @@ module.exports = grammar({
       $.unary_expression,
       $.indirection,
       $.pattern_match,
+      $.format_control,
     ),
+
+    // WRITE format control characters: `!` (newline) and `#` (form
+    // feed). M's WRITE allows these to chain without comma separators —
+    // `W !!` writes two newlines, `W !,X` writes newline then X.
+    // Both characters double as operators (logical OR / modulo); the
+    // GLR parser explores both branches and prec(1) biases the
+    // standalone case.
+    //
+    // `?expr` (tab-to-column) is not currently handled — it collides
+    // with the pattern-match operator. Deferred for v0.2.
+    format_control: $ => prec(1, repeat1(choice('!', '#'))),
 
     // Entry reference: `LABEL^ROUTINE`. Used as DO/GOTO/JOB arguments
     // and as the target of $$extrinsic calls. Plain `^ROUTINE` is

@@ -1,0 +1,95 @@
+================================================================================
+WRITE with single newline format control
+================================================================================
+
+ W !
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control)))))))
+
+================================================================================
+WRITE with two newlines (chained format control)
+================================================================================
+
+ W !!
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control)))))))
+
+================================================================================
+WRITE with mixed format control and string
+================================================================================
+
+ W !!,"hello",!
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control))
+          (argument
+            (string))
+          (argument
+            (format_control)))))))
+
+================================================================================
+WRITE with form feed
+================================================================================
+
+ W #
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (format_control)))))))
+
+================================================================================
+Logical OR operator (binary !) still works
+================================================================================
+
+ I A!B
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (variable
+                (local_variable
+                  (identifier))))))))))

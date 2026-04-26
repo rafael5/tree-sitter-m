@@ -1547,8 +1547,32 @@
         {
           "type": "SYMBOL",
           "name": "pattern_match"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "format_control"
         }
       ]
+    },
+    "format_control": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "!"
+            },
+            {
+              "type": "STRING",
+              "value": "#"
+            }
+          ]
+        }
+      }
     },
     "entry_reference": {
       "type": "PREC",
@@ -4830,6 +4854,10 @@
     ],
     [
       "_line_body"
+    ],
+    [
+      "format_control",
+      "operator"
     ]
   ],
   "precedences": [],
