@@ -1,0 +1,138 @@
+================================================================================
+FOR with bounded range (start:incr:limit)
+================================================================================
+
+ F I=1:1:10
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))
+            (argument_postconditional
+              (number)
+              (number))))))))
+
+================================================================================
+FOR with open range (start:incr, no limit)
+================================================================================
+
+ F I=1:1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))
+            (argument_postconditional
+              (number))))))))
+
+================================================================================
+FOR with body command on same line
+================================================================================
+
+ F I=1:1:10 W I
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))
+            (argument_postconditional
+              (number)
+              (number)))))
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (local_variable
+                (identifier)))))))))
+
+================================================================================
+FOR with negative increment (decreasing)
+================================================================================
+
+ F I=10:-1:1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))
+            (argument_postconditional
+              (unary_expression
+                (operator)
+                (number))
+              (number))))))))
+
+================================================================================
+FOR with expression operands
+================================================================================
+
+ F I=A:B:C
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (variable
+                (local_variable
+                  (identifier))))
+            (argument_postconditional
+              (variable
+                (local_variable
+                  (identifier)))
+              (variable
+                (local_variable
+                  (identifier))))))))))

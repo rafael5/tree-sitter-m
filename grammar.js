@@ -110,12 +110,20 @@ module.exports = grammar({
     // these on DO / GOTO / XECUTE arguments. Per AD-01 the parser accepts
     // them on any argument (the union of all sources); a downstream linter
     // can flag misuse on commands like SET.
+    //
+    // The same `:expr` syntax is overloaded for FOR-loop ranges:
+    // `F I=1:1:10` is a single FOR argument `I=1` followed by `:1:10`
+    // (increment, limit). The grammar accepts a chain of `:expr` parts
+    // and lets downstream consumers re-interpret by command context.
     argument: $ => prec.right(seq(
       $._expression,
       optional($.argument_postconditional),
     )),
 
-    argument_postconditional: $ => seq(':', $._expression),
+    argument_postconditional: $ => prec.right(seq(
+      ':', $._expression,
+      repeat(seq(':', $._expression)),
+    )),
 
     // -------- Expressions --------
 
