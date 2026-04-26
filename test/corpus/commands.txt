@@ -1,0 +1,133 @@
+================================================================================
+Bare commands (BREAK, QUIT)
+================================================================================
+
+ BREAK
+ QUIT
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword))))
+  (line
+    (command_sequence
+      (command
+        (command_keyword)))))
+
+================================================================================
+SET with simple assignment
+================================================================================
+
+ S X=1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))))))))
+
+================================================================================
+DO with global routine reference
+================================================================================
+
+ D ^FOO
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (global_variable
+                (identifier)))))))))
+
+================================================================================
+Multiple commands separated by single space
+================================================================================
+
+ S X=1 S Y=2
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number)))))
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))))))))
+
+================================================================================
+Command keyword full forms (canonical and abbreviated coexist)
+================================================================================
+
+ BREAK
+ BREA
+ BRE
+ BR
+ B
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line (command_sequence (command (command_keyword))))
+  (line (command_sequence (command (command_keyword))))
+  (line (command_sequence (command (command_keyword))))
+  (line (command_sequence (command (command_keyword))))
+  (line (command_sequence (command (command_keyword)))))
+
+================================================================================
+Trailing comment on a command line
+================================================================================
+
+ S X=1 ;set x
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))))))
+    (comment)))

@@ -1,0 +1,134 @@
+================================================================================
+Intrinsic function call
+================================================================================
+
+ W $LENGTH("abc")
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (function_call
+              (intrinsic_function_keyword)
+              (string))))))))
+
+================================================================================
+Intrinsic function with multiple arguments
+================================================================================
+
+ W $EXTRACT("abcdef",2,4)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (function_call
+              (intrinsic_function_keyword)
+              (string)
+              (number)
+              (number))))))))
+
+================================================================================
+Intrinsic function abbreviated form
+================================================================================
+
+ W $L("abc")
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (function_call
+              (intrinsic_function_keyword)
+              (string))))))))
+
+================================================================================
+Extrinsic function call (no routine)
+================================================================================
+
+ S X=$$LABEL(1,2)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (extrinsic_function
+                (identifier)
+                (number)
+                (number)))))))))
+
+================================================================================
+Extrinsic function call with routine reference
+================================================================================
+
+ S X=$$LABEL^ROUTINE(A)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (extrinsic_function
+                (identifier)
+                (identifier)
+                (variable
+                  (local_variable
+                    (identifier)))))))))))
+
+================================================================================
+Extrinsic function call with no arguments
+================================================================================
+
+ S X=$$NOW^TIME
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (extrinsic_function
+                (identifier)
+                (identifier)))))))))

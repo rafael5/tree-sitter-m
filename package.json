@@ -1,0 +1,50 @@
+{
+  "name": "tree-sitter-m",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for the M (MUMPS) programming language. Generated from m-standard's grammar-surface.json (union of AnnoStd, YottaDB, IRIS).",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "license": "AGPL-3.0",
+  "author": "Rafael Richards",
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "m",
+    "mumps",
+    "vista",
+    "yottadb",
+    "iris"
+  ],
+  "files": [
+    "grammar.js",
+    "tree-sitter.json",
+    "binding.gyp",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "scripts": {
+    "build-grammar": "node tools/build-grammar.js",
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "regen": "node tools/build-grammar.js && tree-sitter generate && tree-sitter test"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.m",
+      "file-types": [
+        "m",
+        "mac",
+        "int"
+      ],
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "m-standard": {
+    "schema_version": "1",
+    "source": "../m-standard/integrated/grammar-surface.json"
+  }
+}

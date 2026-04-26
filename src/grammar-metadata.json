@@ -1,0 +1,6687 @@
+{
+  "schema_version": "1",
+  "concept": "grammar-metadata",
+  "generator": "tools/build-grammar.js",
+  "source": "../m-standard/integrated/grammar-surface.json",
+  "generated_at": "2026-04-26T02:31:34Z",
+  "metadata": {
+    "commands:AB": [
+      {
+        "canonical": "ABLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ABL": [
+      {
+        "canonical": "ABLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ABLO": [
+      {
+        "canonical": "ABLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ABLOC": [
+      {
+        "canonical": "ABLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ABLOCK": [
+      {
+        "canonical": "ABLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ASSIGN": [
+      {
+        "canonical": "ASSIGN",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ASTA": [
+      {
+        "canonical": "ASTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ASTAR": [
+      {
+        "canonical": "ASTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ASTART": [
+      {
+        "canonical": "ASTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ASTO": [
+      {
+        "canonical": "ASTOP",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ASTOP": [
+      {
+        "canonical": "ASTOP",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:AUNB": [
+      {
+        "canonical": "AUNBLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:AUNBL": [
+      {
+        "canonical": "AUNBLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:AUNBLO": [
+      {
+        "canonical": "AUNBLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:AUNBLOC": [
+      {
+        "canonical": "AUNBLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:AUNBLOCK": [
+      {
+        "canonical": "AUNBLOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:B": [
+      {
+        "canonical": "BREAK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:BR": [
+      {
+        "canonical": "BREAK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:BRE": [
+      {
+        "canonical": "BREAK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:BREA": [
+      {
+        "canonical": "BREAK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:BREAK": [
+      {
+        "canonical": "BREAK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:CATCH": [
+      {
+        "canonical": "CATCH",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:C": [
+      {
+        "canonical": "CLOSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:CL": [
+      {
+        "canonical": "CLOSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:CLO": [
+      {
+        "canonical": "CLOSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:CLOS": [
+      {
+        "canonical": "CLOSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:CLOSE": [
+      {
+        "canonical": "CLOSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:CONTINUE": [
+      {
+        "canonical": "CONTINUE",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:D": [
+      {
+        "canonical": "DO",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:DO": [
+      {
+        "canonical": "DO",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:E": [
+      {
+        "canonical": "ELSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:EL": [
+      {
+        "canonical": "ELSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ELS": [
+      {
+        "canonical": "ELSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ELSE": [
+      {
+        "canonical": "ELSE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ELSEIF": [
+      {
+        "canonical": "ELSEIF",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ESTA": [
+      {
+        "canonical": "ESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ESTAR": [
+      {
+        "canonical": "ESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ESTART": [
+      {
+        "canonical": "ESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ESTOP": [
+      {
+        "canonical": "ESTOP",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ETRIGGER": [
+      {
+        "canonical": "ETRIGGER",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:F": [
+      {
+        "canonical": "FOR",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:FO": [
+      {
+        "canonical": "FOR",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:FOR": [
+      {
+        "canonical": "FOR",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:G": [
+      {
+        "canonical": "GOTO",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:GO": [
+      {
+        "canonical": "GOTO",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:GOT": [
+      {
+        "canonical": "GOTO",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:GOTO": [
+      {
+        "canonical": "GOTO",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:H": [
+      {
+        "canonical": "HALT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      },
+      {
+        "canonical": "HANG",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:HA": [
+      {
+        "canonical": "HALT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      },
+      {
+        "canonical": "HANG",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:HAL": [
+      {
+        "canonical": "HALT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:HALT": [
+      {
+        "canonical": "HALT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:HAN": [
+      {
+        "canonical": "HANG",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:HANG": [
+      {
+        "canonical": "HANG",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:I": [
+      {
+        "canonical": "IF",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:IF": [
+      {
+        "canonical": "IF",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:J": [
+      {
+        "canonical": "JOB",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:JO": [
+      {
+        "canonical": "JOB",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:JOB": [
+      {
+        "canonical": "JOB",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:K": [
+      {
+        "canonical": "KILL",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:KI": [
+      {
+        "canonical": "KILL",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:KIL": [
+      {
+        "canonical": "KILL",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:KILL": [
+      {
+        "canonical": "KILL",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:KSUBSCRIPTS": [
+      {
+        "canonical": "KSUBSCRIPTS",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:KVALUE": [
+      {
+        "canonical": "KVALUE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:L": [
+      {
+        "canonical": "LOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:LO": [
+      {
+        "canonical": "LOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:LOC": [
+      {
+        "canonical": "LOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:LOCK": [
+      {
+        "canonical": "LOCK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:M": [
+      {
+        "canonical": "MERGE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ME": [
+      {
+        "canonical": "MERGE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:MER": [
+      {
+        "canonical": "MERGE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:MERG": [
+      {
+        "canonical": "MERGE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:MERGE": [
+      {
+        "canonical": "MERGE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:N": [
+      {
+        "canonical": "NEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:NE": [
+      {
+        "canonical": "NEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:NEW": [
+      {
+        "canonical": "NEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:O": [
+      {
+        "canonical": "OPEN",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:OP": [
+      {
+        "canonical": "OPEN",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:OPE": [
+      {
+        "canonical": "OPEN",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:OPEN": [
+      {
+        "canonical": "OPEN",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:PRINT": [
+      {
+        "canonical": "PRINT",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:Q": [
+      {
+        "canonical": "QUIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:QU": [
+      {
+        "canonical": "QUIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:QUI": [
+      {
+        "canonical": "QUIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:QUIT": [
+      {
+        "canonical": "QUIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:R": [
+      {
+        "canonical": "READ",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:RE": [
+      {
+        "canonical": "READ",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:REA": [
+      {
+        "canonical": "READ",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:READ": [
+      {
+        "canonical": "READ",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:RETURN": [
+      {
+        "canonical": "RETURN",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:RLOAD": [
+      {
+        "canonical": "RLOAD",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:RSAVE": [
+      {
+        "canonical": "RSAVE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:S": [
+      {
+        "canonical": "SET",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:SE": [
+      {
+        "canonical": "SET",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:SET": [
+      {
+        "canonical": "SET",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TC": [
+      {
+        "canonical": "TCOMMIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TCO": [
+      {
+        "canonical": "TCOMMIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TCOM": [
+      {
+        "canonical": "TCOMMIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TCOMM": [
+      {
+        "canonical": "TCOMMIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TCOMMI": [
+      {
+        "canonical": "TCOMMIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TCOMMIT": [
+      {
+        "canonical": "TCOMMIT",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:THEN": [
+      {
+        "canonical": "THEN",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:THROW": [
+      {
+        "canonical": "THROW",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRE": [
+      {
+        "canonical": "TRESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRES": [
+      {
+        "canonical": "TRESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TREST": [
+      {
+        "canonical": "TRESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRESTA": [
+      {
+        "canonical": "TRESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRESTAR": [
+      {
+        "canonical": "TRESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRESTART": [
+      {
+        "canonical": "TRESTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRO": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TROL": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TROLL": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TROLLB": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TROLLBA": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TROLLBAC": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TROLLBACK": [
+      {
+        "canonical": "TROLLBACK",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TRY": [
+      {
+        "canonical": "TRY",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:TS": [
+      {
+        "canonical": "TSTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TST": [
+      {
+        "canonical": "TSTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TSTA": [
+      {
+        "canonical": "TSTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TSTAR": [
+      {
+        "canonical": "TSTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:TSTART": [
+      {
+        "canonical": "TSTART",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:U": [
+      {
+        "canonical": "USE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:US": [
+      {
+        "canonical": "USE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:USE": [
+      {
+        "canonical": "USE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:V": [
+      {
+        "canonical": "VIEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:VI": [
+      {
+        "canonical": "VIEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:VIE": [
+      {
+        "canonical": "VIEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:VIEW": [
+      {
+        "canonical": "VIEW",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:WHILE": [
+      {
+        "canonical": "WHILE",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:W": [
+      {
+        "canonical": "WRITE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:WR": [
+      {
+        "canonical": "WRITE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:WRI": [
+      {
+        "canonical": "WRITE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:WRIT": [
+      {
+        "canonical": "WRITE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:WRITE": [
+      {
+        "canonical": "WRITE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:X": [
+      {
+        "canonical": "XECUTE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:XE": [
+      {
+        "canonical": "XECUTE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:XEC": [
+      {
+        "canonical": "XECUTE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:XECU": [
+      {
+        "canonical": "XECUTE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:XECUT": [
+      {
+        "canonical": "XECUTE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:XECUTE": [
+      {
+        "canonical": "XECUTE",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:Z": [
+      {
+        "canonical": "Z",
+        "standard_status": "ansi",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZA": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZAL": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZALL": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZALLO": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZALLOC": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZALLOCA": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZALLOCAT": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZALLOCATE": [
+      {
+        "canonical": "ZALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZB": [
+      {
+        "canonical": "ZBREAK",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZBR": [
+      {
+        "canonical": "ZBREAK",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZBRE": [
+      {
+        "canonical": "ZBREAK",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZBREA": [
+      {
+        "canonical": "ZBREAK",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZBREAK": [
+      {
+        "canonical": "ZBREAK",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCOM": [
+      {
+        "canonical": "ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCOMP": [
+      {
+        "canonical": "ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCOMPI": [
+      {
+        "canonical": "ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCOMPIL": [
+      {
+        "canonical": "ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCOMPILE": [
+      {
+        "canonical": "ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZC": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCO": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCON": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCONT": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCONTI": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCONTIN": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCONTINU": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZCONTINUE": [
+      {
+        "canonical": "ZCONTINUE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZD": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDE": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEA": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEAL": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEALL": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEALLO": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEALLOC": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEALLOCA": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEALLOCAT": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZDEALLOCATE": [
+      {
+        "canonical": "ZDEALLOCATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZED": [
+      {
+        "canonical": "ZEDIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZEDI": [
+      {
+        "canonical": "ZEDIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZEDIT": [
+      {
+        "canonical": "ZEDIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZG": [
+      {
+        "canonical": "ZGOTO",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZGO": [
+      {
+        "canonical": "ZGOTO",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZGOT": [
+      {
+        "canonical": "ZGOTO",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZGOTO": [
+      {
+        "canonical": "ZGOTO",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZHALT": [
+      {
+        "canonical": "ZHALT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZH": [
+      {
+        "canonical": "ZHELP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZHE": [
+      {
+        "canonical": "ZHELP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZHEL": [
+      {
+        "canonical": "ZHELP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZHELP": [
+      {
+        "canonical": "ZHELP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZINSERT": [
+      {
+        "canonical": "ZINSERT",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZK": [
+      {
+        "canonical": "ZKILL",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZKI": [
+      {
+        "canonical": "ZKILL",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZKIL": [
+      {
+        "canonical": "ZKILL",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZKILL": [
+      {
+        "canonical": "ZKILL",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZL": [
+      {
+        "canonical": "ZLINK",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZLI": [
+      {
+        "canonical": "ZLINK",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZLIN": [
+      {
+        "canonical": "ZLINK",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZLINK": [
+      {
+        "canonical": "ZLINK",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZLOAD": [
+      {
+        "canonical": "ZLOAD",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZM": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZME": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZMES": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZMESS": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZMESSA": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZMESSAG": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZMESSAGE": [
+      {
+        "canonical": "ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZNSPACE": [
+      {
+        "canonical": "ZNSPACE",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZP": [
+      {
+        "canonical": "ZPRINT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZPR": [
+      {
+        "canonical": "ZPRINT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZPRI": [
+      {
+        "canonical": "ZPRINT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZPRIN": [
+      {
+        "canonical": "ZPRINT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZPRINT": [
+      {
+        "canonical": "ZPRINT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZREMOVE": [
+      {
+        "canonical": "ZREMOVE",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZRUP": [
+      {
+        "canonical": "ZRUPDATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZRUPD": [
+      {
+        "canonical": "ZRUPDATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZRUPDA": [
+      {
+        "canonical": "ZRUPDATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZRUPDAT": [
+      {
+        "canonical": "ZRUPDATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZRUPDATE": [
+      {
+        "canonical": "ZRUPDATE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSAVE": [
+      {
+        "canonical": "ZSAVE",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSH": [
+      {
+        "canonical": "ZSHOW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSHO": [
+      {
+        "canonical": "ZSHOW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSHOW": [
+      {
+        "canonical": "ZSHOW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZST": [
+      {
+        "canonical": "ZSTEP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSTE": [
+      {
+        "canonical": "ZSTEP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSTEP": [
+      {
+        "canonical": "ZSTEP",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSU": [
+      {
+        "canonical": "ZSU",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSY": [
+      {
+        "canonical": "ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSYS": [
+      {
+        "canonical": "ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSYST": [
+      {
+        "canonical": "ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSYSTE": [
+      {
+        "canonical": "ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZSYSTEM": [
+      {
+        "canonical": "ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTC": [
+      {
+        "canonical": "ZTCOMMIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTCO": [
+      {
+        "canonical": "ZTCOMMIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTCOM": [
+      {
+        "canonical": "ZTCOMMIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTCOMM": [
+      {
+        "canonical": "ZTCOMMIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTCOMMI": [
+      {
+        "canonical": "ZTCOMMIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTCOMMIT": [
+      {
+        "canonical": "ZTCOMMIT",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTRAP": [
+      {
+        "canonical": "ZTRAP",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTR": [
+      {
+        "canonical": "ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTRI": [
+      {
+        "canonical": "ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTRIG": [
+      {
+        "canonical": "ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTRIGG": [
+      {
+        "canonical": "ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTRIGGE": [
+      {
+        "canonical": "ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTRIGGER": [
+      {
+        "canonical": "ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTS": [
+      {
+        "canonical": "ZTSTART",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTST": [
+      {
+        "canonical": "ZTSTART",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTSTA": [
+      {
+        "canonical": "ZTSTART",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTSTAR": [
+      {
+        "canonical": "ZTSTART",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZTSTART": [
+      {
+        "canonical": "ZTSTART",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWI": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWIT": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWITH": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWITHD": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWITHDR": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWITHDRA": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWITHDRAW": [
+      {
+        "canonical": "ZWITHDRAW",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWR": [
+      {
+        "canonical": "ZWRITE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWRI": [
+      {
+        "canonical": "ZWRITE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWRIT": [
+      {
+        "canonical": "ZWRITE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZWRITE": [
+      {
+        "canonical": "ZWRITE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYDE": [
+      {
+        "canonical": "ZYDECODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYDEC": [
+      {
+        "canonical": "ZYDECODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYDECO": [
+      {
+        "canonical": "ZYDECODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYDECOD": [
+      {
+        "canonical": "ZYDECODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYDECODE": [
+      {
+        "canonical": "ZYDECODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYEN": [
+      {
+        "canonical": "ZYENCODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYENC": [
+      {
+        "canonical": "ZYENCODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYENCO": [
+      {
+        "canonical": "ZYENCODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYENCOD": [
+      {
+        "canonical": "ZYENCODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZYENCODE": [
+      {
+        "canonical": "ZYENCODE",
+        "standard_status": "ydb-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZZDUMP": [
+      {
+        "canonical": "ZZDUMP",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZZPRINT": [
+      {
+        "canonical": "ZZPRINT",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "commands:ZZWRITE": [
+      {
+        "canonical": "ZZWRITE",
+        "standard_status": "iris-extension",
+        "concept": "commands"
+      }
+    ],
+    "intrinsic_functions:$A": [
+      {
+        "canonical": "$ASCII",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$AS": [
+      {
+        "canonical": "$ASCII",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ASC": [
+      {
+        "canonical": "$ASCII",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ASCI": [
+      {
+        "canonical": "$ASCII",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ASCII": [
+      {
+        "canonical": "$ASCII",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$BIT": [
+      {
+        "canonical": "$BIT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$BITCOUNT": [
+      {
+        "canonical": "$BITCOUNT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$BITFIND": [
+      {
+        "canonical": "$BITFIND",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$BITLOGIC": [
+      {
+        "canonical": "$BITLOGIC",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CASE": [
+      {
+        "canonical": "$CASE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CHANGE": [
+      {
+        "canonical": "$CHANGE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$C": [
+      {
+        "canonical": "$CHAR",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CH": [
+      {
+        "canonical": "$CHAR",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CHA": [
+      {
+        "canonical": "$CHAR",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CHAR": [
+      {
+        "canonical": "$CHAR",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CLASSMETHOD": [
+      {
+        "canonical": "$CLASSMETHOD",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$CLASSNAME": [
+      {
+        "canonical": "$CLASSNAME",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$COMPILE": [
+      {
+        "canonical": "$COMPILE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$D": [
+      {
+        "canonical": "$DATA",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DA": [
+      {
+        "canonical": "$DATA",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DAT": [
+      {
+        "canonical": "$DATA",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DATA": [
+      {
+        "canonical": "$DATA",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DECIMAL": [
+      {
+        "canonical": "$DECIMAL",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DE": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DEX": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DEXT": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DEXTR": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DEXTRA": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DEXTRAC": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DEXTRACT": [
+      {
+        "canonical": "$DEXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DOUBLE": [
+      {
+        "canonical": "$DOUBLE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DP": [
+      {
+        "canonical": "$DPIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DPI": [
+      {
+        "canonical": "$DPIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DPIE": [
+      {
+        "canonical": "$DPIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DPIEC": [
+      {
+        "canonical": "$DPIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$DPIECE": [
+      {
+        "canonical": "$DPIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$E": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$EX": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$EXT": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$EXTR": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$EXTRA": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$EXTRAC": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$EXTRACT": [
+      {
+        "canonical": "$EXTRACT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FACTOR": [
+      {
+        "canonical": "$FACTOR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$F": [
+      {
+        "canonical": "$FIND",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FI": [
+      {
+        "canonical": "$FIND",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FIN": [
+      {
+        "canonical": "$FIND",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FIND": [
+      {
+        "canonical": "$FIND",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FN": [
+      {
+        "canonical": "$FNUMBER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FNU": [
+      {
+        "canonical": "$FNUMBER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FNUM": [
+      {
+        "canonical": "$FNUMBER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FNUMB": [
+      {
+        "canonical": "$FNUMBER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FNUMBE": [
+      {
+        "canonical": "$FNUMBER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$FNUMBER": [
+      {
+        "canonical": "$FNUMBER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$G": [
+      {
+        "canonical": "$GET",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$GE": [
+      {
+        "canonical": "$GET",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$GET": [
+      {
+        "canonical": "$GET",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$H": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$HO": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$HOR": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$HORO": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$HOROL": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$HOROLO": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$HOROLOG": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$INCREMENT": [
+      {
+        "canonical": "$INCREMENT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$INUMBER": [
+      {
+        "canonical": "$INUMBER",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ISOBJECT": [
+      {
+        "canonical": "$ISOBJECT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ISVALIDDOUBLE": [
+      {
+        "canonical": "$ISVALIDDOUBLE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ISVALIDNUM": [
+      {
+        "canonical": "$ISVALIDNUM",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ISVECTOR": [
+      {
+        "canonical": "$ISVECTOR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$J": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$JU": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$JUS": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$JUST": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$JUSTI": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$JUSTIF": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$JUSTIFY": [
+      {
+        "canonical": "$JUSTIFY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$L": [
+      {
+        "canonical": "$LENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LE": [
+      {
+        "canonical": "$LENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LEN": [
+      {
+        "canonical": "$LENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LENG": [
+      {
+        "canonical": "$LENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LENGT": [
+      {
+        "canonical": "$LENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LENGTH": [
+      {
+        "canonical": "$LENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LIST": [
+      {
+        "canonical": "$LIST",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTBUILD": [
+      {
+        "canonical": "$LISTBUILD",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTDATA": [
+      {
+        "canonical": "$LISTDATA",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTFIND": [
+      {
+        "canonical": "$LISTFIND",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTFROMSTRING": [
+      {
+        "canonical": "$LISTFROMSTRING",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTGET": [
+      {
+        "canonical": "$LISTGET",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTLENGTH": [
+      {
+        "canonical": "$LISTLENGTH",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTNEXT": [
+      {
+        "canonical": "$LISTNEXT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTSAME": [
+      {
+        "canonical": "$LISTSAME",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTTOSTRING": [
+      {
+        "canonical": "$LISTTOSTRING",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTUPDATE": [
+      {
+        "canonical": "$LISTUPDATE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LISTVALID": [
+      {
+        "canonical": "$LISTVALID",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$LOCATE": [
+      {
+        "canonical": "$LOCATE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$MATCH": [
+      {
+        "canonical": "$MATCH",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$METHOD": [
+      {
+        "canonical": "$METHOD",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$M": [
+      {
+        "canonical": "$MUMPS",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$MU": [
+      {
+        "canonical": "$MUMPS",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$MUM": [
+      {
+        "canonical": "$MUMPS",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$MUMP": [
+      {
+        "canonical": "$MUMPS",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$MUMPS": [
+      {
+        "canonical": "$MUMPS",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NA": [
+      {
+        "canonical": "$NAME",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NAM": [
+      {
+        "canonical": "$NAME",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NAME": [
+      {
+        "canonical": "$NAME",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NCONVERT": [
+      {
+        "canonical": "$NCONVERT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$N": [
+      {
+        "canonical": "$NEXT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NE": [
+      {
+        "canonical": "$NEXT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NEX": [
+      {
+        "canonical": "$NEXT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NEXT": [
+      {
+        "canonical": "$NEXT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NORMALIZE": [
+      {
+        "canonical": "$NORMALIZE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NOW": [
+      {
+        "canonical": "$NOW",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$NUMBER": [
+      {
+        "canonical": "$NUMBER",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$O": [
+      {
+        "canonical": "$ORDER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$OR": [
+      {
+        "canonical": "$ORDER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ORD": [
+      {
+        "canonical": "$ORDER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ORDE": [
+      {
+        "canonical": "$ORDER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ORDER": [
+      {
+        "canonical": "$ORDER",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PARAMETER": [
+      {
+        "canonical": "$PARAMETER",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$P": [
+      {
+        "canonical": "$PIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PI": [
+      {
+        "canonical": "$PIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PIE": [
+      {
+        "canonical": "$PIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PIEC": [
+      {
+        "canonical": "$PIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PIECE": [
+      {
+        "canonical": "$PIECE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PREFETCHOFF": [
+      {
+        "canonical": "$PREFETCHOFF",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PREFETCHON": [
+      {
+        "canonical": "$PREFETCHON",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$PROPERTY": [
+      {
+        "canonical": "$PROPERTY",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QL": [
+      {
+        "canonical": "$QLENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QLE": [
+      {
+        "canonical": "$QLENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QLEN": [
+      {
+        "canonical": "$QLENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QLENG": [
+      {
+        "canonical": "$QLENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QLENGT": [
+      {
+        "canonical": "$QLENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QLENGTH": [
+      {
+        "canonical": "$QLENGTH",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QS": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSU": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUB": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUBS": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUBSC": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUBSCR": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUBSCRI": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUBSCRIP": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QSUBSCRIPT": [
+      {
+        "canonical": "$QSUBSCRIPT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$Q": [
+      {
+        "canonical": "$QUERY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QU": [
+      {
+        "canonical": "$QUERY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QUE": [
+      {
+        "canonical": "$QUERY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QUER": [
+      {
+        "canonical": "$QUERY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$QUERY": [
+      {
+        "canonical": "$QUERY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$R": [
+      {
+        "canonical": "$RANDOM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$RA": [
+      {
+        "canonical": "$RANDOM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$RAN": [
+      {
+        "canonical": "$RANDOM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$RAND": [
+      {
+        "canonical": "$RANDOM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$RANDO": [
+      {
+        "canonical": "$RANDOM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$RANDOM": [
+      {
+        "canonical": "$RANDOM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$REPLACE": [
+      {
+        "canonical": "$REPLACE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$RE": [
+      {
+        "canonical": "$REVERSE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$REV": [
+      {
+        "canonical": "$REVERSE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$REVE": [
+      {
+        "canonical": "$REVERSE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$REVER": [
+      {
+        "canonical": "$REVERSE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$REVERS": [
+      {
+        "canonical": "$REVERSE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$REVERSE": [
+      {
+        "canonical": "$REVERSE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SCONVERT": [
+      {
+        "canonical": "$SCONVERT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$S": [
+      {
+        "canonical": "$SELECT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SE": [
+      {
+        "canonical": "$SELECT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SEL": [
+      {
+        "canonical": "$SELECT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SELE": [
+      {
+        "canonical": "$SELECT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SELEC": [
+      {
+        "canonical": "$SELECT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SELECT": [
+      {
+        "canonical": "$SELECT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SEQUENCE": [
+      {
+        "canonical": "$SEQUENCE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SORTBEGIN": [
+      {
+        "canonical": "$SORTBEGIN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$SORTEND": [
+      {
+        "canonical": "$SORTEND",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ST": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$STA": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$STAC": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$STACK": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$T": [
+      {
+        "canonical": "$TEXT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TE": [
+      {
+        "canonical": "$TEXT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TEX": [
+      {
+        "canonical": "$TEXT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TEXT": [
+      {
+        "canonical": "$TEXT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TR": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRA": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRAN": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRANS": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRANSL": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRANSLA": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRANSLAT": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TRANSLATE": [
+      {
+        "canonical": "$TRANSLATE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TY": [
+      {
+        "canonical": "$TYPE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TYP": [
+      {
+        "canonical": "$TYPE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$TYPE": [
+      {
+        "canonical": "$TYPE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$VECTOR": [
+      {
+        "canonical": "$VECTOR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$VECTORDEFINED": [
+      {
+        "canonical": "$VECTORDEFINED",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$VECTOROP": [
+      {
+        "canonical": "$VECTOROP",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$V": [
+      {
+        "canonical": "$VIEW",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$VI": [
+      {
+        "canonical": "$VIEW",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$VIE": [
+      {
+        "canonical": "$VIEW",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$VIEW": [
+      {
+        "canonical": "$VIEW",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WASCII": [
+      {
+        "canonical": "$WASCII",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WCHAR": [
+      {
+        "canonical": "$WCHAR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WEXTRACT": [
+      {
+        "canonical": "$WEXTRACT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WFIND": [
+      {
+        "canonical": "$WFIND",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WISWIDE": [
+      {
+        "canonical": "$WISWIDE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WLENGTH": [
+      {
+        "canonical": "$WLENGTH",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$WREVERSE": [
+      {
+        "canonical": "$WREVERSE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$XECUTE": [
+      {
+        "canonical": "$XECUTE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$Z": [
+      {
+        "canonical": "$Z",
+        "standard_status": "ansi",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZABS": [
+      {
+        "canonical": "$ZABS",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZAHA": [
+      {
+        "canonical": "$ZAHANDLE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZAHAN": [
+      {
+        "canonical": "$ZAHANDLE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZAHAND": [
+      {
+        "canonical": "$ZAHANDLE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZAHANDL": [
+      {
+        "canonical": "$ZAHANDLE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZAHANDLE": [
+      {
+        "canonical": "$ZAHANDLE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZARCCOS": [
+      {
+        "canonical": "$ZARCCOS",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZARCSIN": [
+      {
+        "canonical": "$ZARCSIN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZARCTAN": [
+      {
+        "canonical": "$ZARCTAN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZA": [
+      {
+        "canonical": "$ZASCII",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZAS": [
+      {
+        "canonical": "$ZASCII",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZASC": [
+      {
+        "canonical": "$ZASCII",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZASCI": [
+      {
+        "canonical": "$ZASCII",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZASCII": [
+      {
+        "canonical": "$ZASCII",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZATRANSFORM": [
+      {
+        "canonical": "$ZATRANSFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZBITAND": [
+      {
+        "canonical": "$ZBITAND",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZBOOLEAN": [
+      {
+        "canonical": "$ZBOOLEAN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCH": [
+      {
+        "canonical": "$ZCHAR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCHA": [
+      {
+        "canonical": "$ZCHAR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCHAR": [
+      {
+        "canonical": "$ZCHAR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCO": [
+      {
+        "canonical": "$ZCOLLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      },
+      {
+        "canonical": "$ZCONVERT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOL": [
+      {
+        "canonical": "$ZCOLLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOLL": [
+      {
+        "canonical": "$ZCOLLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOLLA": [
+      {
+        "canonical": "$ZCOLLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOLLAT": [
+      {
+        "canonical": "$ZCOLLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOLLATE": [
+      {
+        "canonical": "$ZCOLLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCON": [
+      {
+        "canonical": "$ZCONVERT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCONV": [
+      {
+        "canonical": "$ZCONVERT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCONVE": [
+      {
+        "canonical": "$ZCONVERT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCONVER": [
+      {
+        "canonical": "$ZCONVERT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCONVERT": [
+      {
+        "canonical": "$ZCONVERT",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOS": [
+      {
+        "canonical": "$ZCOS",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCOT": [
+      {
+        "canonical": "$ZCOT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCRC": [
+      {
+        "canonical": "$ZCRC",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCSC": [
+      {
+        "canonical": "$ZCSC",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZCYC": [
+      {
+        "canonical": "$ZCYC",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDASCII": [
+      {
+        "canonical": "$ZDASCII",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDAT": [
+      {
+        "canonical": "$ZDATA",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      },
+      {
+        "canonical": "$ZDATE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDATA": [
+      {
+        "canonical": "$ZDATA",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZD": [
+      {
+        "canonical": "$ZDATE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDA": [
+      {
+        "canonical": "$ZDATE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDATE": [
+      {
+        "canonical": "$ZDATE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDATEH": [
+      {
+        "canonical": "$ZDATEH",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDATETIME": [
+      {
+        "canonical": "$ZDATETIME",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDATETIMEH": [
+      {
+        "canonical": "$ZDATETIMEH",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZDCHAR": [
+      {
+        "canonical": "$ZDCHAR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEXP": [
+      {
+        "canonical": "$ZEXP",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZE": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEX": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEXT": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEXTR": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEXTRA": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEXTRAC": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZEXTRACT": [
+      {
+        "canonical": "$ZEXTRACT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZF": [
+      {
+        "canonical": "$ZF",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      },
+      {
+        "canonical": "$ZFIND",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZFI": [
+      {
+        "canonical": "$ZFIND",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZFIN": [
+      {
+        "canonical": "$ZFIND",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZFIND": [
+      {
+        "canonical": "$ZFIND",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZGETJPI": [
+      {
+        "canonical": "$ZGETJPI",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZHEX": [
+      {
+        "canonical": "$ZHEX",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZISWIDE": [
+      {
+        "canonical": "$ZISWIDE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJOBEXAM": [
+      {
+        "canonical": "$ZJOBEXAM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJ": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJU": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJUS": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJUST": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJUSTI": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJUSTIF": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZJUSTIFY": [
+      {
+        "canonical": "$ZJUSTIFY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLASCII": [
+      {
+        "canonical": "$ZLASCII",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLCHAR": [
+      {
+        "canonical": "$ZLCHAR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZL": [
+      {
+        "canonical": "$ZLENGTH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLE": [
+      {
+        "canonical": "$ZLENGTH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLEN": [
+      {
+        "canonical": "$ZLENGTH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLENG": [
+      {
+        "canonical": "$ZLENGTH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLENGT": [
+      {
+        "canonical": "$ZLENGTH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLENGTH": [
+      {
+        "canonical": "$ZLENGTH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLN": [
+      {
+        "canonical": "$ZLN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZLOG": [
+      {
+        "canonical": "$ZLOG",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZM": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZME": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZMES": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZMESS": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZMESSA": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZMESSAG": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZMESSAGE": [
+      {
+        "canonical": "$ZMESSAGE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPARSE": [
+      {
+        "canonical": "$ZPARSE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPEEK": [
+      {
+        "canonical": "$ZPEEK",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPI": [
+      {
+        "canonical": "$ZPIECE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPIE": [
+      {
+        "canonical": "$ZPIECE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPIEC": [
+      {
+        "canonical": "$ZPIECE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPIECE": [
+      {
+        "canonical": "$ZPIECE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPOWER": [
+      {
+        "canonical": "$ZPOWER",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZP": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPR": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPRE": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPREV": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPREVI": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPREVIO": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPREVIOU": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZPREVIOUS": [
+      {
+        "canonical": "$ZPREVIOUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZQASCII": [
+      {
+        "canonical": "$ZQASCII",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZQCHAR": [
+      {
+        "canonical": "$ZQCHAR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZQGBLMOD": [
+      {
+        "canonical": "$ZQGBLMOD",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSEARCH": [
+      {
+        "canonical": "$ZSEARCH",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSEC": [
+      {
+        "canonical": "$ZSEC",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSEEK": [
+      {
+        "canonical": "$ZSEEK",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSIGPROC": [
+      {
+        "canonical": "$ZSIGPROC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSIN": [
+      {
+        "canonical": "$ZSIN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSOCKET": [
+      {
+        "canonical": "$ZSOCKET",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSQR": [
+      {
+        "canonical": "$ZSQR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSTRIP": [
+      {
+        "canonical": "$ZSTRIP",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSUB": [
+      {
+        "canonical": "$ZSUBSTR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSUBS": [
+      {
+        "canonical": "$ZSUBSTR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSUBST": [
+      {
+        "canonical": "$ZSUBSTR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSUBSTR": [
+      {
+        "canonical": "$ZSUBSTR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZSYSLOG": [
+      {
+        "canonical": "$ZSYSLOG",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTAN": [
+      {
+        "canonical": "$ZTAN",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTIME": [
+      {
+        "canonical": "$ZTIME",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTIMEH": [
+      {
+        "canonical": "$ZTIMEH",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTR": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRA": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRAN": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRANS": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRANSL": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRANSLA": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRANSLAT": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRANSLATE": [
+      {
+        "canonical": "$ZTRANSLATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRIGGER": [
+      {
+        "canonical": "$ZTRIGGER",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZTRNLNM": [
+      {
+        "canonical": "$ZTRNLNM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZUADITLOG": [
+      {
+        "canonical": "$ZUADITLOG",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWASCII": [
+      {
+        "canonical": "$ZWASCII",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWCHAR": [
+      {
+        "canonical": "$ZWCHAR",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZW": [
+      {
+        "canonical": "$ZWIDTH",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWI": [
+      {
+        "canonical": "$ZWIDTH",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWID": [
+      {
+        "canonical": "$ZWIDTH",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWIDT": [
+      {
+        "canonical": "$ZWIDTH",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWIDTH": [
+      {
+        "canonical": "$ZWIDTH",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZWRITE": [
+      {
+        "canonical": "$ZWRITE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYCOMPILE": [
+      {
+        "canonical": "$ZYCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYHASH": [
+      {
+        "canonical": "$ZYHASH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYISSQLNULL": [
+      {
+        "canonical": "$ZYISSQLNULL",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYSU": [
+      {
+        "canonical": "$ZYSUFFIX",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYSUF": [
+      {
+        "canonical": "$ZYSUFFIX",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYSUFF": [
+      {
+        "canonical": "$ZYSUFFIX",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYSUFFI": [
+      {
+        "canonical": "$ZYSUFFIX",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZYSUFFIX": [
+      {
+        "canonical": "$ZYSUFFIX",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_functions:$ZZENKAKU": [
+      {
+        "canonical": "$ZZENKAKU",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_functions"
+      }
+    ],
+    "intrinsic_special_variables:$D": [
+      {
+        "canonical": "$DEVICE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$DE": [
+      {
+        "canonical": "$DEVICE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$DEV": [
+      {
+        "canonical": "$DEVICE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$DEVI": [
+      {
+        "canonical": "$DEVICE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$DEVIC": [
+      {
+        "canonical": "$DEVICE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$DEVICE": [
+      {
+        "canonical": "$DEVICE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$EC": [
+      {
+        "canonical": "$ECODE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ECO": [
+      {
+        "canonical": "$ECODE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ECOD": [
+      {
+        "canonical": "$ECODE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ECODE": [
+      {
+        "canonical": "$ECODE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ES": [
+      {
+        "canonical": "$ESTACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$EST": [
+      {
+        "canonical": "$ESTACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ESTA": [
+      {
+        "canonical": "$ESTACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ESTAC": [
+      {
+        "canonical": "$ESTACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ESTACK": [
+      {
+        "canonical": "$ESTACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ET": [
+      {
+        "canonical": "$ETRAP",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ETR": [
+      {
+        "canonical": "$ETRAP",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ETRA": [
+      {
+        "canonical": "$ETRAP",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ETRAP": [
+      {
+        "canonical": "$ETRAP",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HALT": [
+      {
+        "canonical": "$HALT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$H": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HO": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HOR": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HORO": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HOROL": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HOROLO": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$HOROLOG": [
+      {
+        "canonical": "$HOROLOG",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$I": [
+      {
+        "canonical": "$IO",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$IO": [
+      {
+        "canonical": "$IO",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$J": [
+      {
+        "canonical": "$JOB",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$JO": [
+      {
+        "canonical": "$JOB",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$JOB": [
+      {
+        "canonical": "$JOB",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$K": [
+      {
+        "canonical": "$KEY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$KE": [
+      {
+        "canonical": "$KEY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$KEY": [
+      {
+        "canonical": "$KEY",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$NAMESPACE": [
+      {
+        "canonical": "$NAMESPACE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$P": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PR": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRI": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRIN": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRINC": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRINCI": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRINCIP": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRINCIPA": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$PRINCIPAL": [
+      {
+        "canonical": "$PRINCIPAL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$Q": [
+      {
+        "canonical": "$QUIT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$QU": [
+      {
+        "canonical": "$QUIT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$QUI": [
+      {
+        "canonical": "$QUIT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$QUIT": [
+      {
+        "canonical": "$QUIT",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$R": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$RE": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REF": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REFE": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REFER": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REFERE": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REFEREN": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REFERENC": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$REFERENCE": [
+      {
+        "canonical": "$REFERENCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ROLES": [
+      {
+        "canonical": "$ROLES",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ST": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      },
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STA": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STAC": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STACK": [
+      {
+        "canonical": "$STACK",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$S": [
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STO": [
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STOR": [
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STORA": [
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STORAG": [
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$STORAGE": [
+      {
+        "canonical": "$STORAGE",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$SY": [
+      {
+        "canonical": "$SYSTEM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$SYS": [
+      {
+        "canonical": "$SYSTEM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$SYST": [
+      {
+        "canonical": "$SYSTEM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$SYSTE": [
+      {
+        "canonical": "$SYSTEM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$SYSTEM": [
+      {
+        "canonical": "$SYSTEM",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$T": [
+      {
+        "canonical": "$TEST",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TE": [
+      {
+        "canonical": "$TEST",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TES": [
+      {
+        "canonical": "$TEST",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TEST": [
+      {
+        "canonical": "$TEST",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$THIS": [
+      {
+        "canonical": "$THIS",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$THROWOBJ": [
+      {
+        "canonical": "$THROWOBJ",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TL": [
+      {
+        "canonical": "$TLEVEL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TLE": [
+      {
+        "canonical": "$TLEVEL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TLEV": [
+      {
+        "canonical": "$TLEVEL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TLEVE": [
+      {
+        "canonical": "$TLEVEL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TLEVEL": [
+      {
+        "canonical": "$TLEVEL",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TR": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TRE": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TRES": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TREST": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TRESTA": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TRESTAR": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$TRESTART": [
+      {
+        "canonical": "$TRESTART",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$USERNAME": [
+      {
+        "canonical": "$USERNAME",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$X": [
+      {
+        "canonical": "$X",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$Y": [
+      {
+        "canonical": "$Y",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZA": [
+      {
+        "canonical": "$ZA",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZALLOCSTOR": [
+      {
+        "canonical": "$ZALLOCSTOR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZAUDIT": [
+      {
+        "canonical": "$ZAUDIT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZB": [
+      {
+        "canonical": "$ZB",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCHILD": [
+      {
+        "canonical": "$ZCHILD",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCHSET": [
+      {
+        "canonical": "$ZCHSET",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCM": [
+      {
+        "canonical": "$ZCMDLINE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCMD": [
+      {
+        "canonical": "$ZCMDLINE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCMDL": [
+      {
+        "canonical": "$ZCMDLINE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCMDLI": [
+      {
+        "canonical": "$ZCMDLINE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCMDLIN": [
+      {
+        "canonical": "$ZCMDLINE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCMDLINE": [
+      {
+        "canonical": "$ZCMDLINE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCO": [
+      {
+        "canonical": "$ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCOM": [
+      {
+        "canonical": "$ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCOMP": [
+      {
+        "canonical": "$ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCOMPI": [
+      {
+        "canonical": "$ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCOMPIL": [
+      {
+        "canonical": "$ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCOMPILE": [
+      {
+        "canonical": "$ZCOMPILE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZC": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCS": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCST": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCSTA": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCSTAT": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCSTATU": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZCSTATUS": [
+      {
+        "canonical": "$ZCSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDA": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDAT": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDATE": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDATEF": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDATEFO": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDATEFOR": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDATEFORM": [
+      {
+        "canonical": "$ZDATEFORM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZD": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDI": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIR": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIRE": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIREC": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIRECT": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIRECTO": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIRECTOR": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZDIRECTORY": [
+      {
+        "canonical": "$ZDIRECTORY",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZEO": [
+      {
+        "canonical": "$ZEOF",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZEOF": [
+      {
+        "canonical": "$ZEOF",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZEOS": [
+      {
+        "canonical": "$ZEOS",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZE": [
+      {
+        "canonical": "$ZERROR",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZER": [
+      {
+        "canonical": "$ZERROR",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZERR": [
+      {
+        "canonical": "$ZERROR",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZERRO": [
+      {
+        "canonical": "$ZERROR",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZERROR": [
+      {
+        "canonical": "$ZERROR",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZG": [
+      {
+        "canonical": "$ZGBLDIR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZGB": [
+      {
+        "canonical": "$ZGBLDIR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZGBL": [
+      {
+        "canonical": "$ZGBLDIR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZGBLD": [
+      {
+        "canonical": "$ZGBLDIR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZGBLDI": [
+      {
+        "canonical": "$ZGBLDIR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZGBLDIR": [
+      {
+        "canonical": "$ZGBLDIR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZH": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZHO": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZHOR": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZHORO": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZHOROL": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZHOROLO": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZHOROLOG": [
+      {
+        "canonical": "$ZHOROLOG",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZICUVER": [
+      {
+        "canonical": "$ZICUVER",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINI": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININ": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININT": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININTE": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININTER": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININTERR": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININTERRU": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININTERRUP": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZININTERRUPT": [
+      {
+        "canonical": "$ZININTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINT": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINTE": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINTER": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINTERR": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINTERRU": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINTERRUP": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZINTERRUPT": [
+      {
+        "canonical": "$ZINTERRUPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZIO": [
+      {
+        "canonical": "$ZIO",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZJ": [
+      {
+        "canonical": "$ZJOB",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZJO": [
+      {
+        "canonical": "$ZJOB",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZJOB": [
+      {
+        "canonical": "$ZJOB",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZL": [
+      {
+        "canonical": "$ZLEVEL",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZLE": [
+      {
+        "canonical": "$ZLEVEL",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZLEV": [
+      {
+        "canonical": "$ZLEVEL",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZLEVE": [
+      {
+        "canonical": "$ZLEVEL",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZLEVEL": [
+      {
+        "canonical": "$ZLEVEL",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMALL": [
+      {
+        "canonical": "$ZMALLOCLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMALLO": [
+      {
+        "canonical": "$ZMALLOCLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMALLOC": [
+      {
+        "canonical": "$ZMALLOCLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMALLOCL": [
+      {
+        "canonical": "$ZMALLOCLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMALLOCLI": [
+      {
+        "canonical": "$ZMALLOCLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMALLOCLIM": [
+      {
+        "canonical": "$ZMALLOCLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMAXTPTI": [
+      {
+        "canonical": "$ZMAXTPTIME",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMAXTPTIM": [
+      {
+        "canonical": "$ZMAXTPTIME",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMAXTPTIME": [
+      {
+        "canonical": "$ZMAXTPTIME",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMLKHASH": [
+      {
+        "canonical": "$ZMLKHASH",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMO": [
+      {
+        "canonical": "$ZMODE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMOD": [
+      {
+        "canonical": "$ZMODE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZMODE": [
+      {
+        "canonical": "$ZMODE",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZNSPACE": [
+      {
+        "canonical": "$ZNSPACE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZONLNRLBK": [
+      {
+        "canonical": "$ZONLNRLBK",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZORDER": [
+      {
+        "canonical": "$ZORDER",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPARENT": [
+      {
+        "canonical": "$ZPARENT",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATN": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATNU": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATNUM": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATNUME": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATNUMER": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATNUMERI": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPATNUMERIC": [
+      {
+        "canonical": "$ZPATNUMERIC",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPI": [
+      {
+        "canonical": "$ZPI",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPOS": [
+      {
+        "canonical": "$ZPOSITION",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPOSI": [
+      {
+        "canonical": "$ZPOSITION",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPOSIT": [
+      {
+        "canonical": "$ZPOSITION",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPOSITI": [
+      {
+        "canonical": "$ZPOSITION",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPOSITIO": [
+      {
+        "canonical": "$ZPOSITION",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPOSITION": [
+      {
+        "canonical": "$ZPOSITION",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPROM": [
+      {
+        "canonical": "$ZPROMPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPROMP": [
+      {
+        "canonical": "$ZPROMPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZPROMPT": [
+      {
+        "canonical": "$ZPROMPT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZQUIT": [
+      {
+        "canonical": "$ZQUIT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZREALSTOR": [
+      {
+        "canonical": "$ZREALSTOR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZREFERENCE": [
+      {
+        "canonical": "$ZREFERENCE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZRELDATE": [
+      {
+        "canonical": "$ZRELDATE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZRO": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZROU": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZROUT": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZROUTI": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZROUTIN": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZROUTINE": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZROUTINES": [
+      {
+        "canonical": "$ZROUTINES",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSO": [
+      {
+        "canonical": "$ZSOURCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSOU": [
+      {
+        "canonical": "$ZSOURCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSOUR": [
+      {
+        "canonical": "$ZSOURCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSOURC": [
+      {
+        "canonical": "$ZSOURCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSOURCE": [
+      {
+        "canonical": "$ZSOURCE",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZS": [
+      {
+        "canonical": "$ZSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZST": [
+      {
+        "canonical": "$ZSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      },
+      {
+        "canonical": "$ZSTEP",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTA": [
+      {
+        "canonical": "$ZSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTAT": [
+      {
+        "canonical": "$ZSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTATU": [
+      {
+        "canonical": "$ZSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTATUS": [
+      {
+        "canonical": "$ZSTATUS",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTE": [
+      {
+        "canonical": "$ZSTEP",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTEP": [
+      {
+        "canonical": "$ZSTEP",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTORAGE": [
+      {
+        "canonical": "$ZSTORAGE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTRP": [
+      {
+        "canonical": "$ZSTRPLLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTRPL": [
+      {
+        "canonical": "$ZSTRPLLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTRPLL": [
+      {
+        "canonical": "$ZSTRPLLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTRPLLI": [
+      {
+        "canonical": "$ZSTRPLLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSTRPLLIM": [
+      {
+        "canonical": "$ZSTRPLLIM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSY": [
+      {
+        "canonical": "$ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSYS": [
+      {
+        "canonical": "$ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSYST": [
+      {
+        "canonical": "$ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSYSTE": [
+      {
+        "canonical": "$ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZSYSTEM": [
+      {
+        "canonical": "$ZSYSTEM",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTE": [
+      {
+        "canonical": "$ZTEXIT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTEX": [
+      {
+        "canonical": "$ZTEXIT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTEXI": [
+      {
+        "canonical": "$ZTEXIT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTEXIT": [
+      {
+        "canonical": "$ZTEXIT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTIMEOUT": [
+      {
+        "canonical": "$ZTIMEOUT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTIMESTAMP": [
+      {
+        "canonical": "$ZTIMESTAMP",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTIMEZONE": [
+      {
+        "canonical": "$ZTIMEZONE",
+        "standard_status": "iris-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZT": [
+      {
+        "canonical": "$ZTRAP",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTR": [
+      {
+        "canonical": "$ZTRAP",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTRA": [
+      {
+        "canonical": "$ZTRAP",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZTRAP": [
+      {
+        "canonical": "$ZTRAP",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$Z": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZU": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUN": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNS": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSP": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPE": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPEC": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPECI": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPECIF": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPECIFI": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPECIFIE": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUNSPECIFIED": [
+      {
+        "canonical": "$ZUNSPECIFIED",
+        "standard_status": "ansi",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUSEDSTOR": [
+      {
+        "canonical": "$ZUSEDSTOR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZUT": [
+      {
+        "canonical": "$ZUT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZV": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZVE": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZVER": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZVERS": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZVERSI": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZVERSIO": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZVERSION": [
+      {
+        "canonical": "$ZVERSION",
+        "standard_status": "multi-vendor-ext",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYER": [
+      {
+        "canonical": "$ZYERROR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYERR": [
+      {
+        "canonical": "$ZYERROR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYERRO": [
+      {
+        "canonical": "$ZYERROR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYERROR": [
+      {
+        "canonical": "$ZYERROR",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYINTRSIG": [
+      {
+        "canonical": "$ZYINTRSIG",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJO": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOB": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOBP": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOBPA": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOBPAR": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOBPARE": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOBPAREN": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "intrinsic_special_variables:$ZYJOBPARENT": [
+      {
+        "canonical": "$ZYJOBPARENT",
+        "standard_status": "ydb-extension",
+        "concept": "intrinsic_special_variables"
+      }
+    ],
+    "operators:#": [
+      {
+        "canonical": "#",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:*": [
+      {
+        "canonical": "*",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:**": [
+      {
+        "canonical": "**",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:+": [
+      {
+        "canonical": "+",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:-": [
+      {
+        "canonical": "-",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:/": [
+      {
+        "canonical": "/",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:\\": [
+      {
+        "canonical": "\\",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:!": [
+      {
+        "canonical": "!",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:&": [
+      {
+        "canonical": "&",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:'": [
+      {
+        "canonical": "'",
+        "standard_status": "ydb-extension",
+        "concept": "operators"
+      }
+    ],
+    "operators:<": [
+      {
+        "canonical": "<",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:>": [
+      {
+        "canonical": ">",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:_": [
+      {
+        "canonical": "_",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:=": [
+      {
+        "canonical": "=",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:[": [
+      {
+        "canonical": "[",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:]": [
+      {
+        "canonical": "]",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "operators:]]": [
+      {
+        "canonical": "]]",
+        "standard_status": "ansi",
+        "concept": "operators"
+      }
+    ],
+    "pattern_codes:A": [
+      {
+        "canonical": "A",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ],
+    "pattern_codes:C": [
+      {
+        "canonical": "C",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ],
+    "pattern_codes:E": [
+      {
+        "canonical": "E",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ],
+    "pattern_codes:L": [
+      {
+        "canonical": "L",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ],
+    "pattern_codes:N": [
+      {
+        "canonical": "N",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ],
+    "pattern_codes:P": [
+      {
+        "canonical": "P",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ],
+    "pattern_codes:U": [
+      {
+        "canonical": "U",
+        "standard_status": "ansi",
+        "concept": "pattern_codes"
+      }
+    ]
+  }
+}

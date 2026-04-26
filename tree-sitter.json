@@ -1,0 +1,32 @@
+{
+  "grammars": [
+    {
+      "name": "m",
+      "camelcase": "M",
+      "scope": "source.m",
+      "path": ".",
+      "file-types": ["m", "mac", "int"],
+      "injection-regex": "^m$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "AGPL-3.0",
+    "description": "Tree-sitter grammar for the M (MUMPS) programming language. Generated from m-standard's grammar-surface.json (union of AnnoStd, YottaDB, IRIS).",
+    "authors": [
+      { "name": "Rafael Richards" }
+    ],
+    "links": {
+      "repository": "https://github.com/rafael5/m-parser"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": false,
+    "swift": false,
+    "zig": false
+  }
+}

@@ -1,0 +1,66 @@
+================================================================================
+QUIT with simple postconditional
+================================================================================
+
+ Q:X=1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (postconditional
+          (binary_expression
+            (variable
+              (local_variable
+                (identifier)))
+            (operator)
+            (number)))))))
+
+================================================================================
+Postconditional with following arguments
+================================================================================
+
+ W:X>0 "positive"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (postconditional
+          (binary_expression
+            (variable
+              (local_variable
+                (identifier)))
+            (operator)
+            (number)))
+        (argument_list
+          (argument
+            (string)))))))
+
+================================================================================
+Postconditional with parenthesized expression
+================================================================================
+
+ Q:(X=1)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (postconditional
+          (parenthesized
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (number))))))))

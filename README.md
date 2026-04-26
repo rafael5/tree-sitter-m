@@ -3,8 +3,11 @@
 A [tree-sitter](https://tree-sitter.github.io/) grammar for the
 M (MUMPS) programming language.
 
-> **Status:** specification phase. No code yet.
-> The full design is in [`docs/spec.md`](docs/spec.md).
+> **Status:** v0.1 implementation in progress.
+> Milestones B0–B2 done (scaffolding, data-driven keyword tables,
+> hand-coded line/expression grammar, 33 passing corpus tests).
+> See [`docs/build-log.md`](docs/build-log.md) for the latest
+> snapshot and [`docs/spec.md`](docs/spec.md) for the full design.
 
 ## Why this exists
 

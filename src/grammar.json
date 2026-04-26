@@ -1,0 +1,4479 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "m",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_blank"
+          }
+        ]
+      }
+    },
+    "_blank": {
+      "type": "SYMBOL",
+      "name": "_eol"
+    },
+    "line": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "label"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "formals"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "_sp"
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "_line_body"
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_sp"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_line_body"
+                }
+              ]
+            },
+            {
+              "type": "SYMBOL",
+              "name": "comment"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_eol"
+        }
+      ]
+    },
+    "_line_body": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "command_sequence"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_sp"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "comment"
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment"
+        }
+      ]
+    },
+    "label": {
+      "type": "PATTERN",
+      "value": "[%A-Za-z][%A-Za-z0-9]*"
+    },
+    "formals": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "identifier"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[%A-Za-z][%A-Za-z0-9]*"
+    },
+    "_sp": {
+      "type": "PATTERN",
+      "value": " +"
+    },
+    "_eol": {
+      "type": "PATTERN",
+      "value": "\\r?\\n"
+    },
+    "comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ";"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^\\r\\n]*"
+        }
+      ]
+    },
+    "command_sequence": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "command"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_sp"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "command"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "command": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "command_keyword"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "postconditional"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "_sp"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "argument_list"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "command_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "KSUBSCRIPTS"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEALLOCATE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEALLOCAT"
+        },
+        {
+          "type": "STRING",
+          "value": "TROLLBACK"
+        },
+        {
+          "type": "STRING",
+          "value": "ZALLOCATE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCONTINUE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEALLOCA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWITHDRAW"
+        },
+        {
+          "type": "STRING",
+          "value": "AUNBLOCK"
+        },
+        {
+          "type": "STRING",
+          "value": "CONTINUE"
+        },
+        {
+          "type": "STRING",
+          "value": "ETRIGGER"
+        },
+        {
+          "type": "STRING",
+          "value": "TRESTART"
+        },
+        {
+          "type": "STRING",
+          "value": "TROLLBAC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZALLOCAT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCOMPILE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCONTINU"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEALLOC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZMESSAGE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZRUPDATE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTCOMMIT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTRIGGER"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWITHDRA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYDECODE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYENCODE"
+        },
+        {
+          "type": "STRING",
+          "value": "AUNBLOC"
+        },
+        {
+          "type": "STRING",
+          "value": "TCOMMIT"
+        },
+        {
+          "type": "STRING",
+          "value": "TRESTAR"
+        },
+        {
+          "type": "STRING",
+          "value": "TROLLBA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZALLOCA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCOMPIL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCONTIN"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEALLO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZINSERT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZMESSAG"
+        },
+        {
+          "type": "STRING",
+          "value": "ZNSPACE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZREMOVE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZRUPDAT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSYSTEM"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTCOMMI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTRIGGE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTSTART"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWITHDR"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYDECOD"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYENCOD"
+        },
+        {
+          "type": "STRING",
+          "value": "ZZPRINT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZZWRITE"
+        },
+        {
+          "type": "STRING",
+          "value": "ABLOCK"
+        },
+        {
+          "type": "STRING",
+          "value": "ASSIGN"
+        },
+        {
+          "type": "STRING",
+          "value": "ASTART"
+        },
+        {
+          "type": "STRING",
+          "value": "AUNBLO"
+        },
+        {
+          "type": "STRING",
+          "value": "ELSEIF"
+        },
+        {
+          "type": "STRING",
+          "value": "ESTART"
+        },
+        {
+          "type": "STRING",
+          "value": "KVALUE"
+        },
+        {
+          "type": "STRING",
+          "value": "RETURN"
+        },
+        {
+          "type": "STRING",
+          "value": "TCOMMI"
+        },
+        {
+          "type": "STRING",
+          "value": "TRESTA"
+        },
+        {
+          "type": "STRING",
+          "value": "TROLLB"
+        },
+        {
+          "type": "STRING",
+          "value": "TSTART"
+        },
+        {
+          "type": "STRING",
+          "value": "XECUTE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZALLOC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZBREAK"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCOMPI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCONTI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEALL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZMESSA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZPRINT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZRUPDA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSYSTE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTCOMM"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTRIGG"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTSTAR"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWITHD"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWRITE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYDECO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYENCO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZZDUMP"
+        },
+        {
+          "type": "STRING",
+          "value": "ABLOC"
+        },
+        {
+          "type": "STRING",
+          "value": "ASTAR"
+        },
+        {
+          "type": "STRING",
+          "value": "ASTOP"
+        },
+        {
+          "type": "STRING",
+          "value": "AUNBL"
+        },
+        {
+          "type": "STRING",
+          "value": "BREAK"
+        },
+        {
+          "type": "STRING",
+          "value": "CATCH"
+        },
+        {
+          "type": "STRING",
+          "value": "CLOSE"
+        },
+        {
+          "type": "STRING",
+          "value": "ESTAR"
+        },
+        {
+          "type": "STRING",
+          "value": "ESTOP"
+        },
+        {
+          "type": "STRING",
+          "value": "MERGE"
+        },
+        {
+          "type": "STRING",
+          "value": "PRINT"
+        },
+        {
+          "type": "STRING",
+          "value": "RLOAD"
+        },
+        {
+          "type": "STRING",
+          "value": "RSAVE"
+        },
+        {
+          "type": "STRING",
+          "value": "TCOMM"
+        },
+        {
+          "type": "STRING",
+          "value": "THROW"
+        },
+        {
+          "type": "STRING",
+          "value": "TREST"
+        },
+        {
+          "type": "STRING",
+          "value": "TROLL"
+        },
+        {
+          "type": "STRING",
+          "value": "TSTAR"
+        },
+        {
+          "type": "STRING",
+          "value": "WHILE"
+        },
+        {
+          "type": "STRING",
+          "value": "WRITE"
+        },
+        {
+          "type": "STRING",
+          "value": "XECUT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZALLO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZBREA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCOMP"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCONT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEAL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZEDIT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZGOTO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZHALT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZHELP"
+        },
+        {
+          "type": "STRING",
+          "value": "ZKILL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZLINK"
+        },
+        {
+          "type": "STRING",
+          "value": "ZLOAD"
+        },
+        {
+          "type": "STRING",
+          "value": "ZMESS"
+        },
+        {
+          "type": "STRING",
+          "value": "ZPRIN"
+        },
+        {
+          "type": "STRING",
+          "value": "ZRUPD"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSAVE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSHOW"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSTEP"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSYST"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTCOM"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTRAP"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTRIG"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTSTA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWITH"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWRIT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYDEC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYENC"
+        },
+        {
+          "type": "STRING",
+          "value": "ABLO"
+        },
+        {
+          "type": "STRING",
+          "value": "ASTA"
+        },
+        {
+          "type": "STRING",
+          "value": "ASTO"
+        },
+        {
+          "type": "STRING",
+          "value": "AUNB"
+        },
+        {
+          "type": "STRING",
+          "value": "BREA"
+        },
+        {
+          "type": "STRING",
+          "value": "CLOS"
+        },
+        {
+          "type": "STRING",
+          "value": "ELSE"
+        },
+        {
+          "type": "STRING",
+          "value": "ESTA"
+        },
+        {
+          "type": "STRING",
+          "value": "GOTO"
+        },
+        {
+          "type": "STRING",
+          "value": "HALT"
+        },
+        {
+          "type": "STRING",
+          "value": "HANG"
+        },
+        {
+          "type": "STRING",
+          "value": "KILL"
+        },
+        {
+          "type": "STRING",
+          "value": "LOCK"
+        },
+        {
+          "type": "STRING",
+          "value": "MERG"
+        },
+        {
+          "type": "STRING",
+          "value": "OPEN"
+        },
+        {
+          "type": "STRING",
+          "value": "QUIT"
+        },
+        {
+          "type": "STRING",
+          "value": "READ"
+        },
+        {
+          "type": "STRING",
+          "value": "TCOM"
+        },
+        {
+          "type": "STRING",
+          "value": "THEN"
+        },
+        {
+          "type": "STRING",
+          "value": "TRES"
+        },
+        {
+          "type": "STRING",
+          "value": "TROL"
+        },
+        {
+          "type": "STRING",
+          "value": "TSTA"
+        },
+        {
+          "type": "STRING",
+          "value": "VIEW"
+        },
+        {
+          "type": "STRING",
+          "value": "WRIT"
+        },
+        {
+          "type": "STRING",
+          "value": "XECU"
+        },
+        {
+          "type": "STRING",
+          "value": "ZALL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZBRE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCOM"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCON"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDEA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZEDI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZGOT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZHEL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZKIL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZLIN"
+        },
+        {
+          "type": "STRING",
+          "value": "ZMES"
+        },
+        {
+          "type": "STRING",
+          "value": "ZPRI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZRUP"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSHO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSTE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSYS"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTCO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTRI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTST"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWIT"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWRI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYDE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZYEN"
+        },
+        {
+          "type": "STRING",
+          "value": "ABL"
+        },
+        {
+          "type": "STRING",
+          "value": "BRE"
+        },
+        {
+          "type": "STRING",
+          "value": "CLO"
+        },
+        {
+          "type": "STRING",
+          "value": "ELS"
+        },
+        {
+          "type": "STRING",
+          "value": "FOR"
+        },
+        {
+          "type": "STRING",
+          "value": "GOT"
+        },
+        {
+          "type": "STRING",
+          "value": "HAL"
+        },
+        {
+          "type": "STRING",
+          "value": "HAN"
+        },
+        {
+          "type": "STRING",
+          "value": "JOB"
+        },
+        {
+          "type": "STRING",
+          "value": "KIL"
+        },
+        {
+          "type": "STRING",
+          "value": "LOC"
+        },
+        {
+          "type": "STRING",
+          "value": "MER"
+        },
+        {
+          "type": "STRING",
+          "value": "NEW"
+        },
+        {
+          "type": "STRING",
+          "value": "OPE"
+        },
+        {
+          "type": "STRING",
+          "value": "QUI"
+        },
+        {
+          "type": "STRING",
+          "value": "REA"
+        },
+        {
+          "type": "STRING",
+          "value": "SET"
+        },
+        {
+          "type": "STRING",
+          "value": "TCO"
+        },
+        {
+          "type": "STRING",
+          "value": "TRE"
+        },
+        {
+          "type": "STRING",
+          "value": "TRO"
+        },
+        {
+          "type": "STRING",
+          "value": "TRY"
+        },
+        {
+          "type": "STRING",
+          "value": "TST"
+        },
+        {
+          "type": "STRING",
+          "value": "USE"
+        },
+        {
+          "type": "STRING",
+          "value": "VIE"
+        },
+        {
+          "type": "STRING",
+          "value": "WRI"
+        },
+        {
+          "type": "STRING",
+          "value": "XEC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZAL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZBR"
+        },
+        {
+          "type": "STRING",
+          "value": "ZCO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZDE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZED"
+        },
+        {
+          "type": "STRING",
+          "value": "ZGO"
+        },
+        {
+          "type": "STRING",
+          "value": "ZHE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZKI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZLI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZME"
+        },
+        {
+          "type": "STRING",
+          "value": "ZPR"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSH"
+        },
+        {
+          "type": "STRING",
+          "value": "ZST"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSU"
+        },
+        {
+          "type": "STRING",
+          "value": "ZSY"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTR"
+        },
+        {
+          "type": "STRING",
+          "value": "ZTS"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWI"
+        },
+        {
+          "type": "STRING",
+          "value": "ZWR"
+        },
+        {
+          "type": "STRING",
+          "value": "AB"
+        },
+        {
+          "type": "STRING",
+          "value": "BR"
+        },
+        {
+          "type": "STRING",
+          "value": "CL"
+        },
+        {
+          "type": "STRING",
+          "value": "DO"
+        },
+        {
+          "type": "STRING",
+          "value": "EL"
+        },
+        {
+          "type": "STRING",
+          "value": "FO"
+        },
+        {
+          "type": "STRING",
+          "value": "GO"
+        },
+        {
+          "type": "STRING",
+          "value": "HA"
+        },
+        {
+          "type": "STRING",
+          "value": "IF"
+        },
+        {
+          "type": "STRING",
+          "value": "JO"
+        },
+        {
+          "type": "STRING",
+          "value": "KI"
+        },
+        {
+          "type": "STRING",
+          "value": "LO"
+        },
+        {
+          "type": "STRING",
+          "value": "ME"
+        },
+        {
+          "type": "STRING",
+          "value": "NE"
+        },
+        {
+          "type": "STRING",
+          "value": "OP"
+        },
+        {
+          "type": "STRING",
+          "value": "QU"
+        },
+        {
+          "type": "STRING",
+          "value": "RE"
+        },
+        {
+          "type": "STRING",
+          "value": "SE"
+        },
+        {
+          "type": "STRING",
+          "value": "TC"
+        },
+        {
+          "type": "STRING",
+          "value": "TS"
+        },
+        {
+          "type": "STRING",
+          "value": "US"
+        },
+        {
+          "type": "STRING",
+          "value": "VI"
+        },
+        {
+          "type": "STRING",
+          "value": "WR"
+        },
+        {
+          "type": "STRING",
+          "value": "XE"
+        },
+        {
+          "type": "STRING",
+          "value": "ZA"
+        },
+        {
+          "type": "STRING",
+          "value": "ZB"
+        },
+        {
+          "type": "STRING",
+          "value": "ZC"
+        },
+        {
+          "type": "STRING",
+          "value": "ZD"
+        },
+        {
+          "type": "STRING",
+          "value": "ZG"
+        },
+        {
+          "type": "STRING",
+          "value": "ZH"
+        },
+        {
+          "type": "STRING",
+          "value": "ZK"
+        },
+        {
+          "type": "STRING",
+          "value": "ZL"
+        },
+        {
+          "type": "STRING",
+          "value": "ZM"
+        },
+        {
+          "type": "STRING",
+          "value": "ZP"
+        },
+        {
+          "type": "STRING",
+          "value": "B"
+        },
+        {
+          "type": "STRING",
+          "value": "C"
+        },
+        {
+          "type": "STRING",
+          "value": "D"
+        },
+        {
+          "type": "STRING",
+          "value": "E"
+        },
+        {
+          "type": "STRING",
+          "value": "F"
+        },
+        {
+          "type": "STRING",
+          "value": "G"
+        },
+        {
+          "type": "STRING",
+          "value": "H"
+        },
+        {
+          "type": "STRING",
+          "value": "I"
+        },
+        {
+          "type": "STRING",
+          "value": "J"
+        },
+        {
+          "type": "STRING",
+          "value": "K"
+        },
+        {
+          "type": "STRING",
+          "value": "L"
+        },
+        {
+          "type": "STRING",
+          "value": "M"
+        },
+        {
+          "type": "STRING",
+          "value": "N"
+        },
+        {
+          "type": "STRING",
+          "value": "O"
+        },
+        {
+          "type": "STRING",
+          "value": "Q"
+        },
+        {
+          "type": "STRING",
+          "value": "R"
+        },
+        {
+          "type": "STRING",
+          "value": "S"
+        },
+        {
+          "type": "STRING",
+          "value": "U"
+        },
+        {
+          "type": "STRING",
+          "value": "V"
+        },
+        {
+          "type": "STRING",
+          "value": "W"
+        },
+        {
+          "type": "STRING",
+          "value": "X"
+        },
+        {
+          "type": "STRING",
+          "value": "Z"
+        }
+      ]
+    },
+    "postconditional": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        }
+      ]
+    },
+    "argument_list": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "argument"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "argument"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "argument": {
+      "type": "SYMBOL",
+      "name": "_expression"
+    },
+    "_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "special_variable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_call"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "extrinsic_function"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "variable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "parenthesized"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "binary_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "unary_expression"
+        }
+      ]
+    },
+    "parenthesized": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "binary_expression": {
+      "type": "PREC_LEFT",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "operator"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        ]
+      }
+    },
+    "unary_expression": {
+      "type": "PREC",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "operator"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        ]
+      }
+    },
+    "operator": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "]]"
+        },
+        {
+          "type": "STRING",
+          "value": "**"
+        },
+        {
+          "type": "STRING",
+          "value": "_"
+        },
+        {
+          "type": "STRING",
+          "value": "-"
+        },
+        {
+          "type": "STRING",
+          "value": "!"
+        },
+        {
+          "type": "STRING",
+          "value": "'"
+        },
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        },
+        {
+          "type": "STRING",
+          "value": "*"
+        },
+        {
+          "type": "STRING",
+          "value": "/"
+        },
+        {
+          "type": "STRING",
+          "value": "\\"
+        },
+        {
+          "type": "STRING",
+          "value": "&"
+        },
+        {
+          "type": "STRING",
+          "value": "#"
+        },
+        {
+          "type": "STRING",
+          "value": "+"
+        },
+        {
+          "type": "STRING",
+          "value": "<"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "STRING",
+          "value": ">"
+        }
+      ]
+    },
+    "string": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "\""
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "\"\""
+              },
+              {
+                "type": "PATTERN",
+                "value": "[^\"\\r\\n]"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "\""
+        }
+      ]
+    },
+    "number": {
+      "type": "PATTERN",
+      "value": "(\\d+(\\.\\d*)?|\\.\\d+)([Ee][+-]?\\d+)?"
+    },
+    "variable": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "local_variable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "global_variable"
+        }
+      ]
+    },
+    "local_variable": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "subscripts"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "global_variable": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "^"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "subscripts"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "subscripts": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expression"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "function_call": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "intrinsic_function_keyword"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_inner_arglist"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "intrinsic_function_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$LISTFROMSTRING"
+        },
+        {
+          "type": "STRING",
+          "value": "$ISVALIDDOUBLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$VECTORDEFINED"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTTOSTRING"
+        },
+        {
+          "type": "STRING",
+          "value": "$CLASSMETHOD"
+        },
+        {
+          "type": "STRING",
+          "value": "$PREFETCHOFF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZATRANSFORM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYISSQLNULL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ISVALIDNUM"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTLENGTH"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTUPDATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$PREFETCHON"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUBSCRIPT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATETIMEH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRANSLATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$CLASSNAME"
+        },
+        {
+          "type": "STRING",
+          "value": "$INCREMENT"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTBUILD"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTVALID"
+        },
+        {
+          "type": "STRING",
+          "value": "$NORMALIZE"
+        },
+        {
+          "type": "STRING",
+          "value": "$PARAMETER"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUBSCRIP"
+        },
+        {
+          "type": "STRING",
+          "value": "$SORTBEGIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRANSLATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATETIME"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPREVIOUS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRANSLAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUADITLOG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYCOMPILE"
+        },
+        {
+          "type": "STRING",
+          "value": "$BITCOUNT"
+        },
+        {
+          "type": "STRING",
+          "value": "$BITLOGIC"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEXTRACT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ISOBJECT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ISVECTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTDATA"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTFIND"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTNEXT"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTSAME"
+        },
+        {
+          "type": "STRING",
+          "value": "$NCONVERT"
+        },
+        {
+          "type": "STRING",
+          "value": "$PROPERTY"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUBSCRI"
+        },
+        {
+          "type": "STRING",
+          "value": "$SCONVERT"
+        },
+        {
+          "type": "STRING",
+          "value": "$SEQUENCE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRANSLAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$VECTOROP"
+        },
+        {
+          "type": "STRING",
+          "value": "$WEXTRACT"
+        },
+        {
+          "type": "STRING",
+          "value": "$WREVERSE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAHANDLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZBOOLEAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOLLATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCONVERT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEXTRACT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJOBEXAM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJUSTIFY"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMESSAGE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPREVIOU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZQGBLMOD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSIGPROC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRANSLA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRIGGER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYSUFFIX"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZZENKAKU"
+        },
+        {
+          "type": "STRING",
+          "value": "$BITFIND"
+        },
+        {
+          "type": "STRING",
+          "value": "$COMPILE"
+        },
+        {
+          "type": "STRING",
+          "value": "$DECIMAL"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEXTRAC"
+        },
+        {
+          "type": "STRING",
+          "value": "$EXTRACT"
+        },
+        {
+          "type": "STRING",
+          "value": "$FNUMBER"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOROLOG"
+        },
+        {
+          "type": "STRING",
+          "value": "$INUMBER"
+        },
+        {
+          "type": "STRING",
+          "value": "$JUSTIFY"
+        },
+        {
+          "type": "STRING",
+          "value": "$LISTGET"
+        },
+        {
+          "type": "STRING",
+          "value": "$QLENGTH"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUBSCR"
+        },
+        {
+          "type": "STRING",
+          "value": "$REPLACE"
+        },
+        {
+          "type": "STRING",
+          "value": "$REVERSE"
+        },
+        {
+          "type": "STRING",
+          "value": "$SORTEND"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRANSLA"
+        },
+        {
+          "type": "STRING",
+          "value": "$WISWIDE"
+        },
+        {
+          "type": "STRING",
+          "value": "$WLENGTH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAHANDL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZARCCOS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZARCSIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZARCTAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZBITAND"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOLLAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCONVER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEXTRAC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZGETJPI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZISWIDE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJUSTIF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLENGTH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMESSAG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPREVIO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZQASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSEARCH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSOCKET"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSUBSTR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSYSLOG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRANSL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRNLNM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYSUFFI"
+        },
+        {
+          "type": "STRING",
+          "value": "$CHANGE"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEXTRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$DOUBLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$DPIECE"
+        },
+        {
+          "type": "STRING",
+          "value": "$EXTRAC"
+        },
+        {
+          "type": "STRING",
+          "value": "$FACTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$FNUMBE"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOROLO"
+        },
+        {
+          "type": "STRING",
+          "value": "$JUSTIF"
+        },
+        {
+          "type": "STRING",
+          "value": "$LENGTH"
+        },
+        {
+          "type": "STRING",
+          "value": "$LOCATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$METHOD"
+        },
+        {
+          "type": "STRING",
+          "value": "$NUMBER"
+        },
+        {
+          "type": "STRING",
+          "value": "$QLENGT"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUBSC"
+        },
+        {
+          "type": "STRING",
+          "value": "$RANDOM"
+        },
+        {
+          "type": "STRING",
+          "value": "$REVERS"
+        },
+        {
+          "type": "STRING",
+          "value": "$SELECT"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRANSL"
+        },
+        {
+          "type": "STRING",
+          "value": "$VECTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$WASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$XECUTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAHAND"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOLLA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCONVE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATEH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDCHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEXTRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJUSTI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLCHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLENGT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMESSA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPARSE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPIECE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOWER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPREVI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZQCHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTRIP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSUBST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTIMEH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRANS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWCHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWIDTH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWRITE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYHASH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYSUFF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ASCII"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEXTR"
+        },
+        {
+          "type": "STRING",
+          "value": "$DPIEC"
+        },
+        {
+          "type": "STRING",
+          "value": "$EXTRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$FNUMB"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOROL"
+        },
+        {
+          "type": "STRING",
+          "value": "$JUSTI"
+        },
+        {
+          "type": "STRING",
+          "value": "$LENGT"
+        },
+        {
+          "type": "STRING",
+          "value": "$MATCH"
+        },
+        {
+          "type": "STRING",
+          "value": "$MUMPS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ORDER"
+        },
+        {
+          "type": "STRING",
+          "value": "$PIECE"
+        },
+        {
+          "type": "STRING",
+          "value": "$QLENG"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUBS"
+        },
+        {
+          "type": "STRING",
+          "value": "$QUERY"
+        },
+        {
+          "type": "STRING",
+          "value": "$RANDO"
+        },
+        {
+          "type": "STRING",
+          "value": "$REVER"
+        },
+        {
+          "type": "STRING",
+          "value": "$SELEC"
+        },
+        {
+          "type": "STRING",
+          "value": "$STACK"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRANS"
+        },
+        {
+          "type": "STRING",
+          "value": "$WCHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$WFIND"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAHAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZASCI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOLL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCONV"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEXTR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZFIND"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJUST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLENG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMESS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPEEK"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPIEC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPREV"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSEEK"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSUBS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTIME"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWIDT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYSUF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ASCI"
+        },
+        {
+          "type": "STRING",
+          "value": "$CASE"
+        },
+        {
+          "type": "STRING",
+          "value": "$CHAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$DATA"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEXT"
+        },
+        {
+          "type": "STRING",
+          "value": "$DPIE"
+        },
+        {
+          "type": "STRING",
+          "value": "$EXTR"
+        },
+        {
+          "type": "STRING",
+          "value": "$FIND"
+        },
+        {
+          "type": "STRING",
+          "value": "$FNUM"
+        },
+        {
+          "type": "STRING",
+          "value": "$HORO"
+        },
+        {
+          "type": "STRING",
+          "value": "$JUST"
+        },
+        {
+          "type": "STRING",
+          "value": "$LENG"
+        },
+        {
+          "type": "STRING",
+          "value": "$LIST"
+        },
+        {
+          "type": "STRING",
+          "value": "$MUMP"
+        },
+        {
+          "type": "STRING",
+          "value": "$NAME"
+        },
+        {
+          "type": "STRING",
+          "value": "$NEXT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ORDE"
+        },
+        {
+          "type": "STRING",
+          "value": "$PIEC"
+        },
+        {
+          "type": "STRING",
+          "value": "$QLEN"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSUB"
+        },
+        {
+          "type": "STRING",
+          "value": "$QUER"
+        },
+        {
+          "type": "STRING",
+          "value": "$RAND"
+        },
+        {
+          "type": "STRING",
+          "value": "$REVE"
+        },
+        {
+          "type": "STRING",
+          "value": "$SELE"
+        },
+        {
+          "type": "STRING",
+          "value": "$STAC"
+        },
+        {
+          "type": "STRING",
+          "value": "$TEXT"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$TYPE"
+        },
+        {
+          "type": "STRING",
+          "value": "$VIEW"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZABS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAHA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZASC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCHA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCON"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCRC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCSC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCYC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEXP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEXT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZFIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHEX"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJUS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLEN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLOG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMES"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPIE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPRE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSEC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSQR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSUB"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWID"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYSU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ASC"
+        },
+        {
+          "type": "STRING",
+          "value": "$BIT"
+        },
+        {
+          "type": "STRING",
+          "value": "$CHA"
+        },
+        {
+          "type": "STRING",
+          "value": "$DAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEX"
+        },
+        {
+          "type": "STRING",
+          "value": "$DPI"
+        },
+        {
+          "type": "STRING",
+          "value": "$EXT"
+        },
+        {
+          "type": "STRING",
+          "value": "$FIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$FNU"
+        },
+        {
+          "type": "STRING",
+          "value": "$GET"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$JUS"
+        },
+        {
+          "type": "STRING",
+          "value": "$LEN"
+        },
+        {
+          "type": "STRING",
+          "value": "$MUM"
+        },
+        {
+          "type": "STRING",
+          "value": "$NAM"
+        },
+        {
+          "type": "STRING",
+          "value": "$NEX"
+        },
+        {
+          "type": "STRING",
+          "value": "$NOW"
+        },
+        {
+          "type": "STRING",
+          "value": "$ORD"
+        },
+        {
+          "type": "STRING",
+          "value": "$PIE"
+        },
+        {
+          "type": "STRING",
+          "value": "$QLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$QSU"
+        },
+        {
+          "type": "STRING",
+          "value": "$QUE"
+        },
+        {
+          "type": "STRING",
+          "value": "$RAN"
+        },
+        {
+          "type": "STRING",
+          "value": "$REV"
+        },
+        {
+          "type": "STRING",
+          "value": "$SEL"
+        },
+        {
+          "type": "STRING",
+          "value": "$STA"
+        },
+        {
+          "type": "STRING",
+          "value": "$TEX"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$TYP"
+        },
+        {
+          "type": "STRING",
+          "value": "$VIE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEX"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZFI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZME"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZWI"
+        },
+        {
+          "type": "STRING",
+          "value": "$AS"
+        },
+        {
+          "type": "STRING",
+          "value": "$CH"
+        },
+        {
+          "type": "STRING",
+          "value": "$DA"
+        },
+        {
+          "type": "STRING",
+          "value": "$DE"
+        },
+        {
+          "type": "STRING",
+          "value": "$DP"
+        },
+        {
+          "type": "STRING",
+          "value": "$EX"
+        },
+        {
+          "type": "STRING",
+          "value": "$FI"
+        },
+        {
+          "type": "STRING",
+          "value": "$FN"
+        },
+        {
+          "type": "STRING",
+          "value": "$GE"
+        },
+        {
+          "type": "STRING",
+          "value": "$HO"
+        },
+        {
+          "type": "STRING",
+          "value": "$JU"
+        },
+        {
+          "type": "STRING",
+          "value": "$LE"
+        },
+        {
+          "type": "STRING",
+          "value": "$MU"
+        },
+        {
+          "type": "STRING",
+          "value": "$NA"
+        },
+        {
+          "type": "STRING",
+          "value": "$NE"
+        },
+        {
+          "type": "STRING",
+          "value": "$OR"
+        },
+        {
+          "type": "STRING",
+          "value": "$PI"
+        },
+        {
+          "type": "STRING",
+          "value": "$QL"
+        },
+        {
+          "type": "STRING",
+          "value": "$QS"
+        },
+        {
+          "type": "STRING",
+          "value": "$QU"
+        },
+        {
+          "type": "STRING",
+          "value": "$RA"
+        },
+        {
+          "type": "STRING",
+          "value": "$RE"
+        },
+        {
+          "type": "STRING",
+          "value": "$SE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ST"
+        },
+        {
+          "type": "STRING",
+          "value": "$TE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TR"
+        },
+        {
+          "type": "STRING",
+          "value": "$TY"
+        },
+        {
+          "type": "STRING",
+          "value": "$VI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJ"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZW"
+        },
+        {
+          "type": "STRING",
+          "value": "$A"
+        },
+        {
+          "type": "STRING",
+          "value": "$C"
+        },
+        {
+          "type": "STRING",
+          "value": "$D"
+        },
+        {
+          "type": "STRING",
+          "value": "$E"
+        },
+        {
+          "type": "STRING",
+          "value": "$F"
+        },
+        {
+          "type": "STRING",
+          "value": "$G"
+        },
+        {
+          "type": "STRING",
+          "value": "$H"
+        },
+        {
+          "type": "STRING",
+          "value": "$J"
+        },
+        {
+          "type": "STRING",
+          "value": "$L"
+        },
+        {
+          "type": "STRING",
+          "value": "$M"
+        },
+        {
+          "type": "STRING",
+          "value": "$N"
+        },
+        {
+          "type": "STRING",
+          "value": "$O"
+        },
+        {
+          "type": "STRING",
+          "value": "$P"
+        },
+        {
+          "type": "STRING",
+          "value": "$Q"
+        },
+        {
+          "type": "STRING",
+          "value": "$R"
+        },
+        {
+          "type": "STRING",
+          "value": "$S"
+        },
+        {
+          "type": "STRING",
+          "value": "$T"
+        },
+        {
+          "type": "STRING",
+          "value": "$V"
+        },
+        {
+          "type": "STRING",
+          "value": "$Z"
+        }
+      ]
+    },
+    "special_variable": {
+      "type": "SYMBOL",
+      "name": "special_variable_keyword"
+    },
+    "special_variable_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$ZININTERRUPT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPECIFIED"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININTERRUP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATNUMERIC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPECIFIE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOBPARENT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZALLOCSTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIRECTORY"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININTERRU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINTERRUPT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMALLOCLIM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMAXTPTIME"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATNUMERI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZREFERENCE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTIMESTAMP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPECIFI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOBPAREN"
+        },
+        {
+          "type": "STRING",
+          "value": "$NAMESPACE"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRINCIPAL"
+        },
+        {
+          "type": "STRING",
+          "value": "$REFERENCE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATEFORM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIRECTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININTERR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINTERRUP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMALLOCLI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMAXTPTIM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZONLNRLBK"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATNUMER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOSITION"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZREALSTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZROUTINES"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTRPLLIM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTIMEZONE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPECIF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUSEDSTOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYINTRSIG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOBPARE"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRINCIPA"
+        },
+        {
+          "type": "STRING",
+          "value": "$REFERENC"
+        },
+        {
+          "type": "STRING",
+          "value": "$THROWOBJ"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRESTART"
+        },
+        {
+          "type": "STRING",
+          "value": "$USERNAME"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCMDLINE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOMPILE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCSTATUS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATEFOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIRECTO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHOROLOG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININTER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINTERRU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMALLOCL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMAXTPTI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMLKHASH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATNUME"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOSITIO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZRELDATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZROUTINE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTORAGE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTRPLLI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTIMEOUT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPECI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZVERSION"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOBPAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOROLOG"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRINCIP"
+        },
+        {
+          "type": "STRING",
+          "value": "$REFEREN"
+        },
+        {
+          "type": "STRING",
+          "value": "$STORAGE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRESTAR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCMDLIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOMPIL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCSTATU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATEFO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIRECT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZGBLDIR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHOROLO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZICUVER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINTERR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMALLOC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZNSPACE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPARENT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATNUM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOSITI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPROMPT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZROUTIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSOURCE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTATUS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTRPLL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSYSTEM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPEC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZVERSIO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYERROR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOBPA"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEVICE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ESTACK"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOROLO"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRINCI"
+        },
+        {
+          "type": "STRING",
+          "value": "$REFERE"
+        },
+        {
+          "type": "STRING",
+          "value": "$STORAG"
+        },
+        {
+          "type": "STRING",
+          "value": "$SYSTEM"
+        },
+        {
+          "type": "STRING",
+          "value": "$TLEVEL"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRESTA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZAUDIT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCHILD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCHSET"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCMDLI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOMPI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCSTAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATEF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIREC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZERROR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZGBLDI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHOROL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINTER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLEVEL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMALLO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZORDER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATNU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOSIT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPROMP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZROUTI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSOURC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTATU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTRPL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSYSTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTEXIT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSPE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZVERSI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYERRO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOBP"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEVIC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ECODE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ESTAC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ETRAP"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOROL"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRINC"
+        },
+        {
+          "type": "STRING",
+          "value": "$REFER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ROLES"
+        },
+        {
+          "type": "STRING",
+          "value": "$STACK"
+        },
+        {
+          "type": "STRING",
+          "value": "$STORA"
+        },
+        {
+          "type": "STRING",
+          "value": "$SYSTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TLEVE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TREST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCMDL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOMP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCSTA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDATE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIRE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZERRO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZGBLD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHORO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZININ"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLEVE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMALL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMODE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPATN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOSI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPROM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZQUIT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZROUT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSOUR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTEP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTRP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSYST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTEXI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRAP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNSP"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZVERS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYERR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJOB"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEVI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ECOD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ESTA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ETRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$HALT"
+        },
+        {
+          "type": "STRING",
+          "value": "$HORO"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRIN"
+        },
+        {
+          "type": "STRING",
+          "value": "$QUIT"
+        },
+        {
+          "type": "STRING",
+          "value": "$REFE"
+        },
+        {
+          "type": "STRING",
+          "value": "$STAC"
+        },
+        {
+          "type": "STRING",
+          "value": "$STOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$SYST"
+        },
+        {
+          "type": "STRING",
+          "value": "$TEST"
+        },
+        {
+          "type": "STRING",
+          "value": "$THIS"
+        },
+        {
+          "type": "STRING",
+          "value": "$TLEV"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRES"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCMD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCOM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDAT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDIR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEOF"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEOS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZERR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZGBL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZINT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJOB"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLEV"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMOD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPOS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZROU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSOU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSYS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTEX"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTRA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUNS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZVER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZYJO"
+        },
+        {
+          "type": "STRING",
+          "value": "$DEV"
+        },
+        {
+          "type": "STRING",
+          "value": "$ECO"
+        },
+        {
+          "type": "STRING",
+          "value": "$EST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ETR"
+        },
+        {
+          "type": "STRING",
+          "value": "$HOR"
+        },
+        {
+          "type": "STRING",
+          "value": "$JOB"
+        },
+        {
+          "type": "STRING",
+          "value": "$KEY"
+        },
+        {
+          "type": "STRING",
+          "value": "$PRI"
+        },
+        {
+          "type": "STRING",
+          "value": "$QUI"
+        },
+        {
+          "type": "STRING",
+          "value": "$REF"
+        },
+        {
+          "type": "STRING",
+          "value": "$STA"
+        },
+        {
+          "type": "STRING",
+          "value": "$STO"
+        },
+        {
+          "type": "STRING",
+          "value": "$SYS"
+        },
+        {
+          "type": "STRING",
+          "value": "$TES"
+        },
+        {
+          "type": "STRING",
+          "value": "$TLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TRE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCM"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZCS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZDI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZEO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZER"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZGB"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZHO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZIO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZLE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZMO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZPI"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZRO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSO"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZST"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZSY"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZTR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUN"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZUT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZVE"
+        },
+        {
+          "type": "STRING",
+          "value": "$DE"
+        },
+        {
+          "type": "STRING",
+          "value": "$EC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ES"
+        },
+        {
+          "type": "STRING",
+          "value": "$ET"
+        },
+        {
+          "type": "STRING",
+          "value": "$HO"
+        },
+        {
+          "type": "STRING",
+          "value": "$IO"
+        },
+        {
+          "type": "STRING",
+          "value": "$JO"
+        },
+        {
+          "type": "STRING",
+          "value": "$KE"
+        },
+        {
+          "type": "STRING",
+          "value": "$PR"
+        },
+        {
+          "type": "STRING",
+          "value": "$QU"
+        },
+        {
+          "type": "STRING",
+          "value": "$RE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ST"
+        },
+        {
+          "type": "STRING",
+          "value": "$SY"
+        },
+        {
+          "type": "STRING",
+          "value": "$TE"
+        },
+        {
+          "type": "STRING",
+          "value": "$TL"
+        },
+        {
+          "type": "STRING",
+          "value": "$TR"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZA"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZB"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZC"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZD"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZE"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZG"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZH"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZJ"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZL"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZS"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZT"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZU"
+        },
+        {
+          "type": "STRING",
+          "value": "$ZV"
+        },
+        {
+          "type": "STRING",
+          "value": "$D"
+        },
+        {
+          "type": "STRING",
+          "value": "$H"
+        },
+        {
+          "type": "STRING",
+          "value": "$I"
+        },
+        {
+          "type": "STRING",
+          "value": "$J"
+        },
+        {
+          "type": "STRING",
+          "value": "$K"
+        },
+        {
+          "type": "STRING",
+          "value": "$P"
+        },
+        {
+          "type": "STRING",
+          "value": "$Q"
+        },
+        {
+          "type": "STRING",
+          "value": "$R"
+        },
+        {
+          "type": "STRING",
+          "value": "$S"
+        },
+        {
+          "type": "STRING",
+          "value": "$T"
+        },
+        {
+          "type": "STRING",
+          "value": "$X"
+        },
+        {
+          "type": "STRING",
+          "value": "$Y"
+        },
+        {
+          "type": "STRING",
+          "value": "$Z"
+        }
+      ]
+    },
+    "extrinsic_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$$"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "^"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "("
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_inner_arglist"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "STRING",
+                  "value": ")"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "_inner_arglist": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expression"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extras": [],
+  "conflicts": [
+    [
+      "command_sequence"
+    ]
+  ],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}

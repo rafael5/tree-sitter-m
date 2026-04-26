@@ -1,0 +1,94 @@
+================================================================================
+Intrinsic special variable canonical form
+================================================================================
+
+ W $JOB
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (special_variable
+              (special_variable_keyword))))))))
+
+================================================================================
+Intrinsic special variable abbreviated form
+================================================================================
+
+ W $J
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (special_variable
+              (special_variable_keyword))))))))
+
+================================================================================
+ISV in postconditional expression
+================================================================================
+
+ Q:$JOB=0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (postconditional
+          (binary_expression
+            (special_variable
+              (special_variable_keyword))
+            (operator)
+            (number)))))))
+
+================================================================================
+$D ambiguous form (could be $DEVICE ISV or $DATA function)
+================================================================================
+
+ W $D
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (special_variable
+              (special_variable_keyword))))))))
+
+================================================================================
+$D used as function (disambiguated by parens)
+================================================================================
+
+ W $D(X)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (function_call
+              (intrinsic_function_keyword)
+              (variable
+                (local_variable
+                  (identifier))))))))))

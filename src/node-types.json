@@ -1,0 +1,4277 @@
+[
+  {
+    "type": "argument",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "argument_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "argument",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binary_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "argument_list",
+          "named": true
+        },
+        {
+          "type": "command_keyword",
+          "named": true
+        },
+        {
+          "type": "postconditional",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "command_sequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "extrinsic_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formals",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_call",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "intrinsic_function_keyword",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global_variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "subscripts",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "intrinsic_function_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "label",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command_sequence",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "formals",
+          "named": true
+        },
+        {
+          "type": "label",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "local_variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "subscripts",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "parenthesized",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "postconditional",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "special_variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "special_variable_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "special_variable_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "subscripts",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "global_variable",
+          "named": true
+        },
+        {
+          "type": "local_variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "\"\"",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "$$",
+    "named": false
+  },
+  {
+    "type": "$A",
+    "named": false
+  },
+  {
+    "type": "$AS",
+    "named": false
+  },
+  {
+    "type": "$ASC",
+    "named": false
+  },
+  {
+    "type": "$ASCI",
+    "named": false
+  },
+  {
+    "type": "$ASCII",
+    "named": false
+  },
+  {
+    "type": "$BIT",
+    "named": false
+  },
+  {
+    "type": "$BITCOUNT",
+    "named": false
+  },
+  {
+    "type": "$BITFIND",
+    "named": false
+  },
+  {
+    "type": "$BITLOGIC",
+    "named": false
+  },
+  {
+    "type": "$C",
+    "named": false
+  },
+  {
+    "type": "$CASE",
+    "named": false
+  },
+  {
+    "type": "$CH",
+    "named": false
+  },
+  {
+    "type": "$CHA",
+    "named": false
+  },
+  {
+    "type": "$CHANGE",
+    "named": false
+  },
+  {
+    "type": "$CHAR",
+    "named": false
+  },
+  {
+    "type": "$CLASSMETHOD",
+    "named": false
+  },
+  {
+    "type": "$CLASSNAME",
+    "named": false
+  },
+  {
+    "type": "$COMPILE",
+    "named": false
+  },
+  {
+    "type": "$D",
+    "named": false
+  },
+  {
+    "type": "$DA",
+    "named": false
+  },
+  {
+    "type": "$DAT",
+    "named": false
+  },
+  {
+    "type": "$DATA",
+    "named": false
+  },
+  {
+    "type": "$DE",
+    "named": false
+  },
+  {
+    "type": "$DECIMAL",
+    "named": false
+  },
+  {
+    "type": "$DEV",
+    "named": false
+  },
+  {
+    "type": "$DEVI",
+    "named": false
+  },
+  {
+    "type": "$DEVIC",
+    "named": false
+  },
+  {
+    "type": "$DEVICE",
+    "named": false
+  },
+  {
+    "type": "$DEX",
+    "named": false
+  },
+  {
+    "type": "$DEXT",
+    "named": false
+  },
+  {
+    "type": "$DEXTR",
+    "named": false
+  },
+  {
+    "type": "$DEXTRA",
+    "named": false
+  },
+  {
+    "type": "$DEXTRAC",
+    "named": false
+  },
+  {
+    "type": "$DEXTRACT",
+    "named": false
+  },
+  {
+    "type": "$DOUBLE",
+    "named": false
+  },
+  {
+    "type": "$DP",
+    "named": false
+  },
+  {
+    "type": "$DPI",
+    "named": false
+  },
+  {
+    "type": "$DPIE",
+    "named": false
+  },
+  {
+    "type": "$DPIEC",
+    "named": false
+  },
+  {
+    "type": "$DPIECE",
+    "named": false
+  },
+  {
+    "type": "$E",
+    "named": false
+  },
+  {
+    "type": "$EC",
+    "named": false
+  },
+  {
+    "type": "$ECO",
+    "named": false
+  },
+  {
+    "type": "$ECOD",
+    "named": false
+  },
+  {
+    "type": "$ECODE",
+    "named": false
+  },
+  {
+    "type": "$ES",
+    "named": false
+  },
+  {
+    "type": "$EST",
+    "named": false
+  },
+  {
+    "type": "$ESTA",
+    "named": false
+  },
+  {
+    "type": "$ESTAC",
+    "named": false
+  },
+  {
+    "type": "$ESTACK",
+    "named": false
+  },
+  {
+    "type": "$ET",
+    "named": false
+  },
+  {
+    "type": "$ETR",
+    "named": false
+  },
+  {
+    "type": "$ETRA",
+    "named": false
+  },
+  {
+    "type": "$ETRAP",
+    "named": false
+  },
+  {
+    "type": "$EX",
+    "named": false
+  },
+  {
+    "type": "$EXT",
+    "named": false
+  },
+  {
+    "type": "$EXTR",
+    "named": false
+  },
+  {
+    "type": "$EXTRA",
+    "named": false
+  },
+  {
+    "type": "$EXTRAC",
+    "named": false
+  },
+  {
+    "type": "$EXTRACT",
+    "named": false
+  },
+  {
+    "type": "$F",
+    "named": false
+  },
+  {
+    "type": "$FACTOR",
+    "named": false
+  },
+  {
+    "type": "$FI",
+    "named": false
+  },
+  {
+    "type": "$FIN",
+    "named": false
+  },
+  {
+    "type": "$FIND",
+    "named": false
+  },
+  {
+    "type": "$FN",
+    "named": false
+  },
+  {
+    "type": "$FNU",
+    "named": false
+  },
+  {
+    "type": "$FNUM",
+    "named": false
+  },
+  {
+    "type": "$FNUMB",
+    "named": false
+  },
+  {
+    "type": "$FNUMBE",
+    "named": false
+  },
+  {
+    "type": "$FNUMBER",
+    "named": false
+  },
+  {
+    "type": "$G",
+    "named": false
+  },
+  {
+    "type": "$GE",
+    "named": false
+  },
+  {
+    "type": "$GET",
+    "named": false
+  },
+  {
+    "type": "$H",
+    "named": false
+  },
+  {
+    "type": "$HALT",
+    "named": false
+  },
+  {
+    "type": "$HO",
+    "named": false
+  },
+  {
+    "type": "$HOR",
+    "named": false
+  },
+  {
+    "type": "$HORO",
+    "named": false
+  },
+  {
+    "type": "$HOROL",
+    "named": false
+  },
+  {
+    "type": "$HOROLO",
+    "named": false
+  },
+  {
+    "type": "$HOROLOG",
+    "named": false
+  },
+  {
+    "type": "$I",
+    "named": false
+  },
+  {
+    "type": "$INCREMENT",
+    "named": false
+  },
+  {
+    "type": "$INUMBER",
+    "named": false
+  },
+  {
+    "type": "$IO",
+    "named": false
+  },
+  {
+    "type": "$ISOBJECT",
+    "named": false
+  },
+  {
+    "type": "$ISVALIDDOUBLE",
+    "named": false
+  },
+  {
+    "type": "$ISVALIDNUM",
+    "named": false
+  },
+  {
+    "type": "$ISVECTOR",
+    "named": false
+  },
+  {
+    "type": "$J",
+    "named": false
+  },
+  {
+    "type": "$JO",
+    "named": false
+  },
+  {
+    "type": "$JOB",
+    "named": false
+  },
+  {
+    "type": "$JU",
+    "named": false
+  },
+  {
+    "type": "$JUS",
+    "named": false
+  },
+  {
+    "type": "$JUST",
+    "named": false
+  },
+  {
+    "type": "$JUSTI",
+    "named": false
+  },
+  {
+    "type": "$JUSTIF",
+    "named": false
+  },
+  {
+    "type": "$JUSTIFY",
+    "named": false
+  },
+  {
+    "type": "$K",
+    "named": false
+  },
+  {
+    "type": "$KE",
+    "named": false
+  },
+  {
+    "type": "$KEY",
+    "named": false
+  },
+  {
+    "type": "$L",
+    "named": false
+  },
+  {
+    "type": "$LE",
+    "named": false
+  },
+  {
+    "type": "$LEN",
+    "named": false
+  },
+  {
+    "type": "$LENG",
+    "named": false
+  },
+  {
+    "type": "$LENGT",
+    "named": false
+  },
+  {
+    "type": "$LENGTH",
+    "named": false
+  },
+  {
+    "type": "$LIST",
+    "named": false
+  },
+  {
+    "type": "$LISTBUILD",
+    "named": false
+  },
+  {
+    "type": "$LISTDATA",
+    "named": false
+  },
+  {
+    "type": "$LISTFIND",
+    "named": false
+  },
+  {
+    "type": "$LISTFROMSTRING",
+    "named": false
+  },
+  {
+    "type": "$LISTGET",
+    "named": false
+  },
+  {
+    "type": "$LISTLENGTH",
+    "named": false
+  },
+  {
+    "type": "$LISTNEXT",
+    "named": false
+  },
+  {
+    "type": "$LISTSAME",
+    "named": false
+  },
+  {
+    "type": "$LISTTOSTRING",
+    "named": false
+  },
+  {
+    "type": "$LISTUPDATE",
+    "named": false
+  },
+  {
+    "type": "$LISTVALID",
+    "named": false
+  },
+  {
+    "type": "$LOCATE",
+    "named": false
+  },
+  {
+    "type": "$M",
+    "named": false
+  },
+  {
+    "type": "$MATCH",
+    "named": false
+  },
+  {
+    "type": "$METHOD",
+    "named": false
+  },
+  {
+    "type": "$MU",
+    "named": false
+  },
+  {
+    "type": "$MUM",
+    "named": false
+  },
+  {
+    "type": "$MUMP",
+    "named": false
+  },
+  {
+    "type": "$MUMPS",
+    "named": false
+  },
+  {
+    "type": "$N",
+    "named": false
+  },
+  {
+    "type": "$NA",
+    "named": false
+  },
+  {
+    "type": "$NAM",
+    "named": false
+  },
+  {
+    "type": "$NAME",
+    "named": false
+  },
+  {
+    "type": "$NAMESPACE",
+    "named": false
+  },
+  {
+    "type": "$NCONVERT",
+    "named": false
+  },
+  {
+    "type": "$NE",
+    "named": false
+  },
+  {
+    "type": "$NEX",
+    "named": false
+  },
+  {
+    "type": "$NEXT",
+    "named": false
+  },
+  {
+    "type": "$NORMALIZE",
+    "named": false
+  },
+  {
+    "type": "$NOW",
+    "named": false
+  },
+  {
+    "type": "$NUMBER",
+    "named": false
+  },
+  {
+    "type": "$O",
+    "named": false
+  },
+  {
+    "type": "$OR",
+    "named": false
+  },
+  {
+    "type": "$ORD",
+    "named": false
+  },
+  {
+    "type": "$ORDE",
+    "named": false
+  },
+  {
+    "type": "$ORDER",
+    "named": false
+  },
+  {
+    "type": "$P",
+    "named": false
+  },
+  {
+    "type": "$PARAMETER",
+    "named": false
+  },
+  {
+    "type": "$PI",
+    "named": false
+  },
+  {
+    "type": "$PIE",
+    "named": false
+  },
+  {
+    "type": "$PIEC",
+    "named": false
+  },
+  {
+    "type": "$PIECE",
+    "named": false
+  },
+  {
+    "type": "$PR",
+    "named": false
+  },
+  {
+    "type": "$PREFETCHOFF",
+    "named": false
+  },
+  {
+    "type": "$PREFETCHON",
+    "named": false
+  },
+  {
+    "type": "$PRI",
+    "named": false
+  },
+  {
+    "type": "$PRIN",
+    "named": false
+  },
+  {
+    "type": "$PRINC",
+    "named": false
+  },
+  {
+    "type": "$PRINCI",
+    "named": false
+  },
+  {
+    "type": "$PRINCIP",
+    "named": false
+  },
+  {
+    "type": "$PRINCIPA",
+    "named": false
+  },
+  {
+    "type": "$PRINCIPAL",
+    "named": false
+  },
+  {
+    "type": "$PROPERTY",
+    "named": false
+  },
+  {
+    "type": "$Q",
+    "named": false
+  },
+  {
+    "type": "$QL",
+    "named": false
+  },
+  {
+    "type": "$QLE",
+    "named": false
+  },
+  {
+    "type": "$QLEN",
+    "named": false
+  },
+  {
+    "type": "$QLENG",
+    "named": false
+  },
+  {
+    "type": "$QLENGT",
+    "named": false
+  },
+  {
+    "type": "$QLENGTH",
+    "named": false
+  },
+  {
+    "type": "$QS",
+    "named": false
+  },
+  {
+    "type": "$QSU",
+    "named": false
+  },
+  {
+    "type": "$QSUB",
+    "named": false
+  },
+  {
+    "type": "$QSUBS",
+    "named": false
+  },
+  {
+    "type": "$QSUBSC",
+    "named": false
+  },
+  {
+    "type": "$QSUBSCR",
+    "named": false
+  },
+  {
+    "type": "$QSUBSCRI",
+    "named": false
+  },
+  {
+    "type": "$QSUBSCRIP",
+    "named": false
+  },
+  {
+    "type": "$QSUBSCRIPT",
+    "named": false
+  },
+  {
+    "type": "$QU",
+    "named": false
+  },
+  {
+    "type": "$QUE",
+    "named": false
+  },
+  {
+    "type": "$QUER",
+    "named": false
+  },
+  {
+    "type": "$QUERY",
+    "named": false
+  },
+  {
+    "type": "$QUI",
+    "named": false
+  },
+  {
+    "type": "$QUIT",
+    "named": false
+  },
+  {
+    "type": "$R",
+    "named": false
+  },
+  {
+    "type": "$RA",
+    "named": false
+  },
+  {
+    "type": "$RAN",
+    "named": false
+  },
+  {
+    "type": "$RAND",
+    "named": false
+  },
+  {
+    "type": "$RANDO",
+    "named": false
+  },
+  {
+    "type": "$RANDOM",
+    "named": false
+  },
+  {
+    "type": "$RE",
+    "named": false
+  },
+  {
+    "type": "$REF",
+    "named": false
+  },
+  {
+    "type": "$REFE",
+    "named": false
+  },
+  {
+    "type": "$REFER",
+    "named": false
+  },
+  {
+    "type": "$REFERE",
+    "named": false
+  },
+  {
+    "type": "$REFEREN",
+    "named": false
+  },
+  {
+    "type": "$REFERENC",
+    "named": false
+  },
+  {
+    "type": "$REFERENCE",
+    "named": false
+  },
+  {
+    "type": "$REPLACE",
+    "named": false
+  },
+  {
+    "type": "$REV",
+    "named": false
+  },
+  {
+    "type": "$REVE",
+    "named": false
+  },
+  {
+    "type": "$REVER",
+    "named": false
+  },
+  {
+    "type": "$REVERS",
+    "named": false
+  },
+  {
+    "type": "$REVERSE",
+    "named": false
+  },
+  {
+    "type": "$ROLES",
+    "named": false
+  },
+  {
+    "type": "$S",
+    "named": false
+  },
+  {
+    "type": "$SCONVERT",
+    "named": false
+  },
+  {
+    "type": "$SE",
+    "named": false
+  },
+  {
+    "type": "$SEL",
+    "named": false
+  },
+  {
+    "type": "$SELE",
+    "named": false
+  },
+  {
+    "type": "$SELEC",
+    "named": false
+  },
+  {
+    "type": "$SELECT",
+    "named": false
+  },
+  {
+    "type": "$SEQUENCE",
+    "named": false
+  },
+  {
+    "type": "$SORTBEGIN",
+    "named": false
+  },
+  {
+    "type": "$SORTEND",
+    "named": false
+  },
+  {
+    "type": "$ST",
+    "named": false
+  },
+  {
+    "type": "$STA",
+    "named": false
+  },
+  {
+    "type": "$STAC",
+    "named": false
+  },
+  {
+    "type": "$STACK",
+    "named": false
+  },
+  {
+    "type": "$STO",
+    "named": false
+  },
+  {
+    "type": "$STOR",
+    "named": false
+  },
+  {
+    "type": "$STORA",
+    "named": false
+  },
+  {
+    "type": "$STORAG",
+    "named": false
+  },
+  {
+    "type": "$STORAGE",
+    "named": false
+  },
+  {
+    "type": "$SY",
+    "named": false
+  },
+  {
+    "type": "$SYS",
+    "named": false
+  },
+  {
+    "type": "$SYST",
+    "named": false
+  },
+  {
+    "type": "$SYSTE",
+    "named": false
+  },
+  {
+    "type": "$SYSTEM",
+    "named": false
+  },
+  {
+    "type": "$T",
+    "named": false
+  },
+  {
+    "type": "$TE",
+    "named": false
+  },
+  {
+    "type": "$TES",
+    "named": false
+  },
+  {
+    "type": "$TEST",
+    "named": false
+  },
+  {
+    "type": "$TEX",
+    "named": false
+  },
+  {
+    "type": "$TEXT",
+    "named": false
+  },
+  {
+    "type": "$THIS",
+    "named": false
+  },
+  {
+    "type": "$THROWOBJ",
+    "named": false
+  },
+  {
+    "type": "$TL",
+    "named": false
+  },
+  {
+    "type": "$TLE",
+    "named": false
+  },
+  {
+    "type": "$TLEV",
+    "named": false
+  },
+  {
+    "type": "$TLEVE",
+    "named": false
+  },
+  {
+    "type": "$TLEVEL",
+    "named": false
+  },
+  {
+    "type": "$TR",
+    "named": false
+  },
+  {
+    "type": "$TRA",
+    "named": false
+  },
+  {
+    "type": "$TRAN",
+    "named": false
+  },
+  {
+    "type": "$TRANS",
+    "named": false
+  },
+  {
+    "type": "$TRANSL",
+    "named": false
+  },
+  {
+    "type": "$TRANSLA",
+    "named": false
+  },
+  {
+    "type": "$TRANSLAT",
+    "named": false
+  },
+  {
+    "type": "$TRANSLATE",
+    "named": false
+  },
+  {
+    "type": "$TRE",
+    "named": false
+  },
+  {
+    "type": "$TRES",
+    "named": false
+  },
+  {
+    "type": "$TREST",
+    "named": false
+  },
+  {
+    "type": "$TRESTA",
+    "named": false
+  },
+  {
+    "type": "$TRESTAR",
+    "named": false
+  },
+  {
+    "type": "$TRESTART",
+    "named": false
+  },
+  {
+    "type": "$TY",
+    "named": false
+  },
+  {
+    "type": "$TYP",
+    "named": false
+  },
+  {
+    "type": "$TYPE",
+    "named": false
+  },
+  {
+    "type": "$USERNAME",
+    "named": false
+  },
+  {
+    "type": "$V",
+    "named": false
+  },
+  {
+    "type": "$VECTOR",
+    "named": false
+  },
+  {
+    "type": "$VECTORDEFINED",
+    "named": false
+  },
+  {
+    "type": "$VECTOROP",
+    "named": false
+  },
+  {
+    "type": "$VI",
+    "named": false
+  },
+  {
+    "type": "$VIE",
+    "named": false
+  },
+  {
+    "type": "$VIEW",
+    "named": false
+  },
+  {
+    "type": "$WASCII",
+    "named": false
+  },
+  {
+    "type": "$WCHAR",
+    "named": false
+  },
+  {
+    "type": "$WEXTRACT",
+    "named": false
+  },
+  {
+    "type": "$WFIND",
+    "named": false
+  },
+  {
+    "type": "$WISWIDE",
+    "named": false
+  },
+  {
+    "type": "$WLENGTH",
+    "named": false
+  },
+  {
+    "type": "$WREVERSE",
+    "named": false
+  },
+  {
+    "type": "$X",
+    "named": false
+  },
+  {
+    "type": "$XECUTE",
+    "named": false
+  },
+  {
+    "type": "$Y",
+    "named": false
+  },
+  {
+    "type": "$Z",
+    "named": false
+  },
+  {
+    "type": "$ZA",
+    "named": false
+  },
+  {
+    "type": "$ZABS",
+    "named": false
+  },
+  {
+    "type": "$ZAHA",
+    "named": false
+  },
+  {
+    "type": "$ZAHAN",
+    "named": false
+  },
+  {
+    "type": "$ZAHAND",
+    "named": false
+  },
+  {
+    "type": "$ZAHANDL",
+    "named": false
+  },
+  {
+    "type": "$ZAHANDLE",
+    "named": false
+  },
+  {
+    "type": "$ZALLOCSTOR",
+    "named": false
+  },
+  {
+    "type": "$ZARCCOS",
+    "named": false
+  },
+  {
+    "type": "$ZARCSIN",
+    "named": false
+  },
+  {
+    "type": "$ZARCTAN",
+    "named": false
+  },
+  {
+    "type": "$ZAS",
+    "named": false
+  },
+  {
+    "type": "$ZASC",
+    "named": false
+  },
+  {
+    "type": "$ZASCI",
+    "named": false
+  },
+  {
+    "type": "$ZASCII",
+    "named": false
+  },
+  {
+    "type": "$ZATRANSFORM",
+    "named": false
+  },
+  {
+    "type": "$ZAUDIT",
+    "named": false
+  },
+  {
+    "type": "$ZB",
+    "named": false
+  },
+  {
+    "type": "$ZBITAND",
+    "named": false
+  },
+  {
+    "type": "$ZBOOLEAN",
+    "named": false
+  },
+  {
+    "type": "$ZC",
+    "named": false
+  },
+  {
+    "type": "$ZCH",
+    "named": false
+  },
+  {
+    "type": "$ZCHA",
+    "named": false
+  },
+  {
+    "type": "$ZCHAR",
+    "named": false
+  },
+  {
+    "type": "$ZCHILD",
+    "named": false
+  },
+  {
+    "type": "$ZCHSET",
+    "named": false
+  },
+  {
+    "type": "$ZCM",
+    "named": false
+  },
+  {
+    "type": "$ZCMD",
+    "named": false
+  },
+  {
+    "type": "$ZCMDL",
+    "named": false
+  },
+  {
+    "type": "$ZCMDLI",
+    "named": false
+  },
+  {
+    "type": "$ZCMDLIN",
+    "named": false
+  },
+  {
+    "type": "$ZCMDLINE",
+    "named": false
+  },
+  {
+    "type": "$ZCO",
+    "named": false
+  },
+  {
+    "type": "$ZCOL",
+    "named": false
+  },
+  {
+    "type": "$ZCOLL",
+    "named": false
+  },
+  {
+    "type": "$ZCOLLA",
+    "named": false
+  },
+  {
+    "type": "$ZCOLLAT",
+    "named": false
+  },
+  {
+    "type": "$ZCOLLATE",
+    "named": false
+  },
+  {
+    "type": "$ZCOM",
+    "named": false
+  },
+  {
+    "type": "$ZCOMP",
+    "named": false
+  },
+  {
+    "type": "$ZCOMPI",
+    "named": false
+  },
+  {
+    "type": "$ZCOMPIL",
+    "named": false
+  },
+  {
+    "type": "$ZCOMPILE",
+    "named": false
+  },
+  {
+    "type": "$ZCON",
+    "named": false
+  },
+  {
+    "type": "$ZCONV",
+    "named": false
+  },
+  {
+    "type": "$ZCONVE",
+    "named": false
+  },
+  {
+    "type": "$ZCONVER",
+    "named": false
+  },
+  {
+    "type": "$ZCONVERT",
+    "named": false
+  },
+  {
+    "type": "$ZCOS",
+    "named": false
+  },
+  {
+    "type": "$ZCOT",
+    "named": false
+  },
+  {
+    "type": "$ZCRC",
+    "named": false
+  },
+  {
+    "type": "$ZCS",
+    "named": false
+  },
+  {
+    "type": "$ZCSC",
+    "named": false
+  },
+  {
+    "type": "$ZCST",
+    "named": false
+  },
+  {
+    "type": "$ZCSTA",
+    "named": false
+  },
+  {
+    "type": "$ZCSTAT",
+    "named": false
+  },
+  {
+    "type": "$ZCSTATU",
+    "named": false
+  },
+  {
+    "type": "$ZCSTATUS",
+    "named": false
+  },
+  {
+    "type": "$ZCYC",
+    "named": false
+  },
+  {
+    "type": "$ZD",
+    "named": false
+  },
+  {
+    "type": "$ZDA",
+    "named": false
+  },
+  {
+    "type": "$ZDASCII",
+    "named": false
+  },
+  {
+    "type": "$ZDAT",
+    "named": false
+  },
+  {
+    "type": "$ZDATA",
+    "named": false
+  },
+  {
+    "type": "$ZDATE",
+    "named": false
+  },
+  {
+    "type": "$ZDATEF",
+    "named": false
+  },
+  {
+    "type": "$ZDATEFO",
+    "named": false
+  },
+  {
+    "type": "$ZDATEFOR",
+    "named": false
+  },
+  {
+    "type": "$ZDATEFORM",
+    "named": false
+  },
+  {
+    "type": "$ZDATEH",
+    "named": false
+  },
+  {
+    "type": "$ZDATETIME",
+    "named": false
+  },
+  {
+    "type": "$ZDATETIMEH",
+    "named": false
+  },
+  {
+    "type": "$ZDCHAR",
+    "named": false
+  },
+  {
+    "type": "$ZDI",
+    "named": false
+  },
+  {
+    "type": "$ZDIR",
+    "named": false
+  },
+  {
+    "type": "$ZDIRE",
+    "named": false
+  },
+  {
+    "type": "$ZDIREC",
+    "named": false
+  },
+  {
+    "type": "$ZDIRECT",
+    "named": false
+  },
+  {
+    "type": "$ZDIRECTO",
+    "named": false
+  },
+  {
+    "type": "$ZDIRECTOR",
+    "named": false
+  },
+  {
+    "type": "$ZDIRECTORY",
+    "named": false
+  },
+  {
+    "type": "$ZE",
+    "named": false
+  },
+  {
+    "type": "$ZEO",
+    "named": false
+  },
+  {
+    "type": "$ZEOF",
+    "named": false
+  },
+  {
+    "type": "$ZEOS",
+    "named": false
+  },
+  {
+    "type": "$ZER",
+    "named": false
+  },
+  {
+    "type": "$ZERR",
+    "named": false
+  },
+  {
+    "type": "$ZERRO",
+    "named": false
+  },
+  {
+    "type": "$ZERROR",
+    "named": false
+  },
+  {
+    "type": "$ZEX",
+    "named": false
+  },
+  {
+    "type": "$ZEXP",
+    "named": false
+  },
+  {
+    "type": "$ZEXT",
+    "named": false
+  },
+  {
+    "type": "$ZEXTR",
+    "named": false
+  },
+  {
+    "type": "$ZEXTRA",
+    "named": false
+  },
+  {
+    "type": "$ZEXTRAC",
+    "named": false
+  },
+  {
+    "type": "$ZEXTRACT",
+    "named": false
+  },
+  {
+    "type": "$ZF",
+    "named": false
+  },
+  {
+    "type": "$ZFI",
+    "named": false
+  },
+  {
+    "type": "$ZFIN",
+    "named": false
+  },
+  {
+    "type": "$ZFIND",
+    "named": false
+  },
+  {
+    "type": "$ZG",
+    "named": false
+  },
+  {
+    "type": "$ZGB",
+    "named": false
+  },
+  {
+    "type": "$ZGBL",
+    "named": false
+  },
+  {
+    "type": "$ZGBLD",
+    "named": false
+  },
+  {
+    "type": "$ZGBLDI",
+    "named": false
+  },
+  {
+    "type": "$ZGBLDIR",
+    "named": false
+  },
+  {
+    "type": "$ZGETJPI",
+    "named": false
+  },
+  {
+    "type": "$ZH",
+    "named": false
+  },
+  {
+    "type": "$ZHEX",
+    "named": false
+  },
+  {
+    "type": "$ZHO",
+    "named": false
+  },
+  {
+    "type": "$ZHOR",
+    "named": false
+  },
+  {
+    "type": "$ZHORO",
+    "named": false
+  },
+  {
+    "type": "$ZHOROL",
+    "named": false
+  },
+  {
+    "type": "$ZHOROLO",
+    "named": false
+  },
+  {
+    "type": "$ZHOROLOG",
+    "named": false
+  },
+  {
+    "type": "$ZICUVER",
+    "named": false
+  },
+  {
+    "type": "$ZINI",
+    "named": false
+  },
+  {
+    "type": "$ZININ",
+    "named": false
+  },
+  {
+    "type": "$ZININT",
+    "named": false
+  },
+  {
+    "type": "$ZININTE",
+    "named": false
+  },
+  {
+    "type": "$ZININTER",
+    "named": false
+  },
+  {
+    "type": "$ZININTERR",
+    "named": false
+  },
+  {
+    "type": "$ZININTERRU",
+    "named": false
+  },
+  {
+    "type": "$ZININTERRUP",
+    "named": false
+  },
+  {
+    "type": "$ZININTERRUPT",
+    "named": false
+  },
+  {
+    "type": "$ZINT",
+    "named": false
+  },
+  {
+    "type": "$ZINTE",
+    "named": false
+  },
+  {
+    "type": "$ZINTER",
+    "named": false
+  },
+  {
+    "type": "$ZINTERR",
+    "named": false
+  },
+  {
+    "type": "$ZINTERRU",
+    "named": false
+  },
+  {
+    "type": "$ZINTERRUP",
+    "named": false
+  },
+  {
+    "type": "$ZINTERRUPT",
+    "named": false
+  },
+  {
+    "type": "$ZIO",
+    "named": false
+  },
+  {
+    "type": "$ZISWIDE",
+    "named": false
+  },
+  {
+    "type": "$ZJ",
+    "named": false
+  },
+  {
+    "type": "$ZJO",
+    "named": false
+  },
+  {
+    "type": "$ZJOB",
+    "named": false
+  },
+  {
+    "type": "$ZJOBEXAM",
+    "named": false
+  },
+  {
+    "type": "$ZJU",
+    "named": false
+  },
+  {
+    "type": "$ZJUS",
+    "named": false
+  },
+  {
+    "type": "$ZJUST",
+    "named": false
+  },
+  {
+    "type": "$ZJUSTI",
+    "named": false
+  },
+  {
+    "type": "$ZJUSTIF",
+    "named": false
+  },
+  {
+    "type": "$ZJUSTIFY",
+    "named": false
+  },
+  {
+    "type": "$ZL",
+    "named": false
+  },
+  {
+    "type": "$ZLASCII",
+    "named": false
+  },
+  {
+    "type": "$ZLCHAR",
+    "named": false
+  },
+  {
+    "type": "$ZLE",
+    "named": false
+  },
+  {
+    "type": "$ZLEN",
+    "named": false
+  },
+  {
+    "type": "$ZLENG",
+    "named": false
+  },
+  {
+    "type": "$ZLENGT",
+    "named": false
+  },
+  {
+    "type": "$ZLENGTH",
+    "named": false
+  },
+  {
+    "type": "$ZLEV",
+    "named": false
+  },
+  {
+    "type": "$ZLEVE",
+    "named": false
+  },
+  {
+    "type": "$ZLEVEL",
+    "named": false
+  },
+  {
+    "type": "$ZLN",
+    "named": false
+  },
+  {
+    "type": "$ZLOG",
+    "named": false
+  },
+  {
+    "type": "$ZM",
+    "named": false
+  },
+  {
+    "type": "$ZMALL",
+    "named": false
+  },
+  {
+    "type": "$ZMALLO",
+    "named": false
+  },
+  {
+    "type": "$ZMALLOC",
+    "named": false
+  },
+  {
+    "type": "$ZMALLOCL",
+    "named": false
+  },
+  {
+    "type": "$ZMALLOCLI",
+    "named": false
+  },
+  {
+    "type": "$ZMALLOCLIM",
+    "named": false
+  },
+  {
+    "type": "$ZMAXTPTI",
+    "named": false
+  },
+  {
+    "type": "$ZMAXTPTIM",
+    "named": false
+  },
+  {
+    "type": "$ZMAXTPTIME",
+    "named": false
+  },
+  {
+    "type": "$ZME",
+    "named": false
+  },
+  {
+    "type": "$ZMES",
+    "named": false
+  },
+  {
+    "type": "$ZMESS",
+    "named": false
+  },
+  {
+    "type": "$ZMESSA",
+    "named": false
+  },
+  {
+    "type": "$ZMESSAG",
+    "named": false
+  },
+  {
+    "type": "$ZMESSAGE",
+    "named": false
+  },
+  {
+    "type": "$ZMLKHASH",
+    "named": false
+  },
+  {
+    "type": "$ZMO",
+    "named": false
+  },
+  {
+    "type": "$ZMOD",
+    "named": false
+  },
+  {
+    "type": "$ZMODE",
+    "named": false
+  },
+  {
+    "type": "$ZNSPACE",
+    "named": false
+  },
+  {
+    "type": "$ZONLNRLBK",
+    "named": false
+  },
+  {
+    "type": "$ZORDER",
+    "named": false
+  },
+  {
+    "type": "$ZP",
+    "named": false
+  },
+  {
+    "type": "$ZPARENT",
+    "named": false
+  },
+  {
+    "type": "$ZPARSE",
+    "named": false
+  },
+  {
+    "type": "$ZPATN",
+    "named": false
+  },
+  {
+    "type": "$ZPATNU",
+    "named": false
+  },
+  {
+    "type": "$ZPATNUM",
+    "named": false
+  },
+  {
+    "type": "$ZPATNUME",
+    "named": false
+  },
+  {
+    "type": "$ZPATNUMER",
+    "named": false
+  },
+  {
+    "type": "$ZPATNUMERI",
+    "named": false
+  },
+  {
+    "type": "$ZPATNUMERIC",
+    "named": false
+  },
+  {
+    "type": "$ZPEEK",
+    "named": false
+  },
+  {
+    "type": "$ZPI",
+    "named": false
+  },
+  {
+    "type": "$ZPIE",
+    "named": false
+  },
+  {
+    "type": "$ZPIEC",
+    "named": false
+  },
+  {
+    "type": "$ZPIECE",
+    "named": false
+  },
+  {
+    "type": "$ZPOS",
+    "named": false
+  },
+  {
+    "type": "$ZPOSI",
+    "named": false
+  },
+  {
+    "type": "$ZPOSIT",
+    "named": false
+  },
+  {
+    "type": "$ZPOSITI",
+    "named": false
+  },
+  {
+    "type": "$ZPOSITIO",
+    "named": false
+  },
+  {
+    "type": "$ZPOSITION",
+    "named": false
+  },
+  {
+    "type": "$ZPOWER",
+    "named": false
+  },
+  {
+    "type": "$ZPR",
+    "named": false
+  },
+  {
+    "type": "$ZPRE",
+    "named": false
+  },
+  {
+    "type": "$ZPREV",
+    "named": false
+  },
+  {
+    "type": "$ZPREVI",
+    "named": false
+  },
+  {
+    "type": "$ZPREVIO",
+    "named": false
+  },
+  {
+    "type": "$ZPREVIOU",
+    "named": false
+  },
+  {
+    "type": "$ZPREVIOUS",
+    "named": false
+  },
+  {
+    "type": "$ZPROM",
+    "named": false
+  },
+  {
+    "type": "$ZPROMP",
+    "named": false
+  },
+  {
+    "type": "$ZPROMPT",
+    "named": false
+  },
+  {
+    "type": "$ZQASCII",
+    "named": false
+  },
+  {
+    "type": "$ZQCHAR",
+    "named": false
+  },
+  {
+    "type": "$ZQGBLMOD",
+    "named": false
+  },
+  {
+    "type": "$ZQUIT",
+    "named": false
+  },
+  {
+    "type": "$ZREALSTOR",
+    "named": false
+  },
+  {
+    "type": "$ZREFERENCE",
+    "named": false
+  },
+  {
+    "type": "$ZRELDATE",
+    "named": false
+  },
+  {
+    "type": "$ZRO",
+    "named": false
+  },
+  {
+    "type": "$ZROU",
+    "named": false
+  },
+  {
+    "type": "$ZROUT",
+    "named": false
+  },
+  {
+    "type": "$ZROUTI",
+    "named": false
+  },
+  {
+    "type": "$ZROUTIN",
+    "named": false
+  },
+  {
+    "type": "$ZROUTINE",
+    "named": false
+  },
+  {
+    "type": "$ZROUTINES",
+    "named": false
+  },
+  {
+    "type": "$ZS",
+    "named": false
+  },
+  {
+    "type": "$ZSEARCH",
+    "named": false
+  },
+  {
+    "type": "$ZSEC",
+    "named": false
+  },
+  {
+    "type": "$ZSEEK",
+    "named": false
+  },
+  {
+    "type": "$ZSIGPROC",
+    "named": false
+  },
+  {
+    "type": "$ZSIN",
+    "named": false
+  },
+  {
+    "type": "$ZSO",
+    "named": false
+  },
+  {
+    "type": "$ZSOCKET",
+    "named": false
+  },
+  {
+    "type": "$ZSOU",
+    "named": false
+  },
+  {
+    "type": "$ZSOUR",
+    "named": false
+  },
+  {
+    "type": "$ZSOURC",
+    "named": false
+  },
+  {
+    "type": "$ZSOURCE",
+    "named": false
+  },
+  {
+    "type": "$ZSQR",
+    "named": false
+  },
+  {
+    "type": "$ZST",
+    "named": false
+  },
+  {
+    "type": "$ZSTA",
+    "named": false
+  },
+  {
+    "type": "$ZSTAT",
+    "named": false
+  },
+  {
+    "type": "$ZSTATU",
+    "named": false
+  },
+  {
+    "type": "$ZSTATUS",
+    "named": false
+  },
+  {
+    "type": "$ZSTE",
+    "named": false
+  },
+  {
+    "type": "$ZSTEP",
+    "named": false
+  },
+  {
+    "type": "$ZSTORAGE",
+    "named": false
+  },
+  {
+    "type": "$ZSTRIP",
+    "named": false
+  },
+  {
+    "type": "$ZSTRP",
+    "named": false
+  },
+  {
+    "type": "$ZSTRPL",
+    "named": false
+  },
+  {
+    "type": "$ZSTRPLL",
+    "named": false
+  },
+  {
+    "type": "$ZSTRPLLI",
+    "named": false
+  },
+  {
+    "type": "$ZSTRPLLIM",
+    "named": false
+  },
+  {
+    "type": "$ZSUB",
+    "named": false
+  },
+  {
+    "type": "$ZSUBS",
+    "named": false
+  },
+  {
+    "type": "$ZSUBST",
+    "named": false
+  },
+  {
+    "type": "$ZSUBSTR",
+    "named": false
+  },
+  {
+    "type": "$ZSY",
+    "named": false
+  },
+  {
+    "type": "$ZSYS",
+    "named": false
+  },
+  {
+    "type": "$ZSYSLOG",
+    "named": false
+  },
+  {
+    "type": "$ZSYST",
+    "named": false
+  },
+  {
+    "type": "$ZSYSTE",
+    "named": false
+  },
+  {
+    "type": "$ZSYSTEM",
+    "named": false
+  },
+  {
+    "type": "$ZT",
+    "named": false
+  },
+  {
+    "type": "$ZTAN",
+    "named": false
+  },
+  {
+    "type": "$ZTE",
+    "named": false
+  },
+  {
+    "type": "$ZTEX",
+    "named": false
+  },
+  {
+    "type": "$ZTEXI",
+    "named": false
+  },
+  {
+    "type": "$ZTEXIT",
+    "named": false
+  },
+  {
+    "type": "$ZTIME",
+    "named": false
+  },
+  {
+    "type": "$ZTIMEH",
+    "named": false
+  },
+  {
+    "type": "$ZTIMEOUT",
+    "named": false
+  },
+  {
+    "type": "$ZTIMESTAMP",
+    "named": false
+  },
+  {
+    "type": "$ZTIMEZONE",
+    "named": false
+  },
+  {
+    "type": "$ZTR",
+    "named": false
+  },
+  {
+    "type": "$ZTRA",
+    "named": false
+  },
+  {
+    "type": "$ZTRAN",
+    "named": false
+  },
+  {
+    "type": "$ZTRANS",
+    "named": false
+  },
+  {
+    "type": "$ZTRANSL",
+    "named": false
+  },
+  {
+    "type": "$ZTRANSLA",
+    "named": false
+  },
+  {
+    "type": "$ZTRANSLAT",
+    "named": false
+  },
+  {
+    "type": "$ZTRANSLATE",
+    "named": false
+  },
+  {
+    "type": "$ZTRAP",
+    "named": false
+  },
+  {
+    "type": "$ZTRIGGER",
+    "named": false
+  },
+  {
+    "type": "$ZTRNLNM",
+    "named": false
+  },
+  {
+    "type": "$ZU",
+    "named": false
+  },
+  {
+    "type": "$ZUADITLOG",
+    "named": false
+  },
+  {
+    "type": "$ZUN",
+    "named": false
+  },
+  {
+    "type": "$ZUNS",
+    "named": false
+  },
+  {
+    "type": "$ZUNSP",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPE",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPEC",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPECI",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPECIF",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPECIFI",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPECIFIE",
+    "named": false
+  },
+  {
+    "type": "$ZUNSPECIFIED",
+    "named": false
+  },
+  {
+    "type": "$ZUSEDSTOR",
+    "named": false
+  },
+  {
+    "type": "$ZUT",
+    "named": false
+  },
+  {
+    "type": "$ZV",
+    "named": false
+  },
+  {
+    "type": "$ZVE",
+    "named": false
+  },
+  {
+    "type": "$ZVER",
+    "named": false
+  },
+  {
+    "type": "$ZVERS",
+    "named": false
+  },
+  {
+    "type": "$ZVERSI",
+    "named": false
+  },
+  {
+    "type": "$ZVERSIO",
+    "named": false
+  },
+  {
+    "type": "$ZVERSION",
+    "named": false
+  },
+  {
+    "type": "$ZW",
+    "named": false
+  },
+  {
+    "type": "$ZWASCII",
+    "named": false
+  },
+  {
+    "type": "$ZWCHAR",
+    "named": false
+  },
+  {
+    "type": "$ZWI",
+    "named": false
+  },
+  {
+    "type": "$ZWID",
+    "named": false
+  },
+  {
+    "type": "$ZWIDT",
+    "named": false
+  },
+  {
+    "type": "$ZWIDTH",
+    "named": false
+  },
+  {
+    "type": "$ZWRITE",
+    "named": false
+  },
+  {
+    "type": "$ZYCOMPILE",
+    "named": false
+  },
+  {
+    "type": "$ZYER",
+    "named": false
+  },
+  {
+    "type": "$ZYERR",
+    "named": false
+  },
+  {
+    "type": "$ZYERRO",
+    "named": false
+  },
+  {
+    "type": "$ZYERROR",
+    "named": false
+  },
+  {
+    "type": "$ZYHASH",
+    "named": false
+  },
+  {
+    "type": "$ZYINTRSIG",
+    "named": false
+  },
+  {
+    "type": "$ZYISSQLNULL",
+    "named": false
+  },
+  {
+    "type": "$ZYJO",
+    "named": false
+  },
+  {
+    "type": "$ZYJOB",
+    "named": false
+  },
+  {
+    "type": "$ZYJOBP",
+    "named": false
+  },
+  {
+    "type": "$ZYJOBPA",
+    "named": false
+  },
+  {
+    "type": "$ZYJOBPAR",
+    "named": false
+  },
+  {
+    "type": "$ZYJOBPARE",
+    "named": false
+  },
+  {
+    "type": "$ZYJOBPAREN",
+    "named": false
+  },
+  {
+    "type": "$ZYJOBPARENT",
+    "named": false
+  },
+  {
+    "type": "$ZYSU",
+    "named": false
+  },
+  {
+    "type": "$ZYSUF",
+    "named": false
+  },
+  {
+    "type": "$ZYSUFF",
+    "named": false
+  },
+  {
+    "type": "$ZYSUFFI",
+    "named": false
+  },
+  {
+    "type": "$ZYSUFFIX",
+    "named": false
+  },
+  {
+    "type": "$ZZENKAKU",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "**",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "AB",
+    "named": false
+  },
+  {
+    "type": "ABL",
+    "named": false
+  },
+  {
+    "type": "ABLO",
+    "named": false
+  },
+  {
+    "type": "ABLOC",
+    "named": false
+  },
+  {
+    "type": "ABLOCK",
+    "named": false
+  },
+  {
+    "type": "ASSIGN",
+    "named": false
+  },
+  {
+    "type": "ASTA",
+    "named": false
+  },
+  {
+    "type": "ASTAR",
+    "named": false
+  },
+  {
+    "type": "ASTART",
+    "named": false
+  },
+  {
+    "type": "ASTO",
+    "named": false
+  },
+  {
+    "type": "ASTOP",
+    "named": false
+  },
+  {
+    "type": "AUNB",
+    "named": false
+  },
+  {
+    "type": "AUNBL",
+    "named": false
+  },
+  {
+    "type": "AUNBLO",
+    "named": false
+  },
+  {
+    "type": "AUNBLOC",
+    "named": false
+  },
+  {
+    "type": "AUNBLOCK",
+    "named": false
+  },
+  {
+    "type": "B",
+    "named": false
+  },
+  {
+    "type": "BR",
+    "named": false
+  },
+  {
+    "type": "BRE",
+    "named": false
+  },
+  {
+    "type": "BREA",
+    "named": false
+  },
+  {
+    "type": "BREAK",
+    "named": false
+  },
+  {
+    "type": "C",
+    "named": false
+  },
+  {
+    "type": "CATCH",
+    "named": false
+  },
+  {
+    "type": "CL",
+    "named": false
+  },
+  {
+    "type": "CLO",
+    "named": false
+  },
+  {
+    "type": "CLOS",
+    "named": false
+  },
+  {
+    "type": "CLOSE",
+    "named": false
+  },
+  {
+    "type": "CONTINUE",
+    "named": false
+  },
+  {
+    "type": "D",
+    "named": false
+  },
+  {
+    "type": "DO",
+    "named": false
+  },
+  {
+    "type": "E",
+    "named": false
+  },
+  {
+    "type": "EL",
+    "named": false
+  },
+  {
+    "type": "ELS",
+    "named": false
+  },
+  {
+    "type": "ELSE",
+    "named": false
+  },
+  {
+    "type": "ELSEIF",
+    "named": false
+  },
+  {
+    "type": "ESTA",
+    "named": false
+  },
+  {
+    "type": "ESTAR",
+    "named": false
+  },
+  {
+    "type": "ESTART",
+    "named": false
+  },
+  {
+    "type": "ESTOP",
+    "named": false
+  },
+  {
+    "type": "ETRIGGER",
+    "named": false
+  },
+  {
+    "type": "F",
+    "named": false
+  },
+  {
+    "type": "FO",
+    "named": false
+  },
+  {
+    "type": "FOR",
+    "named": false
+  },
+  {
+    "type": "G",
+    "named": false
+  },
+  {
+    "type": "GO",
+    "named": false
+  },
+  {
+    "type": "GOT",
+    "named": false
+  },
+  {
+    "type": "GOTO",
+    "named": false
+  },
+  {
+    "type": "H",
+    "named": false
+  },
+  {
+    "type": "HA",
+    "named": false
+  },
+  {
+    "type": "HAL",
+    "named": false
+  },
+  {
+    "type": "HALT",
+    "named": false
+  },
+  {
+    "type": "HAN",
+    "named": false
+  },
+  {
+    "type": "HANG",
+    "named": false
+  },
+  {
+    "type": "I",
+    "named": false
+  },
+  {
+    "type": "IF",
+    "named": false
+  },
+  {
+    "type": "J",
+    "named": false
+  },
+  {
+    "type": "JO",
+    "named": false
+  },
+  {
+    "type": "JOB",
+    "named": false
+  },
+  {
+    "type": "K",
+    "named": false
+  },
+  {
+    "type": "KI",
+    "named": false
+  },
+  {
+    "type": "KIL",
+    "named": false
+  },
+  {
+    "type": "KILL",
+    "named": false
+  },
+  {
+    "type": "KSUBSCRIPTS",
+    "named": false
+  },
+  {
+    "type": "KVALUE",
+    "named": false
+  },
+  {
+    "type": "L",
+    "named": false
+  },
+  {
+    "type": "LO",
+    "named": false
+  },
+  {
+    "type": "LOC",
+    "named": false
+  },
+  {
+    "type": "LOCK",
+    "named": false
+  },
+  {
+    "type": "M",
+    "named": false
+  },
+  {
+    "type": "ME",
+    "named": false
+  },
+  {
+    "type": "MER",
+    "named": false
+  },
+  {
+    "type": "MERG",
+    "named": false
+  },
+  {
+    "type": "MERGE",
+    "named": false
+  },
+  {
+    "type": "N",
+    "named": false
+  },
+  {
+    "type": "NE",
+    "named": false
+  },
+  {
+    "type": "NEW",
+    "named": false
+  },
+  {
+    "type": "O",
+    "named": false
+  },
+  {
+    "type": "OP",
+    "named": false
+  },
+  {
+    "type": "OPE",
+    "named": false
+  },
+  {
+    "type": "OPEN",
+    "named": false
+  },
+  {
+    "type": "PRINT",
+    "named": false
+  },
+  {
+    "type": "Q",
+    "named": false
+  },
+  {
+    "type": "QU",
+    "named": false
+  },
+  {
+    "type": "QUI",
+    "named": false
+  },
+  {
+    "type": "QUIT",
+    "named": false
+  },
+  {
+    "type": "R",
+    "named": false
+  },
+  {
+    "type": "RE",
+    "named": false
+  },
+  {
+    "type": "REA",
+    "named": false
+  },
+  {
+    "type": "READ",
+    "named": false
+  },
+  {
+    "type": "RETURN",
+    "named": false
+  },
+  {
+    "type": "RLOAD",
+    "named": false
+  },
+  {
+    "type": "RSAVE",
+    "named": false
+  },
+  {
+    "type": "S",
+    "named": false
+  },
+  {
+    "type": "SE",
+    "named": false
+  },
+  {
+    "type": "SET",
+    "named": false
+  },
+  {
+    "type": "TC",
+    "named": false
+  },
+  {
+    "type": "TCO",
+    "named": false
+  },
+  {
+    "type": "TCOM",
+    "named": false
+  },
+  {
+    "type": "TCOMM",
+    "named": false
+  },
+  {
+    "type": "TCOMMI",
+    "named": false
+  },
+  {
+    "type": "TCOMMIT",
+    "named": false
+  },
+  {
+    "type": "THEN",
+    "named": false
+  },
+  {
+    "type": "THROW",
+    "named": false
+  },
+  {
+    "type": "TRE",
+    "named": false
+  },
+  {
+    "type": "TRES",
+    "named": false
+  },
+  {
+    "type": "TREST",
+    "named": false
+  },
+  {
+    "type": "TRESTA",
+    "named": false
+  },
+  {
+    "type": "TRESTAR",
+    "named": false
+  },
+  {
+    "type": "TRESTART",
+    "named": false
+  },
+  {
+    "type": "TRO",
+    "named": false
+  },
+  {
+    "type": "TROL",
+    "named": false
+  },
+  {
+    "type": "TROLL",
+    "named": false
+  },
+  {
+    "type": "TROLLB",
+    "named": false
+  },
+  {
+    "type": "TROLLBA",
+    "named": false
+  },
+  {
+    "type": "TROLLBAC",
+    "named": false
+  },
+  {
+    "type": "TROLLBACK",
+    "named": false
+  },
+  {
+    "type": "TRY",
+    "named": false
+  },
+  {
+    "type": "TS",
+    "named": false
+  },
+  {
+    "type": "TST",
+    "named": false
+  },
+  {
+    "type": "TSTA",
+    "named": false
+  },
+  {
+    "type": "TSTAR",
+    "named": false
+  },
+  {
+    "type": "TSTART",
+    "named": false
+  },
+  {
+    "type": "U",
+    "named": false
+  },
+  {
+    "type": "US",
+    "named": false
+  },
+  {
+    "type": "USE",
+    "named": false
+  },
+  {
+    "type": "V",
+    "named": false
+  },
+  {
+    "type": "VI",
+    "named": false
+  },
+  {
+    "type": "VIE",
+    "named": false
+  },
+  {
+    "type": "VIEW",
+    "named": false
+  },
+  {
+    "type": "W",
+    "named": false
+  },
+  {
+    "type": "WHILE",
+    "named": false
+  },
+  {
+    "type": "WR",
+    "named": false
+  },
+  {
+    "type": "WRI",
+    "named": false
+  },
+  {
+    "type": "WRIT",
+    "named": false
+  },
+  {
+    "type": "WRITE",
+    "named": false
+  },
+  {
+    "type": "X",
+    "named": false
+  },
+  {
+    "type": "XE",
+    "named": false
+  },
+  {
+    "type": "XEC",
+    "named": false
+  },
+  {
+    "type": "XECU",
+    "named": false
+  },
+  {
+    "type": "XECUT",
+    "named": false
+  },
+  {
+    "type": "XECUTE",
+    "named": false
+  },
+  {
+    "type": "Z",
+    "named": false
+  },
+  {
+    "type": "ZA",
+    "named": false
+  },
+  {
+    "type": "ZAL",
+    "named": false
+  },
+  {
+    "type": "ZALL",
+    "named": false
+  },
+  {
+    "type": "ZALLO",
+    "named": false
+  },
+  {
+    "type": "ZALLOC",
+    "named": false
+  },
+  {
+    "type": "ZALLOCA",
+    "named": false
+  },
+  {
+    "type": "ZALLOCAT",
+    "named": false
+  },
+  {
+    "type": "ZALLOCATE",
+    "named": false
+  },
+  {
+    "type": "ZB",
+    "named": false
+  },
+  {
+    "type": "ZBR",
+    "named": false
+  },
+  {
+    "type": "ZBRE",
+    "named": false
+  },
+  {
+    "type": "ZBREA",
+    "named": false
+  },
+  {
+    "type": "ZBREAK",
+    "named": false
+  },
+  {
+    "type": "ZC",
+    "named": false
+  },
+  {
+    "type": "ZCO",
+    "named": false
+  },
+  {
+    "type": "ZCOM",
+    "named": false
+  },
+  {
+    "type": "ZCOMP",
+    "named": false
+  },
+  {
+    "type": "ZCOMPI",
+    "named": false
+  },
+  {
+    "type": "ZCOMPIL",
+    "named": false
+  },
+  {
+    "type": "ZCOMPILE",
+    "named": false
+  },
+  {
+    "type": "ZCON",
+    "named": false
+  },
+  {
+    "type": "ZCONT",
+    "named": false
+  },
+  {
+    "type": "ZCONTI",
+    "named": false
+  },
+  {
+    "type": "ZCONTIN",
+    "named": false
+  },
+  {
+    "type": "ZCONTINU",
+    "named": false
+  },
+  {
+    "type": "ZCONTINUE",
+    "named": false
+  },
+  {
+    "type": "ZD",
+    "named": false
+  },
+  {
+    "type": "ZDE",
+    "named": false
+  },
+  {
+    "type": "ZDEA",
+    "named": false
+  },
+  {
+    "type": "ZDEAL",
+    "named": false
+  },
+  {
+    "type": "ZDEALL",
+    "named": false
+  },
+  {
+    "type": "ZDEALLO",
+    "named": false
+  },
+  {
+    "type": "ZDEALLOC",
+    "named": false
+  },
+  {
+    "type": "ZDEALLOCA",
+    "named": false
+  },
+  {
+    "type": "ZDEALLOCAT",
+    "named": false
+  },
+  {
+    "type": "ZDEALLOCATE",
+    "named": false
+  },
+  {
+    "type": "ZED",
+    "named": false
+  },
+  {
+    "type": "ZEDI",
+    "named": false
+  },
+  {
+    "type": "ZEDIT",
+    "named": false
+  },
+  {
+    "type": "ZG",
+    "named": false
+  },
+  {
+    "type": "ZGO",
+    "named": false
+  },
+  {
+    "type": "ZGOT",
+    "named": false
+  },
+  {
+    "type": "ZGOTO",
+    "named": false
+  },
+  {
+    "type": "ZH",
+    "named": false
+  },
+  {
+    "type": "ZHALT",
+    "named": false
+  },
+  {
+    "type": "ZHE",
+    "named": false
+  },
+  {
+    "type": "ZHEL",
+    "named": false
+  },
+  {
+    "type": "ZHELP",
+    "named": false
+  },
+  {
+    "type": "ZINSERT",
+    "named": false
+  },
+  {
+    "type": "ZK",
+    "named": false
+  },
+  {
+    "type": "ZKI",
+    "named": false
+  },
+  {
+    "type": "ZKIL",
+    "named": false
+  },
+  {
+    "type": "ZKILL",
+    "named": false
+  },
+  {
+    "type": "ZL",
+    "named": false
+  },
+  {
+    "type": "ZLI",
+    "named": false
+  },
+  {
+    "type": "ZLIN",
+    "named": false
+  },
+  {
+    "type": "ZLINK",
+    "named": false
+  },
+  {
+    "type": "ZLOAD",
+    "named": false
+  },
+  {
+    "type": "ZM",
+    "named": false
+  },
+  {
+    "type": "ZME",
+    "named": false
+  },
+  {
+    "type": "ZMES",
+    "named": false
+  },
+  {
+    "type": "ZMESS",
+    "named": false
+  },
+  {
+    "type": "ZMESSA",
+    "named": false
+  },
+  {
+    "type": "ZMESSAG",
+    "named": false
+  },
+  {
+    "type": "ZMESSAGE",
+    "named": false
+  },
+  {
+    "type": "ZNSPACE",
+    "named": false
+  },
+  {
+    "type": "ZP",
+    "named": false
+  },
+  {
+    "type": "ZPR",
+    "named": false
+  },
+  {
+    "type": "ZPRI",
+    "named": false
+  },
+  {
+    "type": "ZPRIN",
+    "named": false
+  },
+  {
+    "type": "ZPRINT",
+    "named": false
+  },
+  {
+    "type": "ZREMOVE",
+    "named": false
+  },
+  {
+    "type": "ZRUP",
+    "named": false
+  },
+  {
+    "type": "ZRUPD",
+    "named": false
+  },
+  {
+    "type": "ZRUPDA",
+    "named": false
+  },
+  {
+    "type": "ZRUPDAT",
+    "named": false
+  },
+  {
+    "type": "ZRUPDATE",
+    "named": false
+  },
+  {
+    "type": "ZSAVE",
+    "named": false
+  },
+  {
+    "type": "ZSH",
+    "named": false
+  },
+  {
+    "type": "ZSHO",
+    "named": false
+  },
+  {
+    "type": "ZSHOW",
+    "named": false
+  },
+  {
+    "type": "ZST",
+    "named": false
+  },
+  {
+    "type": "ZSTE",
+    "named": false
+  },
+  {
+    "type": "ZSTEP",
+    "named": false
+  },
+  {
+    "type": "ZSU",
+    "named": false
+  },
+  {
+    "type": "ZSY",
+    "named": false
+  },
+  {
+    "type": "ZSYS",
+    "named": false
+  },
+  {
+    "type": "ZSYST",
+    "named": false
+  },
+  {
+    "type": "ZSYSTE",
+    "named": false
+  },
+  {
+    "type": "ZSYSTEM",
+    "named": false
+  },
+  {
+    "type": "ZTC",
+    "named": false
+  },
+  {
+    "type": "ZTCO",
+    "named": false
+  },
+  {
+    "type": "ZTCOM",
+    "named": false
+  },
+  {
+    "type": "ZTCOMM",
+    "named": false
+  },
+  {
+    "type": "ZTCOMMI",
+    "named": false
+  },
+  {
+    "type": "ZTCOMMIT",
+    "named": false
+  },
+  {
+    "type": "ZTR",
+    "named": false
+  },
+  {
+    "type": "ZTRAP",
+    "named": false
+  },
+  {
+    "type": "ZTRI",
+    "named": false
+  },
+  {
+    "type": "ZTRIG",
+    "named": false
+  },
+  {
+    "type": "ZTRIGG",
+    "named": false
+  },
+  {
+    "type": "ZTRIGGE",
+    "named": false
+  },
+  {
+    "type": "ZTRIGGER",
+    "named": false
+  },
+  {
+    "type": "ZTS",
+    "named": false
+  },
+  {
+    "type": "ZTST",
+    "named": false
+  },
+  {
+    "type": "ZTSTA",
+    "named": false
+  },
+  {
+    "type": "ZTSTAR",
+    "named": false
+  },
+  {
+    "type": "ZTSTART",
+    "named": false
+  },
+  {
+    "type": "ZWI",
+    "named": false
+  },
+  {
+    "type": "ZWIT",
+    "named": false
+  },
+  {
+    "type": "ZWITH",
+    "named": false
+  },
+  {
+    "type": "ZWITHD",
+    "named": false
+  },
+  {
+    "type": "ZWITHDR",
+    "named": false
+  },
+  {
+    "type": "ZWITHDRA",
+    "named": false
+  },
+  {
+    "type": "ZWITHDRAW",
+    "named": false
+  },
+  {
+    "type": "ZWR",
+    "named": false
+  },
+  {
+    "type": "ZWRI",
+    "named": false
+  },
+  {
+    "type": "ZWRIT",
+    "named": false
+  },
+  {
+    "type": "ZWRITE",
+    "named": false
+  },
+  {
+    "type": "ZYDE",
+    "named": false
+  },
+  {
+    "type": "ZYDEC",
+    "named": false
+  },
+  {
+    "type": "ZYDECO",
+    "named": false
+  },
+  {
+    "type": "ZYDECOD",
+    "named": false
+  },
+  {
+    "type": "ZYDECODE",
+    "named": false
+  },
+  {
+    "type": "ZYEN",
+    "named": false
+  },
+  {
+    "type": "ZYENC",
+    "named": false
+  },
+  {
+    "type": "ZYENCO",
+    "named": false
+  },
+  {
+    "type": "ZYENCOD",
+    "named": false
+  },
+  {
+    "type": "ZYENCODE",
+    "named": false
+  },
+  {
+    "type": "ZZDUMP",
+    "named": false
+  },
+  {
+    "type": "ZZPRINT",
+    "named": false
+  },
+  {
+    "type": "ZZWRITE",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "\\",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "]]",
+    "named": false
+  },
+  {
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "_",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  }
+]

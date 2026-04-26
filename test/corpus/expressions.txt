@@ -1,0 +1,138 @@
+================================================================================
+String literal with embedded doubled quote
+================================================================================
+
+ W "he said ""hi"""
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (string)))))))
+
+================================================================================
+Numeric literals (integer, decimal, exponent)
+================================================================================
+
+ W 42
+ W 3.14
+ W 1.5E10
+ W .5
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line (command_sequence (command (command_keyword) (argument_list (argument (number))))))
+  (line (command_sequence (command (command_keyword) (argument_list (argument (number))))))
+  (line (command_sequence (command (command_keyword) (argument_list (argument (number))))))
+  (line (command_sequence (command (command_keyword) (argument_list (argument (number)))))))
+
+================================================================================
+Global variable with subscripts
+================================================================================
+
+ S ^FOO("a","b")=1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (global_variable
+                  (identifier)
+                  (subscripts
+                    (string)
+                    (string))))
+              (operator)
+              (number))))))))
+
+================================================================================
+Local variable with subscripts
+================================================================================
+
+ S X(1,2)=10
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)
+                  (subscripts
+                    (number)
+                    (number))))
+              (operator)
+              (number))))))))
+
+================================================================================
+Concatenation operator (underscore) — left-to-right per M spec
+================================================================================
+
+ S X="hello"_"world"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (binary_expression
+                (variable
+                  (local_variable
+                    (identifier)))
+                (operator)
+                (string))
+              (operator)
+              (string))))))))
+
+================================================================================
+Parenthesized subexpression
+================================================================================
+
+ S X=(A+B)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (parenthesized
+                (binary_expression
+                  (variable
+                    (local_variable
+                      (identifier)))
+                  (operator)
+                  (variable
+                    (local_variable
+                      (identifier))))))))))))
