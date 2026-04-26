@@ -126,6 +126,10 @@
           "named": true
         },
         {
+          "type": "io_param_list",
+          "named": true
+        },
+        {
           "type": "number",
           "named": true
         },
@@ -708,6 +712,73 @@
     "fields": {}
   },
   {
+    "type": "io_param_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "by_reference",
+          "named": true
+        },
+        {
+          "type": "entry_reference",
+          "named": true
+        },
+        {
+          "type": "extrinsic_function",
+          "named": true
+        },
+        {
+          "type": "format_control",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "indirection",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "pattern_match",
+          "named": true
+        },
+        {
+          "type": "special_variable",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "label",
     "named": true,
     "fields": {}
@@ -1166,11 +1237,19 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "special_variable_keyword",
+          "named": true
+        },
+        {
+          "type": "subscripts",
+          "named": true
+        },
+        {
+          "type": "vendor_sv_extension",
           "named": true
         }
       ]
@@ -1501,6 +1580,10 @@
   },
   {
     "type": "pattern_repeat_count",
+    "named": true
+  },
+  {
+    "type": "vendor_sv_extension",
     "named": true
   }
 ]

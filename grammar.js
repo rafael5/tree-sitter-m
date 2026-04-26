@@ -86,6 +86,7 @@ module.exports = grammar({
     [$.global_variable],
     [$.by_reference],
     [$.entry_reference],
+    [$.special_variable],
   ],
 
   rules: {
@@ -255,10 +256,31 @@ module.exports = grammar({
       seq(optional(choice('+', '-')), $.set_target_list),
     )),
 
+    // Argument postconditional is the `:expr` chain after an argument.
+    // Three uses share the same colon-chain shape:
+    //   - DO/GOTO postconditional: `D LABEL:cond`
+    //   - FOR range:                `F I=1:1:N`
+    //   - USE/OPEN I/O parameters:  `U $I:(NOLINE:ESCAPE)`,
+    //                               `O DEV:(::0):"R"`
+    // The I/O form has a parenthesised colon-list as one of the chain
+    // parts. `io_param_list` covers that — it requires ≥1 colon to
+    // distinguish from a regular `parenthesized` expression.
     argument_postconditional: $ => prec.right(seq(
-      ':', $._expression,
-      repeat(seq(':', $._expression)),
+      ':', choice($._expression, $.io_param_list),
+      repeat(seq(':', choice($._expression, $.io_param_list))),
     )),
+
+    // Parenthesised colon-list for USE/OPEN I/O parameters. Slots may
+    // be empty (`(::0)` is "skip param 1, skip param 2, value 0").
+    // The leading `repeat1` colon requirement ensures `(X)` stays a
+    // plain `parenthesized` expression and only `(X:Y)` etc. become
+    // io_param_list.
+    io_param_list: $ => seq(
+      '(',
+      optional($._expression),
+      repeat1(seq(':', optional($._expression))),
+      ')',
+    ),
 
     // -------- Expressions --------
 
@@ -534,9 +556,29 @@ module.exports = grammar({
 
     intrinsic_function_keyword: $ => choice(...K.intrinsic_functions.map(ci)),
 
-    special_variable: $ => $.special_variable_keyword,
+    // Special variable. Two shapes:
+    //   - canonical: just a keyword (`$JOB`, `$P`, `$ZA`)
+    //   - Kernel vendor extension: keyword + extra alpha-numerics
+    //     (`$PD`, `$PT`, `$PM` — Kernel local-var-style names where
+    //     the lexer has already eaten `$P` as the keyword and the
+    //     trailing letters are an extension). Real M doesn't allow
+    //     identifiers to start with `$`, but VistA Kernel reads
+    //     `$PD`/`$PT` etc. as opaque rvalues. The vendor branch lets
+    //     these parse without breaking the surrounding context. GLR
+    //     picks the vendor branch when extra letters follow the
+    //     keyword and the canonical branch otherwise.
+    special_variable: $ => choice(
+      $.special_variable_keyword,
+      seq(
+        $.special_variable_keyword,
+        $.vendor_sv_extension,
+        optional($.subscripts),
+      ),
+    ),
 
     special_variable_keyword: $ => choice(...K.intrinsic_special_variables.map(ci)),
+
+    vendor_sv_extension: $ => /[A-Za-z][A-Za-z0-9]*/,
 
     // Extrinsic function: `$$LABEL`, `$$LABEL^ROUTINE`, `$$^ROUTINE`
     // (no label — the routine's default entry), or `$$@expr[^ROUTINE]`

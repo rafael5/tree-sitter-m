@@ -1,0 +1,79 @@
+================================================================================
+USE with parenthesized I/O parameters
+================================================================================
+
+ U $I:(NOLINE:ESCAPE)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (special_variable
+              (special_variable_keyword))
+            (argument_postconditional
+              (io_param_list
+                (variable
+                  (local_variable
+                    (identifier)))
+                (variable
+                  (local_variable
+                    (identifier)))))))))))
+
+================================================================================
+OPEN with empty-slot I/O parameters
+================================================================================
+
+ O DEV:(::0)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (variable
+              (local_variable
+                (identifier)))
+            (argument_postconditional
+              (io_param_list
+                (number)))))))))
+
+================================================================================
+USE with binary-expression I/O parameters
+================================================================================
+
+ U $I:(VT=1:ESCAPE=1)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (special_variable
+              (special_variable_keyword))
+            (argument_postconditional
+              (io_param_list
+                (binary_expression
+                  (variable
+                    (local_variable
+                      (identifier)))
+                  (operator)
+                  (number))
+                (binary_expression
+                  (variable
+                    (local_variable
+                      (identifier)))
+                  (operator)
+                  (number))))))))))

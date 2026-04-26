@@ -607,3 +607,51 @@ is the documented baseline. The USE/OPEN I/O parameter fix is the
 one pure-grammar opportunity left and could go in either v1.0 or a
 v1.1 patch. Everything else is upstream (m-standard) or out of
 scope (ObjectScript) or non-standard M (Kernel `$PD` idiom).
+
+---
+
+## 2026-04-26 (later × 10) — vendor SV extension + USE/OPEN I/O params
+
+**Done (two related grammar fixes):**
+
+- **Kernel `$PD`/`$PT`/`$PM`-style vendor SV extension.** The lexer
+  was eating `$P` as the keyword and choking on the trailing letter.
+  First attempt — adding a `vendor_dollar_identifier` regex token
+  with `prec(-1)` — failed because tree-sitter's lexer applies
+  precedence DOMINANT over length, so a low-prec longer match still
+  loses. (Confirmed empirically: `prec(-1)` made vendor lose to
+  `$P` keyword on every input.) Negative lookahead `(?!...)` would
+  have worked but tree-sitter's regex engine explicitly rejects
+  look-around. Final approach: parser-rule-level fix — extend
+  `special_variable` to optionally accept a trailing
+  `vendor_sv_extension` (`/[A-Za-z][A-Za-z0-9]*/`) after the
+  keyword. GLR explores both shapes; the vendor branch wins when
+  trailing letters follow a keyword (`$PD` parses as `$P` keyword
+  + `D` extension), the canonical branch wins otherwise.
+  **+0.04pp file-clean rate** (smaller than predicted because each
+  `$PD`-using file usually has many other Kernel idioms too).
+- **USE/OPEN with parenthesised I/O parameters** (`U $I:(NOLINE:ESCAPE)`,
+  `O DEV:(::0)`, `U $I:(VT=1:ESCAPE=1)`). New `io_param_list` rule
+  in the `argument_postconditional` colon-chain. Requires ≥1 colon
+  inside parens to distinguish from a regular `parenthesized`
+  expression. Slots may be empty (`(::0)` is "skip param 1, skip
+  param 2, value 0").
+- 4 new corpus tests (1 vendor SV extension, 3 I/O parameter
+  variants). 104 corpus tests total, all pass.
+- Combined: **98.39% → 98.49% (+0.10pp)** on the full 39,330-routine
+  VistA corpus. 633 → 594 failing files.
+
+**Lessons learned about tree-sitter regex / token-level prec:**
+
+- Token precedence DOMINATES length-based tiebreaking — opposite of
+  parser rule precedence. A `prec(-1)` lexer regex loses to any
+  higher-prec token regardless of which one is longer.
+- Negative lookahead `(?!...)` and look-behind `(?<...)` are
+  rejected outright by tree-sitter's regex engine at generate time.
+  Workaround for lex-level "match unless this exact thing comes
+  next": push the disambiguation into the parser via a GLR
+  alternative.
+- The "special_variable + optional vendor_extension" pattern
+  generalises to any case where a known-set keyword needs to
+  tolerate non-standard trailing characters without consuming them
+  in the keyword token itself.

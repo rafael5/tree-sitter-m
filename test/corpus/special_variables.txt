@@ -92,3 +92,27 @@ $D used as function (disambiguated by parens)
               (variable
                 (local_variable
                   (identifier))))))))))
+
+================================================================================
+Vendor extension on special variable (Kernel $PD-style)
+================================================================================
+
+ S X=$PD
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (variable
+                (local_variable
+                  (identifier)))
+              (operator)
+              (special_variable
+                (special_variable_keyword)
+                (vendor_sv_extension)))))))))

@@ -3,19 +3,17 @@
 Snapshot of where the project sits against `docs/spec.md`. Updated
 on commit; the live progression history lives in `docs/build-log.md`.
 
-**Headline.** Real-source coverage at **98.39% clean on the full
-39,330-routine VistA corpus** (1000-routine sample reads 99.0% —
-sample overstated by 0.6pp). All grammar work for v1.0 scope is
+**Headline.** Real-source coverage at **98.49% clean on the full
+39,330-routine VistA corpus**. All grammar work for v1.0 scope is
 effectively complete; remaining work is delivery (bindings, CI,
 editor integration) plus a few small fit-and-finish items.
 
-**Residual analysis** (633 failing files / ~870+ ERROR nodes):
-~half is **out of scope** (ObjectScript) or **upstream** (vendor
-`$Z*` functions and `ZW` abbreviation missing from m-standard's
-grammar-surface; the `$PD`/`$PT` Kernel local-variable idiom that
-doesn't appear in any standard). The lone parser-side opportunity
-left is **USE / OPEN with `:(param:list)` I/O parameters** (~34
-ERROR nodes in Kernel). 100% of clinical packages parse cleanly.
+**Residual analysis** (594 failing files): ~half is **out of scope**
+(ObjectScript) or **upstream** (vendor `$Z*` functions and `ZW`
+abbreviation missing from m-standard's grammar-surface). 100% of
+clinical packages parse cleanly. The two parser-side opportunities
+flagged at the 98.39% baseline are now landed: Kernel `$PD`-style
+vendor SV extension and USE/OPEN `:(param:list)` I/O parameters.
 
 ---
 
@@ -84,8 +82,8 @@ naked global refs (`^(...)`), case-insensitive keywords.
 - **Corpus tests:** 100 across 14 files in `test/corpus/`. 100% pass.
 - **Lib tests:** 18 in `lib/*.test.js` (stamp.js metadata join). 100% pass.
 - **Real-source smoke gate:** `tools/smoke-corpus.js`. Full corpus
-  39,330 routines / 162 MB at 98.39% clean (36.8s wall, 4.4 MB/s).
-  1000-routine deterministic sample at 99.0% (overstates by 0.6pp).
+  39,330 routines / 162 MB at **98.49% clean** (33.9s wall, 4.8 MB/s).
+  1000-routine deterministic sample at 99.0%.
   Run full: `node tools/smoke-corpus.js ~/vista-meta/vista/vista-m-host/Packages --by-package`.
 - **Error bucket triage:** `tools/error-buckets.js` categorises
   remaining ERROR nodes by syntactic shape.
@@ -133,31 +131,17 @@ Ordered roughly by what blocks the release.
 8. **License headers** on `grammar.js`, `src/parser.c`,
    `src/scanner.c`, `keywords.generated.js`,
    `src/grammar-metadata.json`. AGPL-3.0 SPDX line.
-9. **USE/OPEN with parenthesized I/O parameters**
-   (`U $I:(NOLINE:ESCAPE)`, `O DEV:(::0)`, `O FILE:("R")`). 28+ Kernel
-   ERROR nodes plus more in other system packages. Real M I/O
-   syntax. Likely a small grammar addition: a USE-args /
-   OPEN-args alternative that accepts `:(colon_separated_list)`
-   after a device expression.
-10. **Argless-DO followed by single-space-then-comment** — three
+9. **Argless-DO followed by single-space-then-comment** — three
     shift-reduce residuals in the smoke gate (e.g.
     `D ;W !,IEN ;Q:...`). Either an extension to the line shape
     that lets `_sp1 + comment` close an argless command without
     needing two spaces, or a scanner-level heuristic that emits
     SP2PLUS at command-end-followed-by-comment.
-11. **Vendor symbols missing in m-standard.** Tracking note
+10. **Vendor symbols missing in m-standard.** Tracking note
     upstream for `ZW` abbreviation (ZWRITE), `$ZBITOR`, `$ZGETSYI`,
     `$ZC`, `$ZCALL`, `$ZU` (some forms). ~148 ERROR nodes
     in the Kernel residual trace to these. Fixed in
     `m-standard`'s extractors, not here.
-12. **Kernel `$PD` / `$PT` / `$PX` idiom.** ~535 ERROR nodes in
-    Kernel come from local variables that start with `$P` (e.g.
-    `$PD`, `$PT`). The lexer matches `$P` as the ISV/function
-    keyword and then can't make sense of the trailing letter. Not
-    valid standard M (identifiers can't start with `$`); a Kernel
-    convention. Either patch Kernel, or accept as known residual,
-    or add a "trailing-letter rejection" rule for `$P` keyword
-    matching. Probably accept-as-residual is the right call.
 
 ### Nice-to-have
 
