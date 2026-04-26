@@ -1,4 +1,4 @@
-# m-parser — Specification v0.1
+# tree-sitter-m — Specification v0.1
 
 **Status:** draft for review
 **License of this document:** AGPL-3.0 (matches the artifact it specifies)
@@ -36,7 +36,7 @@ reasoning about M code.
 
 ## 1. Project identity
 
-**Name.** `m-parser`.
+**Name.** `tree-sitter-m`.
 
 **Purpose.** A [tree-sitter](https://tree-sitter.github.io/) grammar
 for the M (MUMPS) programming language. The grammar parses real-world
@@ -69,16 +69,16 @@ M development has historically lacked.
 **Relationship to the project family.**
 
 ```
-m-standard      →   integrated/grammar-surface.json   →   m-parser
+m-standard      →   integrated/grammar-surface.json   →   tree-sitter-m
    (data)              (versioned data contract)         (consumer)
 
-m-parser        →   tree-sitter-m npm package         →   tree-sitter-m-lint
-                    + bindings (Node/Rust/Python/Go)       (sibling project)
-                                                       →   editor plugins
-                                                       →   AI agents
+tree-sitter-m   →   bindings: Node / Rust / Python / Go    →   tree-sitter-m-lint
+ (this project)     (npm, crates.io, PyPI, go modules)         (sibling project)
+                                                           →   editor plugins
+                                                           →   AI agents
 ```
 
-`m-parser` is a downstream consumer of `m-standard`. It does no
+`tree-sitter-m` is a downstream consumer of `m-standard`. It does no
 extraction, no reconciliation, no policy. Its only job is to take
 `m-standard`'s data and produce a fast, embeddable, error-recovering
 parser for M.
@@ -126,20 +126,20 @@ parser for M.
   `&js(...)`, `##super`, `##this`, `obj.method()`, `obj.property=val`
   etc. are ObjectScript — a separate scripting language layered on
   top of M's runtime, not part of M itself. Out of scope for any
-  version of m-parser. A separate `tree-sitter-objectscript`
+  version of tree-sitter-m. A separate `tree-sitter-objectscript`
   grammar would be the right home.
 * **Pre-ANSI dialects.** DSM-11, MUMPS-11, etc. — historical, not
   relevant to live codebases.
 
 **Non-goals:**
 
-* Compiler / interpreter functionality. `m-parser` produces a parse
+* Compiler / interpreter functionality. `tree-sitter-m` produces a parse
   tree; it does not execute or type-check M.
 * Source formatting / reformatting. A formatter (`m-fmt`?) is a
-  separate downstream project that *consumes* `m-parser`.
+  separate downstream project that *consumes* `tree-sitter-m`.
 * Linting / standards enforcement. The pragmatic / SAC / operational
   standards live in `m-standard`'s data; `lint_m` and similar tools
-  consume both `m-parser`'s AST and `m-standard`'s tier classifications.
+  consume both `tree-sitter-m`'s AST and `m-standard`'s tier classifications.
   The parser stays neutral.
 
 ---
@@ -196,14 +196,14 @@ profile.
 
 ### AD-04: Pin to a specific `m-standard` schema version
 
-`m-parser`'s build pipeline pins to a specific `m-standard`
+`tree-sitter-m`'s build pipeline pins to a specific `m-standard`
 `schema_version` (currently `"1"`). When `m-standard` ships a
-breaking schema change (per ADR-005 of m-standard), `m-parser`
+breaking schema change (per ADR-005 of m-standard), `tree-sitter-m`
 chooses whether and when to upgrade. Pinning is recorded in
 `package.json`'s `m-standard.schema_version` field; CI fails the
 build if the pinned schema doesn't match the consumed file.
 
-This means `m-parser` releases are *decoupled* from `m-standard`
+This means `tree-sitter-m` releases are *decoupled* from `m-standard`
 releases — additive m-standard updates flow through automatically;
 breaking ones require deliberate adoption.
 
@@ -230,7 +230,7 @@ language is.
 This means downstream consumers can use any tree-sitter-aware
 tooling (Neovim's nvim-treesitter, VS Code's tree-sitter extensions,
 GitHub's code-search infrastructure, Helix editor, etc.) without
-m-parser-specific glue.
+tree-sitter-m-specific glue.
 
 ---
 
@@ -260,10 +260,10 @@ generator needs:
 }
 ```
 
-`m-parser` consumes this file at build time. The build generator
+`tree-sitter-m` consumes this file at build time. The build generator
 (`tools/build-grammar.js`, see §9) reads the file and emits the
 corresponding `choice(...)` rules into `grammar.js`. Per AD-04
-the file's `schema_version` must match the version `m-parser` is
+the file's `schema_version` must match the version `tree-sitter-m` is
 pinned to.
 
 **Counts in m-standard v0.2:**
@@ -277,13 +277,13 @@ pinned to.
 | pattern_codes | 7 | 7 |
 | **Total** | **347** | **~954** |
 
-These are the keyword sets `m-parser` recognises in v1.0.
+These are the keyword sets `tree-sitter-m` recognises in v1.0.
 
 **Why prefix forms matter.** M abbreviations are
 prefix-truncations: `BREAK` with abbreviation `B` is recognised
 as `B`, `BR`, `BRE`, `BREA`, or `BREAK` — any prefix at least as
 long as the abbreviation. `grammar-surface.json` already explodes
-this; `m-parser`'s grammar simply uses every form as an alternative
+this; `tree-sitter-m`'s grammar simply uses every form as an alternative
 in a `choice(...)`. Total of ~954 keyword forms.
 
 ---
@@ -441,7 +441,7 @@ query language:
 
 ## 8. Output specification
 
-`m-parser` produces:
+`tree-sitter-m` produces:
 
 * **`grammar.js`** — generated tree-sitter grammar definition
   (committed to the repo; consumers don't need to regenerate).
@@ -454,10 +454,12 @@ query language:
 * **`bindings/node/`**, **`bindings/rust/`**, **`bindings/python/`**,
   **`bindings/go/`** — language bindings produced by the tree-sitter
   scaffold.
-* **NPM package** `tree-sitter-m` (or scoped `@m-standard/parser`)
-  — the standard tree-sitter distribution form.
-* **Crate** `tree-sitter-m` on crates.io.
+* **npm package** `tree-sitter-m` — the standard tree-sitter
+  distribution form (matches `tree-sitter-javascript`,
+  `tree-sitter-python`, etc.).
+* **crates.io crate** `tree-sitter-m`.
 * **PyPI package** `tree-sitter-m`.
+* **Go module** `github.com/rafael5/tree-sitter-m`.
 
 All generated artifacts are committed so consumers don't need
 tree-sitter-cli or `m-standard` to install and use the parser. The
@@ -473,7 +475,7 @@ m-standard/
     └── grammar-surface.json   ──┐
                                  │
                                  ▼
-m-parser/
+tree-sitter-m/
 ├── tools/build-grammar.js     ─►  reads grammar-surface.json
 │                                  emits the data-driven half of grammar.js
 │                                  emits src/grammar-metadata.json
@@ -492,7 +494,7 @@ tree-sitter-m` without any of the upstream tools.
 
 The pipeline runs in CI on every commit to `m-standard` that
 changes `grammar-surface.json` (via a webhook or scheduled poll —
-implementation detail) AND on every commit to `m-parser` itself.
+implementation detail) AND on every commit to `tree-sitter-m` itself.
 
 ---
 
@@ -567,9 +569,9 @@ under 100ms on a modern laptop. CI tracks regression.
 
 Editor integrations consume the npm package via:
 
-- VS Code: tree-sitter language extension, with `m-parser` declared
+- VS Code: tree-sitter language extension, with `tree-sitter-m` declared
   in the extension's manifest.
-- Neovim: nvim-treesitter ships parser configurations; `m-parser`
+- Neovim: nvim-treesitter ships parser configurations; `tree-sitter-m`
   is added as a parser source.
 - Emacs: tree-sitter.el's language registration.
 - Helix: declared in `languages.toml`.
@@ -589,7 +591,7 @@ Runtime (per binding):
 - Python: tree-sitter ≥ 0.21
 - Go: tree-sitter Go binding (third-party)
 
-No m-standard dependency at runtime — m-parser ships pre-generated
+No m-standard dependency at runtime — tree-sitter-m ships pre-generated
 artifacts. The m-standard pin is build-time only.
 
 ---
@@ -597,7 +599,7 @@ artifacts. The m-standard pin is build-time only.
 ## 13. Repository layout
 
 ```
-m-parser/
+tree-sitter-m/
 ├── docs/
 │   ├── spec.md                    # this document
 │   ├── adr/
@@ -663,7 +665,7 @@ m-parser/
 | **B4** | Indirection, dot-blocks, pattern matching. The "weird" syntax. | Real-source corpus parses VistA Kernel + YottaDB samples cleanly. |
 | **B5** | Error recovery. Malformed source produces partial AST with `ERROR` nodes scoped tightly. | Editor-quality experience: typing in a partial routine still yields a useful tree. |
 | **B6** | Bindings: Node, Rust, Python, Go. CI builds wheels/binaries for each. | `npm install tree-sitter-m` works end-to-end on Linux/macOS/Windows. |
-| **B7** | Editor integrations published: VS Code extension, nvim-treesitter PR, Emacs registration. | At least one editor ships syntax highlighting using m-parser. |
+| **B7** | Editor integrations published: VS Code extension, nvim-treesitter PR, Emacs registration. | At least one editor ships syntax highlighting using tree-sitter-m. |
 | **v1.0** | Tag and release. | All §16 success criteria met. |
 
 Estimated total: **~3–4 weeks of focused work for v1.0**, dominated
@@ -694,12 +696,12 @@ important to avoid downstream confusion.
 M codebases mix in ObjectScript: `##class(...)`, `&sql(...)`,
 `&js(...)`, `##super`, `obj.method()`, `obj.property=val`. These
 aren't M — they're a separate scripting language that shares M's
-runtime. m-parser is scoped to M and M dialects (AnnoStd, YottaDB,
+runtime. tree-sitter-m is scoped to M and M dialects (AnnoStd, YottaDB,
 IRIS's M layer); ObjectScript is permanently out of scope, not
 deferred. The right home for it is a sibling grammar
-(`tree-sitter-objectscript`) that can compose with m-parser when a
+(`tree-sitter-objectscript`) that can compose with tree-sitter-m when a
 file mixes both. Routines that use ObjectScript heavily will
-produce `ERROR` nodes in m-parser; that's by design.
+produce `ERROR` nodes in tree-sitter-m; that's by design.
 
 **Pattern code namespace.** YottaDB allows new pattern codes via
 the patcode table; IRIS allows custom codes via international
@@ -715,7 +717,7 @@ tree carries `matched_form` (what the source said) vs
 Important to document; easy to confuse.
 
 **m-standard schema evolution.** When m-standard ships
-`schema_version="2"` (per its ADR-005), m-parser must adopt it
+`schema_version="2"` (per its ADR-005), tree-sitter-m must adopt it
 deliberately. The pin in `package.json` and the build-time check
 catch accidental drift.
 
@@ -754,7 +756,7 @@ The following must all be true for v1.0 release:
    work on Linux, macOS, Windows.
 8. **Editor demonstration.** At least one editor integration
    (VS Code extension or nvim-treesitter PR) ships syntax
-   highlighting using m-parser.
+   highlighting using tree-sitter-m.
 9. **ADR set complete.** AD-01 through AD-06 documented as ADRs.
 10. **CI gates.** Build + corpus tests + per-tier coverage gate +
     performance budget all enforced on every PR.
@@ -768,33 +770,33 @@ The following must all be true for v1.0 release:
 
 ## 17. Relationship to m-standard
 
-`m-parser` is a **strict downstream consumer** of `m-standard`. It
+`tree-sitter-m` is a **strict downstream consumer** of `m-standard`. It
 does no extraction, no reconciliation, no policy. The contract is:
 
-- `m-parser` reads exactly one file from `m-standard`:
+- `tree-sitter-m` reads exactly one file from `m-standard`:
   `integrated/grammar-surface.json`.
 - That file is consumed at build time, never at runtime.
-- The pinned `schema_version` is part of `m-parser`'s public ABI
+- The pinned `schema_version` is part of `tree-sitter-m`'s public ABI
   in the sense that downstream consumers know what `standard_status`
   values to expect.
 - When `m-standard` ships an additive grammar-surface change (new
-  command added to a vendor), `m-parser` rebuilds and ships an
+  command added to a vendor), `tree-sitter-m` rebuilds and ships an
   additive update without bumping its own major version.
 - When `m-standard` ships a breaking schema change (per its
-  ADR-005), `m-parser` performs a deliberate adoption and bumps
+  ADR-005), `tree-sitter-m` performs a deliberate adoption and bumps
   its own major version.
 
-Conversely, `m-parser` does **not** influence `m-standard`'s
-direction. If `m-parser` discovers a missing token or a parse
+Conversely, `tree-sitter-m` does **not** influence `m-standard`'s
+direction. If `tree-sitter-m` discovers a missing token or a parse
 ambiguity, the fix lives in `m-standard`'s extractors or sources,
-not in `m-parser`. The data flows in one direction.
+not in `tree-sitter-m`. The data flows in one direction.
 
 The other way to think about it: `m-standard` is the authoritative
-data; `m-parser` is the most prominent consumer. Other consumers
+data; `tree-sitter-m` is the most prominent consumer. Other consumers
 (`tree-sitter-m-lint`, `m-fmt`, AI agents, vista-meta analyzers)
 will follow the same pattern.
 
 The pragmatic / SAC / operational standards are also `m-standard`
-outputs — but they're consumed by `m-parser`'s sibling
-`tree-sitter-m-lint`, not by `m-parser` itself. The parser
+outputs — but they're consumed by `tree-sitter-m`'s sibling
+`tree-sitter-m-lint`, not by `tree-sitter-m` itself. The parser
 recognises everything; the linter classifies what it found.

@@ -1,4 +1,4 @@
-# m-parser
+# tree-sitter-m
 
 A [tree-sitter](https://tree-sitter.github.io/) grammar for the
 M (MUMPS) programming language.
@@ -18,7 +18,7 @@ M (MUMPS) programming language.
 No production-quality tree-sitter grammar for M exists today. M
 development tooling — language servers, refactoring tools,
 AST-based linters, code search, AI agents — has historically
-lacked a shared parsing substrate. `m-parser` aims to be that
+lacked a shared parsing substrate. `tree-sitter-m` aims to be that
 substrate.
 
 The grammar:
@@ -40,7 +40,7 @@ The grammar:
 
 ## Scope
 
-m-parser covers **M and M dialects** — AnnoStd, YottaDB, IRIS's M
+tree-sitter-m covers **M and M dialects** — AnnoStd, YottaDB, IRIS's M
 layer, plus the de-facto extensions VistA actually uses (case-
 insensitive keywords, multi-letter pattern codes `?.ANP`, negated
 operators `'?`/`'&`/`'!`, comparison shorthands `>=`/`<=`/`!=`,
@@ -52,16 +52,16 @@ USE/OPEN parenthesised I/O parameters, and so on).
 are ObjectScript — a separate scripting language layered on top
 of M's runtime, not a dialect of M. The right home for parsing
 those is a sibling `tree-sitter-objectscript` grammar that can
-compose with m-parser when a file mixes both. See
+compose with tree-sitter-m when a file mixes both. See
 [`docs/spec.md`](docs/spec.md) §2 for the full scope decision.
 
 ## What it does NOT do
 
-`m-parser` is a parser, not a compiler, formatter, or linter.
+`tree-sitter-m` is a parser, not a compiler, formatter, or linter.
 
 - **Standards enforcement** (pragmatic / SAC / operational) lives in
   a sibling project (`tree-sitter-m-lint`) that consumes both
-  `m-parser`'s AST and `m-standard`'s tier classifications.
+  `tree-sitter-m`'s AST and `m-standard`'s tier classifications.
 - **Cross-routine resolution**, **type inference**, and **semantic
   analysis** belong in tooling layers above the parser.
 - **InterSystems ObjectScript** is permanently out of scope (see
@@ -70,16 +70,16 @@ compose with m-parser when a file mixes both. See
 ## Relationship to the project family
 
 ```
-m-standard      →   integrated/grammar-surface.json   →   m-parser
+m-standard      →   integrated/grammar-surface.json   →   tree-sitter-m
    (data)              (versioned data contract)         (this project)
 
-m-parser        →   tree-sitter-m npm/crate/pypi      →   tree-sitter-m-lint
-                    + bindings (Node/Rust/Python/Go)       (sibling project)
-                                                       →   editor plugins
-                                                       →   AI agents
+tree-sitter-m   →   bindings: Node / Rust / Python / Go    →   tree-sitter-m-lint
+ (this project)     (npm, crates.io, PyPI, go modules)         (sibling project)
+                                                           →   editor plugins
+                                                           →   AI agents
 ```
 
-`m-parser` is a strict downstream consumer of `m-standard` and
+`tree-sitter-m` is a strict downstream consumer of `m-standard` and
 contributes nothing back upstream. See [`docs/spec.md`](docs/spec.md)
 §17 for the full contract.
 

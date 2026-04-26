@@ -1,4 +1,4 @@
-# Claude project context — m-parser
+# Claude project context — tree-sitter-m
 
 ## What this is
 A tree-sitter grammar for M (MUMPS). Specification phase only — no
@@ -61,7 +61,7 @@ bindings/{node,rust,python,go}   (compiled per platform)
   tier metadata is what lets downstream linters work without
   re-parsing. See AD-03.
 - **Pin the m-standard schema_version.** When m-standard ships a
-  breaking schema change, m-parser adopts deliberately and bumps
+  breaking schema change, tree-sitter-m adopts deliberately and bumps
   major version. CI fails if the consumed file's
   `schema_version` doesn't match the pin. See AD-04.
 
@@ -84,7 +84,7 @@ consumers (the linter, not the parser).
 ## Toolchain
 - Node.js ≥ 20 (tree-sitter-cli)
 - C compiler (gcc/clang/MSVC) for the generated parser
-- No m-standard runtime dependency — m-parser ships pre-generated
+- No m-standard runtime dependency — tree-sitter-m ships pre-generated
   artifacts. m-standard is a build-time data input only.
 
 ## What this is NOT
@@ -97,5 +97,5 @@ consumers (the linter, not the parser).
   `obj.method()`, `obj.property=val`, `##super`, etc.). ObjectScript
   is a separate scripting language layered on top of M's runtime;
   if you want to parse it, build a sibling grammar
-  (`tree-sitter-objectscript`). m-parser covers M and M dialects
+  (`tree-sitter-objectscript`). tree-sitter-m covers M and M dialects
   (AnnoStd, YottaDB, IRIS's M layer) only.

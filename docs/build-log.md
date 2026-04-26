@@ -1,7 +1,15 @@
-# Build log — m-parser
+# Build log — tree-sitter-m
 
 Chronological notes on milestone deliveries, decisions made during
 implementation, and any drift from `spec.md`.
+
+> **Naming note (2026-04-26):** the project was renamed from `m-parser`
+> to `tree-sitter-m` to match the standard tree-sitter ecosystem
+> convention (`tree-sitter-<lang>`). The repo moved from
+> `github.com/rafael5/m-parser` to `github.com/rafael5/tree-sitter-m`
+> (GitHub auto-redirects the old URL). Existing entries below
+> reference the old name as a matter of historical record; project
+> content is unchanged.
 
 ---
 
@@ -901,3 +909,61 @@ m-parser added the comparison/logical extensions explicitly in
 routines, but they should ultimately come from the data table.
 The `$Z*` functions stay as ERROR nodes until m-standard ships a
 fix.
+
+---
+
+## 2026-04-26 (later × 12) — repo + project rename: m-parser → tree-sitter-m
+
+**Done:**
+
+- Renamed GitHub repo from `m-parser` to `tree-sitter-m` via
+  `gh repo rename tree-sitter-m`. GitHub auto-redirects the old URL,
+  so existing clone refs (which used `m-parser`) keep working until
+  rotated.
+- Renamed local working directory `~/projects/m-parser` →
+  `~/projects/tree-sitter-m`.
+- Updated git remote URL to `git@github.com:rafael5/tree-sitter-m.git`,
+  renamed remote from `m-parser` to `origin` (standard convention).
+- Renamed local branch `master` → `main` to match the GitHub remote
+  default and the broader ecosystem standard (every modern
+  `tree-sitter-<lang>` repo uses `main`).
+- Created auto-memory symlink at the new path
+  (`~/.claude/projects/-home-rafael-projects-tree-sitter-m/memory →
+  ~/claude/memory`) to keep the persistent-memory mechanism working
+  for the renamed dir.
+- Rewrote all in-repo references from `m-parser` to `tree-sitter-m`
+  in: `README.md`, `CLAUDE.md`, `STATUS.md`, `docs/spec.md`,
+  `docs/tree-sitter-notes.md`, `tree-sitter.json`, `Makefile`,
+  `lib/stamp.js`, `tools/build-grammar.js`, `tools/smoke-corpus.js`.
+  Tightened a few prose redundancies that the mechanical rewrite
+  introduced (e.g. the `m-standard → m-parser → tree-sitter-m npm
+  package` diagram became `m-standard → tree-sitter-m → bindings`).
+- Existing build-log entries above this one keep the historical
+  `m-parser` name as a matter of record; the front-matter note added
+  in this commit explains why.
+
+**Why now (industry alignment):**
+
+The standard tree-sitter ecosystem convention is one repo per
+grammar named `tree-sitter-<lang>`: `tree-sitter-javascript`,
+`tree-sitter-python`, `tree-sitter-rust`, etc. The published package
+name (`tree-sitter-m` in `package.json`) was already correct; only
+the repo name and the local directory diverged from convention. With
+B6 bindings imminent (npm publication will start putting the package
+in front of consumers), this is the cleanest moment to align —
+discovery flow becomes "google tree-sitter m grammar → npm
+`tree-sitter-m` → `github.com/rafael5/tree-sitter-m`" with no name
+mismatch.
+
+**Memory updated:**
+
+- `~/claude/memory/project_m_parser.md` →
+  `~/claude/memory/project_tree_sitter_m.md` (renamed file +
+  in-content references updated).
+- `~/claude/memory/project_m_parser_vista_corpus.md` →
+  `~/claude/memory/project_tree_sitter_m_vista_corpus.md` (same).
+- `~/claude/memory/MEMORY.md` index entry updated.
+
+**No grammar / parser changes** — this is purely a naming refactor.
+Smoke gate still 99.06% on the full 39,330-routine VistA corpus.
+110 corpus tests still pass.

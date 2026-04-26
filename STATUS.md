@@ -1,4 +1,4 @@
-# m-parser status
+# tree-sitter-m status
 
 Snapshot of where the project sits against `docs/spec.md`. Updated
 on commit; the live progression history lives in `docs/build-log.md`.
@@ -170,7 +170,7 @@ Ordered roughly by what blocks the release.
   `obj.method()`, `obj.property=val`, `##super`, etc. ObjectScript
   is a separate scripting language layered on top of M's runtime —
   the right home is a sibling `tree-sitter-objectscript` grammar
-  that can compose with m-parser when a file mixes both. See
+  that can compose with tree-sitter-m when a file mixes both. See
   `CLAUDE.md` "What this is NOT" and `docs/spec.md §2`.
 - **Cross-routine resolution / semantic analysis / indirection
   resolution / pre-ANSI dialects.** All explicitly deferred or

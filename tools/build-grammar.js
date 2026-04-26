@@ -28,7 +28,7 @@ const SOURCE_PATH = path.resolve(PROJECT_ROOT, PIN.source);
 log(`reading ${SOURCE_PATH}`);
 if (!fs.existsSync(SOURCE_PATH)) {
   fail(`grammar-surface.json not found at ${SOURCE_PATH}\n` +
-       `  Expected layout: ../m-standard/integrated/grammar-surface.json relative to m-parser/`);
+       `  Expected layout: ../m-standard/integrated/grammar-surface.json relative to tree-sitter-m/`);
 }
 const surface = JSON.parse(fs.readFileSync(SOURCE_PATH, 'utf-8'));
 
@@ -38,8 +38,8 @@ if (consumedSchema !== PINNED_SCHEMA) {
     `schema_version mismatch (AD-04):\n` +
     `  pinned   (package.json m-standard.schema_version): ${PINNED_SCHEMA}\n` +
     `  consumed (${SOURCE_PATH}): ${consumedSchema}\n` +
-    `  m-parser must opt into m-standard schema changes deliberately.\n` +
-    `  Either bump the pin (and m-parser major version) or check out\n` +
+    `  tree-sitter-m must opt into m-standard schema changes deliberately.\n` +
+    `  Either bump the pin (and tree-sitter-m major version) or check out\n` +
     `  the matching m-standard revision.`
   );
 }

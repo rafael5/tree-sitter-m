@@ -65,7 +65,7 @@ if (SAMPLE && SAMPLE < files.length) {
   chosen = chosen.filter((_, i) => i % stride === 0).slice(0, SAMPLE);
 }
 
-console.log(`m-parser smoke gate`);
+console.log(`tree-sitter-m smoke gate`);
 console.log(`  root:     ${ROOT}`);
 console.log(`  files:    ${files.length} total${chosen !== files ? `, ${chosen.length} sampled` : ''}`);
 console.log('');

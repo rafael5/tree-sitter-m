@@ -1,7 +1,7 @@
 # Tree-sitter implementation notes
 
 Things about tree-sitter's lexer/parser that aren't obvious from the
-docs and have bitten us during m-parser development. Each entry has
+docs and have bitten us during tree-sitter-m development. Each entry has
 the surface symptom, the actual rule, and the implementation patterns
 we've adopted to work around it.
 
@@ -181,7 +181,7 @@ extension).
 scanner can `lexer->lookahead` arbitrary characters before deciding
 to emit. It can read forward, check against a hash table, decide
 whether to commit (`mark_end`) or back out. We haven't yet needed
-this for m-parser but it's the right tool when GLR can't express
+this for tree-sitter-m but it's the right tool when GLR can't express
 the discrimination cleanly. The cost is moving the rule out of
 grammar.js into hand-written C.
 
