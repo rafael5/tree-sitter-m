@@ -559,3 +559,51 @@ VistA is pure standard M.
 | + numeric label entry-ref + `*var` unary + LOCK prefix | 978 (97.8%) | +1.8pp |
 | + case-insensitive keywords + `$$^routine` | 983 (98.3%) | +0.5pp |
 | + entry-ref/by-ref/pattern indirection + alt-branch seq | 990 (99.0%) | +0.7pp |
+
+---
+
+## 2026-04-26 (final) — full-corpus baseline + Kernel bucket triage
+
+**Full-corpus run** (all 39,330 VistA routines, 162 MB, 36.8s wall,
+4.4 MB/s with `tree-sitter parse --quiet` per-batch):
+
+```
+clean (no ERROR nodes):  38,697  (98.39%)
+with errors:                633
+```
+
+The 1000-routine sample overstated coverage by **0.6pp** (99.0% →
+98.39%). Not catastrophic; the deterministic stride-sample isn't
+badly skewed but does miss some Kernel-heavy patterns.
+
+**Per-package concentration.** Top 6 packages account for 51% of
+failing files: Kernel (112 files), Uncategorized (105), Scheduling
+(42), Registration (22), Capacity Management (21), Integrated
+Billing (20). ~100 packages — every clinical package — are 100%
+clean. The grammar handles standard clinical VistA M without
+exception.
+
+**Kernel bucket triage** (871 raw ERROR nodes across 112 files):
+
+| Nodes | Bucket | Disposition |
+|---:|---|---|
+| 535 | "other" — dominated by `$PD`/`$PT`/`$PX` greedy lex | Kernel-specific local-var convention; not standard M |
+| 137 | Vendor `$Z*` functions (`$ZBITOR`, `$ZGETSYI`, `$ZC`) | m-standard data, not parser |
+| 84+62 | ObjectScript (`OBJ.Method()`, `##class`, `&sql`) | Out of scope per scope-lock |
+| 28+6 | `U`/`O` with `:(param:list)` I/O parameters | **Real M, parser-fixable** |
+| 11 | `ZW` abbreviation of ZWRITE | m-standard data |
+| 5 | Complex indirection `@TAG+1^@RTN` | Label+offset deferred per spec |
+
+**Key finding: the residual is overwhelmingly NOT parser bugs.**
+- ObjectScript (~146 nodes) — out of scope, will never be in scope
+- Vendor `$Z*` / `ZW` (~148 nodes) — needs m-standard data updates
+- `$PD`-style Kernel idioms (~535 nodes) — non-standard M; either
+  Kernel patches or treat as known-residual
+- USE/OPEN parameters (~34 nodes) — the only sizeable parser-side
+  fix worth pursuing
+
+**Recommendation for v1.0:** ship at 98.39%. The full-corpus number
+is the documented baseline. The USE/OPEN I/O parameter fix is the
+one pure-grammar opportunity left and could go in either v1.0 or a
+v1.1 patch. Everything else is upstream (m-standard) or out of
+scope (ObjectScript) or non-standard M (Kernel `$PD` idiom).
