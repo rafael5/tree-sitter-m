@@ -122,11 +122,12 @@ parser for M.
   records the indirection node but does not attempt to evaluate
   `expr` to find the indirected target. A semantic layer can do
   this with runtime data.
-* **InterSystems IRIS class syntax.** ObjectScript's `##class(...)`,
-  `&sql(...)`, `&js(...)`, `##super`, `##this`, etc. are parser
-  extensions on top of M proper. v1.0 covers the M lexical/syntactic
-  surface; class-syntax recognition is a v0.2 add-on for VistA-on-IRIS
-  code that uses class methods.
+* **InterSystems ObjectScript.** `##class(...)`, `&sql(...)`,
+  `&js(...)`, `##super`, `##this`, `obj.method()`, `obj.property=val`
+  etc. are ObjectScript — a separate scripting language layered on
+  top of M's runtime, not part of M itself. Out of scope for any
+  version of m-parser. A separate `tree-sitter-objectscript`
+  grammar would be the right home.
 * **Pre-ANSI dialects.** DSM-11, MUMPS-11, etc. — historical, not
   relevant to live codebases.
 
@@ -689,12 +690,16 @@ resolve; downstream tools that need resolution (a language server,
 say) need their own resolver. Documenting the boundary is
 important to avoid downstream confusion.
 
-**InterSystems class syntax.** VistA-on-IRIS code increasingly
-uses `##class(...)`, `&sql(...)`, `##super` etc. These aren't M
-proper but ObjectScript extensions on top of M. v1.0 deliberately
-defers this; without it, parsing modern VistA-on-IRIS code will
-produce more `ERROR` nodes than ideal. Plan to revisit in v0.2 with
-an IRIS-mode flag on the parser.
+**InterSystems ObjectScript.** VistA-on-IRIS and other commercial
+M codebases mix in ObjectScript: `##class(...)`, `&sql(...)`,
+`&js(...)`, `##super`, `obj.method()`, `obj.property=val`. These
+aren't M — they're a separate scripting language that shares M's
+runtime. m-parser is scoped to M and M dialects (AnnoStd, YottaDB,
+IRIS's M layer); ObjectScript is permanently out of scope, not
+deferred. The right home for it is a sibling grammar
+(`tree-sitter-objectscript`) that can compose with m-parser when a
+file mixes both. Routines that use ObjectScript heavily will
+produce `ERROR` nodes in m-parser; that's by design.
 
 **Pattern code namespace.** YottaDB allows new pattern codes via
 the patcode table; IRIS allows custom codes via international

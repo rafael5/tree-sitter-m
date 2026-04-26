@@ -84,3 +84,9 @@ consumers (the linter, not the parser).
 - A compiler / interpreter. M execution belongs to YottaDB / IRIS.
 - A semantic analyzer. The parser produces a parse tree; type
   inference, control flow, cross-routine resolution all live above.
+- A parser for **InterSystems ObjectScript** (`##class`, `&sql`,
+  `obj.method()`, `obj.property=val`, `##super`, etc.). ObjectScript
+  is a separate scripting language layered on top of M's runtime;
+  if you want to parse it, build a sibling grammar
+  (`tree-sitter-objectscript`). m-parser covers M and M dialects
+  (AnnoStd, YottaDB, IRIS's M layer) only.

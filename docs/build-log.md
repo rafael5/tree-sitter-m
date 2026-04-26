@@ -545,7 +545,9 @@ VistA is pure standard M.
   command, mixed-case command, lowercase intrinsic). 100 corpus
   tests total, 100% pass.
 - Combined session delta: **79.0% → 99.0% (+20.0pp).** The 10
-  remaining residual ERROR nodes are: 1 COS object-method (deferred),
+  remaining residual ERROR nodes are: 1 ObjectScript object-method
+  (out of scope — ObjectScript is a separate scripting language on
+  top of M and gets its own sibling grammar, not coverage here),
   3-4 vendor commands/functions not in m-standard yet (`ZW`
   abbreviation, `$ZU`, `$ZCALL`), and 3 `D ;...` argless-DO-with-
   comment shift-reduce edge cases.
