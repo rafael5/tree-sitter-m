@@ -137,6 +137,93 @@ module.exports = grammar({
       $.parenthesized,
       $.binary_expression,
       $.unary_expression,
+      $.indirection,
+      $.pattern_match,
+    ),
+
+    // M pattern matching: `expr ? pattern` where pattern is a sequence
+    // of (repeat_count, atom) pairs. The right side of `?` is its own
+    // sublanguage — not a normal expression. Pattern codes A/C/E/L/N/P/U
+    // come from m-standard's grammar-surface; YDB and IRIS allow custom
+    // codes via the patcode table (deferred — accepted as identifiers
+    // only). Pattern strings are normal M string literals; pattern
+    // alternation is a parenthesized comma-separated list of atoms.
+    //
+    // Per spec §5.8:
+    //   pattern_atom    ::= repeat_count (pattern_code | pattern_string | alternation)
+    //   repeat_count    ::= integer | integer "." integer? | "." integer
+    pattern_match: $ => prec.left(0, seq(
+      $._expression,
+      '?',
+      $.pattern,
+    )),
+
+    pattern: $ => repeat1($.pattern_atom),
+
+    pattern_atom: $ => seq(
+      $.pattern_repeat_count,
+      choice($.pattern_code, $.pattern_string, $.pattern_alternation),
+    ),
+
+    // Repeat counts: "1", "1.4", "1.", ".4", "."
+    // Lexed as a single token to avoid ambiguity with decimal numbers.
+    pattern_repeat_count: $ => token(choice(
+      /\d+\.\d+/,   // n.m
+      /\d+\./,      // n.
+      /\.\d+/,      // .n
+      /\d+/,        // n
+      /\./,         // .
+    )),
+
+    pattern_code: $ => seq(
+      optional("'"),  // apostrophe = NOT
+      $.pattern_letter,
+    ),
+
+    // The standard 7 codes plus any other ASCII letter (vendor patcode).
+    // Per AD-01 the union: accept any letter; downstream linter flags
+    // non-standard codes.
+    pattern_letter: $ => /[A-Za-z]/,
+
+    pattern_string: $ => $.string,
+
+    pattern_alternation: $ => seq(
+      '(',
+      $.pattern_atom,
+      repeat(seq(',', $.pattern_atom)),
+      ')',
+    ),
+
+    // M indirection: `@expr` evaluates `expr` at runtime to get a name
+    // (variable, label, routine, etc.) and substitutes it. With trailing
+    // `@(subs)` the subscripts are applied to the runtime-determined
+    // name. The parser records the indirection node — actual resolution
+    // is a downstream concern (spec §5.6).
+    //
+    // The subject is restricted to atoms so `@X+1` parses as
+    // `(indirection X) + 1` rather than `@(X+1)`. Nested `@@X` works
+    // via the recursive case.
+    indirection: $ => prec.right(2, seq(
+      '@',
+      $._indirection_subject,
+      optional($.indirection_subscripts),
+    )),
+
+    _indirection_subject: $ => choice(
+      $.variable,
+      $.string,
+      $.parenthesized,
+      $.special_variable,
+      $.function_call,
+      $.extrinsic_function,
+      $.indirection,
+    ),
+
+    indirection_subscripts: $ => seq(
+      '@', '(',
+      $._expression,
+      repeat(seq(',', $._expression)),
+      ')',
     ),
 
     parenthesized: $ => seq('(', $._expression, ')'),

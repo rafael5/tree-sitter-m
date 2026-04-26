@@ -1,0 +1,164 @@
+================================================================================
+Pattern: exact one alpha then any chars
+================================================================================
+
+ I X?1A.E
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))))))))))
+
+================================================================================
+Pattern: range repeat (1 to 4 numerics)
+================================================================================
+
+ I X?1A1.4N
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))))))))))
+
+================================================================================
+Pattern: leading dot repeat (zero-or-more)
+================================================================================
+
+ I X?.5A
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))))))))))
+
+================================================================================
+Pattern: alternation
+================================================================================
+
+ I X?1(1A,1N)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_alternation
+                    (pattern_atom
+                      (pattern_repeat_count)
+                      (pattern_code
+                        (pattern_letter)))
+                    (pattern_atom
+                      (pattern_repeat_count)
+                      (pattern_code
+                        (pattern_letter)))))))))))))
+
+================================================================================
+Pattern: NOT (apostrophe-prefixed code)
+================================================================================
+
+ I X?1'A
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_code
+                    (pattern_letter)))))))))))
+
+================================================================================
+Pattern: literal string match
+================================================================================
+
+ I X?1"ABC"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (pattern_match
+              (variable
+                (local_variable
+                  (identifier)))
+              (pattern
+                (pattern_atom
+                  (pattern_repeat_count)
+                  (pattern_string
+                    (string)))))))))))

@@ -1,0 +1,169 @@
+================================================================================
+Name indirection on variable
+================================================================================
+
+ S @X=1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (indirection
+                (variable
+                  (local_variable
+                    (identifier))))
+              (operator)
+              (number))))))))
+
+================================================================================
+Name indirection on string literal
+================================================================================
+
+ S @"Y"=2
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (indirection
+                (string))
+              (operator)
+              (number))))))))
+
+================================================================================
+Indirection used as DO target
+================================================================================
+
+ D @LABEL
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (indirection
+              (variable
+                (local_variable
+                  (identifier))))))))))
+
+================================================================================
+Subscript indirection on global
+================================================================================
+
+ S @^G@(N)=3
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (indirection
+                (variable
+                  (global_variable
+                    (identifier)))
+                (indirection_subscripts
+                  (variable
+                    (local_variable
+                      (identifier)))))
+              (operator)
+              (number))))))))
+
+================================================================================
+Nested indirection (double-@)
+================================================================================
+
+ S @@X=4
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (indirection
+                (indirection
+                  (variable
+                    (local_variable
+                      (identifier)))))
+              (operator)
+              (number))))))))
+
+================================================================================
+Indirection in expression (does not gobble surrounding operators)
+================================================================================
+
+ S Y=@X+1
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (binary_expression
+                (variable
+                  (local_variable
+                    (identifier)))
+                (operator)
+                (indirection
+                  (variable
+                    (local_variable
+                      (identifier)))))
+              (operator)
+              (number))))))))
+
+================================================================================
+Indirection on parenthesized expression
+================================================================================
+
+ S @(NAME_"X")=5
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (command_sequence
+      (command
+        (command_keyword)
+        (argument_list
+          (argument
+            (binary_expression
+              (indirection
+                (parenthesized
+                  (binary_expression
+                    (variable
+                      (local_variable
+                        (identifier)))
+                    (operator)
+                    (string))))
+              (operator)
+              (number))))))))
