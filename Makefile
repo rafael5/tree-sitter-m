@@ -96,4 +96,14 @@ clean:
 test:
 	$(TS) test
 
-.PHONY: all install uninstall clean test
+# parse-rate-check: run `m fmt --check` over the canonical VistA
+# corpus and assert that the parse-error rate stays at or below
+# THRESHOLD_PCT (default 1.0%). Pre-merge gate to catch grammar
+# regressions on legacy VistA syntax.
+#
+#   THRESHOLD_PCT=1.0 make parse-rate-check
+#   VISTA_DIR=/other/path THRESHOLD_PCT=2.0 make parse-rate-check
+parse-rate-check:
+	./scripts/vista-parse-rate.sh
+
+.PHONY: all install uninstall clean test parse-rate-check
