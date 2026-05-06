@@ -111,13 +111,31 @@ node -e "const P=require('tree-sitter'); const M=require('tree-sitter-m');
   console.log('node binding:', t.rootNode.type, 'hasError=', t.rootNode.hasError);"
 ```
 
-**Prebuilds** (defer for a later release): `prebuildify` is wired
-in `package.json` but not yet running in CI. First-time consumers
-on a platform without a prebuild will fall back to `node-gyp`
-build at install time (works, but slow and requires a C
-toolchain). To add prebuilds, build them in a CI matrix
-(macOS-13/14, ubuntu-20.04/22.04, windows-2022) and bundle via
-`prebuildify` before `npm publish`.
+**Prebuilds** (now wired): `.github/workflows/prebuilds.yml` runs
+on `v*` tag push and produces N-API binaries for
+linux-x64/arm64, macos-x64/arm64, windows-x64. Each matrix leg
+uploads a `prebuilds-<os>-<arch>.tar.gz` artifact, then a final
+job attaches all five tarballs to the GitHub Release for the tag.
+
+To bundle them into the npm package before `npm publish`:
+
+```bash
+TAG="v$NEW"
+gh release download "$TAG" -p 'prebuilds-*.tar.gz' -D /tmp/ts-m-prebuilds
+for f in /tmp/ts-m-prebuilds/prebuilds-*.tar.gz; do tar -xzf "$f"; done
+ls prebuilds/                                       # 5 platform dirs
+npm pack --dry-run | grep prebuilds                 # confirm bundled
+npm publish --access public
+```
+
+Without this step, first-time consumers on a platform without a
+prebuild fall back to `node-gyp` build at install time (works,
+but slow and requires a C toolchain).
+
+The CI workflow runs *after* `git push origin "v$NEW"` (step 6,
+below). Wait for the workflow's "Attach prebuilds to GitHub
+Release" job to finish before running the consumer-bundle block
+above.
 
 ## 4. Publish to crates.io
 

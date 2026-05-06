@@ -116,10 +116,15 @@ Ordered roughly by what blocks the release.
 
 1. **B6 — bindings: publish.** Scaffolds and local builds done
    (`bindings/{node,rust,python,go}/` all green on a real toolchain
-   matrix). Remaining: publish to npm / crates.io / PyPI; add a
-   `github.com/rafael5/tree-sitter-m` Go module tag. The `prebuildify`
-   wiring is in `package.json` for Node prebuilt binaries; CI matrix
-   is the gating piece (see #2).
+   matrix). Prebuildify CI shipped 2026-05-05
+   (`.github/workflows/prebuilds.yml`): tag-triggered matrix builds
+   N-API binaries for linux-x64/arm64, macos-x64/arm64, windows-x64
+   and attaches them to the GitHub Release for the tag. RELEASE.md §3
+   documents the consumer-bundle flow (`gh release download` →
+   extract → `npm publish`). Remaining: maintainer-gated registry
+   publishes to npm / crates.io / PyPI / Go module tag — runbook is
+   `RELEASE.md` (requires npm 2FA, cargo token, PyPI API token; not
+   automatable from a session).
 2. **CI workflow.** `.github/workflows/ci.yml` landed 2026-04-26:
    five jobs — `grammar` (corpus + lib + per-tier coverage gate +
    parser-regen-clean check), `node` / `rust` / `go` / `python`
