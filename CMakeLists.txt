@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-m
-        VERSION "0.1.0"
+        VERSION "0.1.1"
         DESCRIPTION "Tree-sitter grammar for the M (MUMPS) programming language. Generated from m-standard's grammar-surface.json (union of AnnoStd, YottaDB, IRIS)."
         HOMEPAGE_URL "https://github.com/m-dev-tools/m-parser"
         LANGUAGES C)

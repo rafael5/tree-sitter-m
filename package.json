@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-m",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tree-sitter grammar for the M (MUMPS) programming language. Generated from m-standard's grammar-surface.json (union of AnnoStd, YottaDB, IRIS).",
   "main": "bindings/node",
   "types": "bindings/node",
