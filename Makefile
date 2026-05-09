@@ -3,7 +3,7 @@ $(error Windows is not supported)
 endif
 
 LANGUAGE_NAME := tree-sitter-m
-HOMEPAGE_URL := https://github.com/rafael5/tree-sitter-m
+HOMEPAGE_URL := https://github.com/m-dev-tools/tree-sitter-m
 VERSION := 0.1.0
 
 # repository

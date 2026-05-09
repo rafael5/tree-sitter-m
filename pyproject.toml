@@ -19,7 +19,7 @@ license.text = "AGPL-3.0"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/rafael5/tree-sitter-m"
+Homepage = "https://github.com/m-dev-tools/tree-sitter-m"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.24"]

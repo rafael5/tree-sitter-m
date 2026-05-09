@@ -6,7 +6,7 @@ implementation, and any drift from `spec.md`.
 > **Naming note (2026-04-26):** the project was renamed from `m-parser`
 > to `tree-sitter-m` to match the standard tree-sitter ecosystem
 > convention (`tree-sitter-<lang>`). The repo moved from
-> `github.com/rafael5/m-parser` to `github.com/rafael5/tree-sitter-m`
+> `github.com/m-dev-tools/m-parser` to `github.com/m-dev-tools/tree-sitter-m`
 > (GitHub auto-redirects the old URL). Existing entries below
 > reference the old name as a matter of historical record; project
 > content is unchanged.
@@ -47,7 +47,7 @@ them.
 
 ## 2026-04-26 — Sibling `tree-sitter-m-vscode` Phase 2 (criterion #8 implementation)
 
-Live at `github.com/rafael5/tree-sitter-m-vscode`. Substantively
+Live at `github.com/m-dev-tools/tree-sitter-m-vscode`. Substantively
 closes criterion #8 (editor integration); marketplace publish is the
 only remaining piece, gated on a VS Code Marketplace PAT.
 
@@ -1187,7 +1187,7 @@ fix.
   rotated.
 - Renamed local working directory `~/projects/m-parser` →
   `~/projects/tree-sitter-m`.
-- Updated git remote URL to `git@github.com:rafael5/tree-sitter-m.git`,
+- Updated git remote URL to `git@github.com:m-dev-tools/tree-sitter-m.git`,
   renamed remote from `m-parser` to `origin` (standard convention).
 - Renamed local branch `master` → `main` to match the GitHub remote
   default and the broader ecosystem standard (every modern
@@ -1217,7 +1217,7 @@ the repo name and the local directory diverged from convention. With
 B6 bindings imminent (npm publication will start putting the package
 in front of consumers), this is the cleanest moment to align —
 discovery flow becomes "google tree-sitter m grammar → npm
-`tree-sitter-m` → `github.com/rafael5/tree-sitter-m`" with no name
+`tree-sitter-m` → `github.com/m-dev-tools/tree-sitter-m`" with no name
 mismatch.
 
 **Memory updated:**

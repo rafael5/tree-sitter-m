@@ -114,14 +114,14 @@ ecosystems:
 ```bash
 npm install tree-sitter-m tree-sitter            # Node
 cargo add tree-sitter-m tree-sitter              # Rust
-go get github.com/rafael5/tree-sitter-m          # Go
+go get github.com/m-dev-tools/tree-sitter-m          # Go
 ```
 
 The Python binding is consumed via a local checkout — there is
 no PyPI publication planned:
 
 ```bash
-git clone https://github.com/rafael5/tree-sitter-m
+git clone https://github.com/m-dev-tools/tree-sitter-m
 pip install ./tree-sitter-m tree-sitter          # Python
 ```
 

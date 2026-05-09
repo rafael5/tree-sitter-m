@@ -386,7 +386,7 @@ query language:
   distribution form (matches `tree-sitter-javascript`,
   `tree-sitter-python`, etc.).
 * **crates.io crate** `tree-sitter-m`.
-* **Go module** `github.com/rafael5/tree-sitter-m`.
+* **Go module** `github.com/m-dev-tools/tree-sitter-m`.
 * **Python binding**: clone-and-install from the GitHub repo (no
   PyPI publication planned).
 
@@ -494,7 +494,7 @@ under 100ms on a modern laptop. CI tracks regression.
 | Node | `tree-sitter-m` on npm | `npm install tree-sitter-m` |
 | Rust | `tree-sitter-m` on crates.io | `cargo add tree-sitter-m` |
 | Python | clone-and-install (no PyPI) | `git clone …/tree-sitter-m && pip install ./tree-sitter-m` |
-| Go | `github.com/rafael5/tree-sitter-m` | `go get github.com/rafael5/tree-sitter-m` |
+| Go | `github.com/m-dev-tools/tree-sitter-m` | `go get github.com/m-dev-tools/tree-sitter-m` |
 
 Editor integrations consume the npm package via:
 

@@ -13,7 +13,7 @@ distinct.
 
 | | Discovery | Origin | Upstream | Resolution |
 |---|---|---|---|---|
-| [DISC-001](#disc-001) | YDB/IRIS list-function abbreviations missing from `grammar-surface.json` | tree-sitter-m-vscode test-routine authoring, 2026-04-26 | m-standard ([BL-014](../../m-standard/docs/build-log.md#bl-014) / [issue #3](https://github.com/rafael5/m-standard/issues/3)) | open — needs sweep across all `$LIST*` canonicals |
+| [DISC-001](#disc-001) | YDB/IRIS list-function abbreviations missing from `grammar-surface.json` | tree-sitter-m-vscode test-routine authoring, 2026-04-26 | m-standard ([BL-014](../../m-standard/docs/build-log.md#bl-014) / [issue #3](https://github.com/m-dev-tools/m-standard/issues/3)) | open — needs sweep across all `$LIST*` canonicals |
 | [DISC-002](#disc-002) | Negated compound operators (`'[`, `']`, `']]`) require no whitespace before rhs | tree-sitter-m-vscode test-routine authoring, 2026-04-26 | parser-side; lexer / longest-match | won't fix — real M has no such whitespace; document and move on |
 | [DISC-003](#disc-003) | `by_reference` rule rejects `global_variable` (passing `^GBL` by-ref) | tree-sitter-m-vscode test-routine authoring, 2026-04-26 | parser-side; grammar rule | won't fix — globals are already by-name in M; the construct is semantically meaningless |
 
@@ -24,7 +24,7 @@ distinct.
 **Origin:** tree-sitter-m-vscode test-routine authoring, 2026-04-26.
 **Phase:** B6 — bindings + extension scaffolding.
 **Upstream:** [m-standard BL-014](../../m-standard/docs/build-log.md#bl-014) (open).
-**Tracker:** [m-standard#3](https://github.com/rafael5/m-standard/issues/3) (open).
+**Tracker:** [m-standard#3](https://github.com/m-dev-tools/m-standard/issues/3) (open).
 
 **Statement.** `m-standard/integrated/grammar-surface.json` lists
 the YDB/IRIS list-manipulation functions (`$LIST`, `$LISTBUILD`,

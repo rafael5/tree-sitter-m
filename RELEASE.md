@@ -186,13 +186,13 @@ within a few minutes.
 ```bash
 mkdir -p /tmp/ts-m-go-verify && cd /tmp/ts-m-go-verify
 go mod init ts-m-verify
-go get github.com/rafael5/tree-sitter-m@v$NEW
+go get github.com/m-dev-tools/tree-sitter-m@v$NEW
 cat > main.go << 'EOF'
 package main
 import (
     "fmt"
     tree_sitter "github.com/tree-sitter/go-tree-sitter"
-    tree_sitter_m "github.com/rafael5/tree-sitter-m/bindings/go"
+    tree_sitter_m "github.com/m-dev-tools/tree-sitter-m/bindings/go"
 )
 func main() {
     p := tree_sitter.NewParser()
@@ -221,7 +221,7 @@ gh release create "v$NEW" \
 
 - npm: https://www.npmjs.com/package/tree-sitter-m/v/$NEW
 - crates.io: https://crates.io/crates/tree-sitter-m/$NEW
-- Go: `go get github.com/rafael5/tree-sitter-m@v$NEW`
+- Go: `go get github.com/m-dev-tools/tree-sitter-m@v$NEW`
 - Python: clone-and-install (no PyPI publication)
 
 ## Status
@@ -242,7 +242,7 @@ After the registries are up:
 
 - [ ] All `verify` blocks above print `hasError=false`.
 - [ ] Each registry's package page renders the README.
-- [ ] The Go badge resolves at `https://pkg.go.dev/github.com/rafael5/tree-sitter-m`.
+- [ ] The Go badge resolves at `https://pkg.go.dev/github.com/m-dev-tools/tree-sitter-m`.
 - [ ] Update `STATUS.md` criterion #7 from ⚠️ to ✅.
 
 ## 8. Rollback options if something is wrong

@@ -73,7 +73,7 @@ naked global refs (`^(...)`), case-insensitive keywords.
 | 5 | Per-tier coverage gate (every `(canonical_name, standard_status)` pair has a corpus test) | ✅ `tools/coverage-gate.js` walks `test/corpus/*.txt` + `test/coverage/keywords.m` (auto-generated from `grammar-metadata.json`); 347/347 triples covered; wired into `npm test` and the `grammar` CI job |
 | 6 | Performance: 10k-line routine under 100ms | ✅ `tools/perf-bench.js`: synthesised 10k-line single routine parses in **78.63 ms** (range 78–83 ms over 5 runs); largest real VistA routine (1,597 lines) 12.20 ms; sample p95 2.30 ms. Logged in `docs/build-log.md` 2026-04-26. |
 | 7 | Bindings published (`npm install tree-sitter-m`, `cargo add tree-sitter-m`, Go module tag — Python binding stays clone-and-install) | ⚠️ scaffolds green locally; not yet published |
-| 8 | Editor demonstration (VS Code extension or nvim-treesitter PR) | ⚠️ implementation done; marketplace publish pending. Sibling repo `tree-sitter-m-vscode` (https://github.com/rafael5/tree-sitter-m-vscode) ships a two-layer extension: TextMate grammar for cold-load + a `DocumentSemanticTokensProvider` powered by `tree-sitter-m` compiled to WASM via `tree-sitter build --wasm --docker`. `vsce package` produces a 1.27 MB .vsix bundling the parser .wasm + web-tree-sitter runtime. Marketplace `vsce publish` needs a personal access token from dev.azure.com — gated on user. |
+| 8 | Editor demonstration (VS Code extension or nvim-treesitter PR) | ⚠️ implementation done; marketplace publish pending. Sibling repo `tree-sitter-m-vscode` (https://github.com/m-dev-tools/tree-sitter-m-vscode) ships a two-layer extension: TextMate grammar for cold-load + a `DocumentSemanticTokensProvider` powered by `tree-sitter-m` compiled to WASM via `tree-sitter build --wasm --docker`. `vsce package` produces a 1.27 MB .vsix bundling the parser .wasm + web-tree-sitter runtime. Marketplace `vsce publish` needs a personal access token from dev.azure.com — gated on user. |
 | 9 | ADR set complete (AD-01..06 documented) | ✅ per-ADR files under `docs/adr/` (context / decision / consequences / status); `docs/spec.md §3` is the one-line index |
 | 10 | CI gates (build + corpus + coverage + perf budget on every PR) | ⚠️ `.github/workflows/ci.yml` runs corpus + lib + per-tier coverage gate + parser-regen-clean check + node/rust/go/python matrix on Linux/macOS/Windows; perf budget not yet wired |
 | 11 | License compliance (AGPL-3.0 in `LICENSE`, license header on generated files) | ⚠️ `LICENSE` exists; SPDX line on `grammar.js`, `src/scanner.c`, `keywords.generated.js` (via generator). `src/parser.c` skipped — tree-sitter generate would wipe a hand-stamped header on every regen, and the existing tree-sitter `@generated` marker plus repo-root `LICENSE` is the conventional pattern; `src/grammar-metadata.json` skipped (JSON has no comments). |
@@ -146,7 +146,7 @@ Ordered roughly by what blocks the release.
    so consumers don't have to re-implement the join.
 6. **B7 — at least one editor integration** (criterion #8). VS Code
    extension implemented and pushed to
-   `github.com/rafael5/tree-sitter-m-vscode` 2026-04-26. Two-layer:
+   `github.com/m-dev-tools/tree-sitter-m-vscode` 2026-04-26. Two-layer:
    TextMate cold-load + tree-sitter-m WASM semantic tokens. Foundation
    in this repo: `queries/highlights.scm` (consumable by Helix /
    nvim-treesitter) + `lib/queries.test.js`. **Remaining:** publish
