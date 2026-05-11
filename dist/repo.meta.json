@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/m-dev-tools/.github/main/profile/repo.meta.schema.json",
+  "id": "tool:tree-sitter-m",
+  "repo": "https://github.com/m-dev-tools/tree-sitter-m",
+  "role": "Tree-sitter grammar for M (MUMPS) — parser + AST node-types + grammar-metadata, generated from m-standard's grammar-surface.json",
+  "language": ["javascript", "c", "rust", "python", "go"],
+  "license": "AGPL-3.0",
+  "agent_instructions": "AGENTS.md",
+  "verified_on": "2026-05-10",
+  "exposes": {
+    "node_types":        "src/node-types.json",
+    "grammar":           "src/grammar.json",
+    "grammar_metadata":  "src/grammar-metadata.json"
+  },
+  "consumes": ["tool:m-standard"],
+  "verification_commands": ["make test", "make check-manifest"],
+  "status": "active",
+  "notes": "Parser artefacts under src/ are committed — consumers don't need tree-sitter-cli or an m-standard sibling checkout. m-standard is a build-time data input only (consumed by tools/build-grammar.js when regenerating the grammar)."
+}

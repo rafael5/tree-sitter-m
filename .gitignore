@@ -17,7 +17,10 @@ _obj/
 
 # Python artifacts
 .venv/
-dist/
+dist/*
+# Phase-0 contract: org catalog fetches this by raw URL; track it
+# despite the broader dist/ ignore.
+!dist/repo.meta.json
 *.egg-info
 *.whl
 
