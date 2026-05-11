@@ -106,4 +106,42 @@ test:
 parse-rate-check:
 	./scripts/vista-parse-rate.sh
 
-.PHONY: all install uninstall clean test parse-rate-check
+# ── Phase-0 AI-discoverability contract ───────────────────────────────
+#
+# Tier-2 entry to the org catalog. See
+# https://github.com/m-dev-tools/.github/blob/main/docs/AI-discoverability-plan.md
+#
+# The exposed `src/{node-types,grammar,grammar-metadata}.json` files
+# are tree-sitter-generated and already committed; there's no separate
+# `make manifest` step that regenerates them outside the existing
+# `tree-sitter generate` / `tools/build-grammar.js` chain (gated by
+# `make test`). `make manifest` is therefore a no-op pointer — it
+# exists only so verification_commands in dist/repo.meta.json line up
+# with the other org repos.
+
+manifest:
+	@echo "tree-sitter-m: dist/repo.meta.json exposes are tree-sitter-generated under src/."
+	@echo "  - 'tree-sitter generate'         → src/{parser.c,grammar.json,node-types.json}"
+	@echo "  - 'node tools/build-grammar.js'  → grammar.js + src/grammar-metadata.json"
+	@echo "    (the build-grammar step requires a sibling m-standard checkout)"
+
+check-manifest:
+	python3 tools/check-manifest.py
+
+# Guardrail: docs/ holds only human-readable prose. Same target name
+# as the tier-1 repos so cross-repo muscle memory works.
+check-docs-prose:
+	@if [ ! -d docs ]; then echo "check-docs-prose: no docs/ directory ✓"; exit 0; fi; \
+	violations=$$(find docs -type f \
+	    ! -name '*.md' ! -name '*.markdown' \
+	    ! -name '*.png' ! -name '*.jpg' ! -name '*.jpeg' \
+	    ! -name '*.gif' ! -name '*.svg' ! -name '*.webp' \
+	    ! -name '.gitkeep'); \
+	if [ -n "$$violations" ]; then \
+	  echo "ERROR: non-prose files under docs/ — move to a top-level domain dir:" >&2; \
+	  echo "$$violations" >&2; \
+	  exit 1; \
+	fi; \
+	echo "check-docs-prose: docs/ is prose-only ✓"
+
+.PHONY: all install uninstall clean test parse-rate-check manifest check-manifest check-docs-prose
